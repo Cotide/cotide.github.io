@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="xcli’s Blog"/>
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.3.x" />
+
+
+
+<link rel="canonical" href="https://cotide.github.io/page/2/"/>
+
+
+<meta name="description" content="xcli’s Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xcli’s Blog">
+<meta property="og:url" content="https://cotide.github.io/page/2/index.html">
+<meta property="og:site_name" content="xcli’s Blog">
+<meta property="og:description" content="xcli’s Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="xcli’s Blog">
+<meta name="twitter:description" content="xcli’s Blog">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: ,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> xcli’s Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">xcli’s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="https://about.me/xcli">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">xcli’s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://about.me/xcli">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts">
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/03/14/Mobile/PhoneGap 实战 – 初探/">PhoneGap 实战 – 初探</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Mar 14, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h2 id="HTML5-跨平台应用程式开发"><a href="#HTML5-跨平台应用程式开发" class="headerlink" title="HTML5 跨平台应用程式开发"></a>HTML5 跨平台应用程式开发</h2><p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f1vqm7hvs6j20ee08tdg7.jpg" alt="图一：移动设备与PC市场份额"></p>
+<p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7jw1f1vqt5mgp1j20et095gm0.jpg" alt="图二：全球支持Html5设备占有率"></p>
+<p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f1vqucf4mnj20cg082wew.jpg" alt="图三:开发商对HTML的支持"></p>
+<p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f1vqv11lyyj20bu0ahwf3.jpg" alt="图四：HTML5兼容性"></p>
+<blockquote>
+<p><strong>移动手持设备</strong> （目前2014年）或者未来出货量将远超PC（图一）。在2016年，估计会有85％的手机配备的HTML5相容的浏览器（图2），资料显示，三分之二的行动应用程式开发商逐渐偏向使用HTML5作为开发平台。</p>
+</blockquote>
+<h2 id="PhoneGap简介"><a href="#PhoneGap简介" class="headerlink" title="PhoneGap简介"></a>PhoneGap简介</h2><p>PhoneGap 是基于HTML5的移动应用前端开发框架。使用HTML+CSS+JavaScript,再通过PhoneGap就可以快速创建移动App。<br>PhoneGet能让你只使用简单的Web技术即可获得移动设备的原生特性，如摄像头、加速器、指南针等。使用这些特性，再充份发挥你的想象力，就可以实现各种类型的、特别有意思的移动应用。<br>PhoneGap 是完全公开开放源代码的，您可以通过编写组件，实现任何原生设备特性的扩展。之后，还可以通过PhoneGap打包App,这样编写一次基础代码就可以将App部署到多个移动平台上。</p>
+<h2 id="PhoneGap-环境搭建"><a href="#PhoneGap-环境搭建" class="headerlink" title="PhoneGap 环境搭建"></a>PhoneGap 环境搭建</h2><p>网址: <a href="http://phonegap.com/install/" target="_blank" rel="external">http://phonegap.com/install/</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7jw1f1vr3gma32j20ih07v0t1.jpg" alt="图一：移动设备与PC市场份额"></p>
+<p>【安装】</p>
+<p>步骤1：安装NodeJS</p>
+<p>步骤2：打开命令运行, 输入命令  npm install -g phonegap   </p>
+<p>使用npm命令安装PhoneGap时候遇到问题排查：</p>
+<p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7jw1f1vr4niyprj20gb0argmt.jpg" alt="PhoneGap"></p>
+<pre><code class="dos"><span class="function">C:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt; <span class="title">npm</span> <span class="title">install</span> -<span class="title">g</span> <span class="title">phonegap</span>
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">not</span> <span class="title">found</span>: <span class="title">git</span>
+<span class="title">npm</span> <span class="title">ERR</span>!
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">Failed</span> <span class="title">using</span> <span class="title">git</span>.
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">This</span> <span class="title">is</span> <span class="title">most</span> <span class="title">likely</span> <span class="title">not</span> <span class="title">a</span> <span class="title">problem</span> <span class="title">with</span> <span class="title">npm</span> <span class="title">itself</span>.
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">Please</span> <span class="title">check</span> <span class="title">if</span> <span class="title">you</span> <span class="title">have</span> <span class="title">git</span> <span class="title">installed</span> <span class="title">and</span> <span class="title">in</span> <span class="title">your</span> <span class="title">PATH</span>.
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">System</span> <span class="title">Windows_NT</span> 6.1.7601
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">command</span> "<span class="title">D</span>:\\<span class="title">Program</span> <span class="title">Files</span>\\<span class="title">nodejs</span>\\\\<span class="title">node.exe</span>" "<span class="title">D</span>:\\<span class="title">Program</span> <span class="title">Files</span>\\<span class="title">nod</span>
+<span class="title">ejs</span>\\<span class="title">node_modules</span>\\<span class="title">npm</span>\\<span class="title">bin</span>\\<span class="title">npm</span>-<span class="title">cli.js</span>" "<span class="title">install</span>" "-<span class="title">g</span>" "<span class="title">phonegap</span>"
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">cwd</span> <span class="title">C</span>:\<span class="title">Users</span>\<span class="title">Administrator</span>
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">node</span> -<span class="title">v</span> <span class="title">v0</span>.10.29
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">npm</span> -<span class="title">v</span> 1.4.14
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">code</span> <span class="title">ENOGIT</span>
+<span class="title">npm</span> <span class="title">ERR</span>!
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">Additional</span> <span class="title">logging</span> <span class="title">details</span> <span class="title">can</span> <span class="title">be</span> <span class="title">found</span> <span class="title">in</span>:
+<span class="title">npm</span> <span class="title">ERR</span>!     <span class="title">C</span>:\<span class="title">Users</span>\<span class="title">Administrator</span>\<span class="title">npm</span>-<span class="title">debug.log</span>
+<span class="title">npm</span> <span class="title">ERR</span>! <span class="title">not</span> <span class="title">ok</span> <span class="title">code</span> 0</span>
+</code></pre>
+<p>查看 npm-debug.log 日志文件片段说明</p>
+<pre><code class="dos"><span class="number">370</span> error <span class="keyword">not</span> found: git
+<span class="number">371</span> error Failed using git.
+<span class="number">371</span> error This is most likely <span class="keyword">not</span> a problem with npm itself.
+<span class="number">371</span> error Please check <span class="keyword">if</span> you have git installed and <span class="keyword">in</span> your <span class="built_in">PATH</span>.
+<span class="number">372</span> error System Windows_NT <span class="number">6</span>.<span class="number">1</span>.<span class="number">7601</span>
+<span class="number">373</span> error command "D:\\Program Files\\nodejs\\\\node.exe""D:\\Program Files\\nodejs\\node_modules\\npm\\b  <span class="keyword">in</span>\\npm-cli.js""install" "-g" "phonegap"
+<span class="number">374</span> error cwd C:\Users\Administrator
+<span class="number">375</span> error node -v v0.<span class="number">10</span>.<span class="number">29</span>
+<span class="number">376</span> error npm -v <span class="number">1</span>.<span class="number">4</span>.<span class="number">14</span>
+<span class="number">377</span> error code ENOGIT
+</code></pre>
+<p>NodeJs没办法识别到GIT的存在，检查GIT已经安装在本机。但还是出现“error notfound: git”。<br>最后发现GIT没有在环境变量中配置Path</p>
+<p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f1vr8g6ykaj20k40c8jtu.jpg" alt="PhoneGap"><br>Path配置路径为：</p>
+<pre><code class="dos">Git安装文件路径\Git\bing
+Git安装文件路径\Git\libexec\git-core
+</code></pre>
+<blockquote>
+<p><strong>注意：</strong>多个Path配置用;分割<br>测试Git是否配置成功。</p>
+</blockquote>
+<p>打开CMD 输入 Git  </p>
+<p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7jw1f1vrcugwstj20gf0ftq5u.jpg" alt="PhoneGap"><br>继续使用 npm 命令 安装PhoneGap</p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7jw1f1vrd2examj20i90dp778.jpg" alt="PhoneGap"><br>现在Phonegap已经安装了.</p>
+<h2 id="PhoneGap-在NodeJs实战"><a href="#PhoneGap-在NodeJs实战" class="headerlink" title="PhoneGap 在NodeJs实战"></a>PhoneGap 在NodeJs实战</h2><p>使用官方方式运行PhoneGap( <a href="http://phonegap.com/install/" target="_blank" rel="external">http://phonegap.com/install/</a>)</p>
+<pre><code class="dos">$ phonegap create my-app
+$ <span class="built_in">cd</span> my-app
+$ phonegap run android
+</code></pre>
+<blockquote>
+<p><strong>注意</strong>这里需要已经安装好Android-SDK 和 Java SDK 和已经配置到环境变量，因为这里ANT会调用它们。</p>
+</blockquote>
+<h3 id="1-使用phonegap-创建一个应用"><a href="#1-使用phonegap-创建一个应用" class="headerlink" title="1.使用phonegap 创建一个应用"></a>1.使用phonegap 创建一个应用</h3><p>打开CMD 使用命令  phonegap create[path]  path为项目位置，如果不输入默认为：C:\Users\Administrator下<br><img src="http://ww1.sinaimg.cn/large/7c2c6ab7jw1f1vrfc1j71j20ja0343z0.jpg" alt="PhoneGap"></p>
+<h3 id="2-定位到应用的文件夹位置"><a href="#2-定位到应用的文件夹位置" class="headerlink" title="2.定位到应用的文件夹位置"></a>2.定位到应用的文件夹位置</h3><p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7jw1f1vrg30cvrj20fr00z746.jpg" alt="PhoneGap"></p>
+<h3 id="3-使用phonegap-运行当前android应用"><a href="#3-使用phonegap-运行当前android应用" class="headerlink" title="3.使用phonegap 运行当前android应用"></a>3.使用phonegap 运行当前android应用</h3><p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7jw1f1vrgpm13bj20g900t3ye.jpg" alt="PhoneGap"></p>
+<p>在执行中遇到问题：<br><img src="http://ww3.sinaimg.cn/large/7c2c6ab7jw1f1vrhkmyx9j20id0bj76e.jpg" alt="PhoneGap"></p>
+<pre><code>Error:ERROR : executing command &apos;ant&apos;, make sure you have ant installed and add edto your path.
+</code></pre><p> 去Apache官方查询了一下ANT的资料（<a href="http://wiki.apache.org/ant/FrontPage" target="_blank" rel="external">http://wiki.apache.org/ant/FrontPage</a> ）</p>
+<blockquote>
+<p><strong>ApacheAnt</strong>是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。由Apache软件基 金会所提供。默认情况下，它的buildfile(XML文件)名为build.xml。每一个buildfile含有一个<project>和至少一个默认的<target>，这些targets包 含许多task elements。每一个task element有一个用来被参考的id，此id必须是唯一的。</target></project></p>
+</blockquote>
+<p>于是去apache官方下载ANT（<a href="http://ant.apache.org/" target="_blank" rel="external">http://ant.apache.org/</a> ）<br>关于ANT配置方法可以查看<a href="http://pan.baidu.com/s/1lJZUQ" target="_blank" rel="external">http://pan.baidu.com/s/1lJZUQ</a><br>配置完ANT后，重新开发CMD，定位到  my-app  项目文件路径，执行 phonegap run android  命令。<br>Phonegap调用了android 的AVD工具(安卓模拟器)，运行当前的APP效果如下：</p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f1vrjvr0xij20fl0cbmy0.jpg" alt="PhoneGap"><br>更多关于PhoneGap命令的使用可以使用CMD命令  PhoneGap Help  查看或者去它们官方网站了解。</p>
+<h2 id="PhoneGap在Eclipse实战"><a href="#PhoneGap在Eclipse实战" class="headerlink" title="PhoneGap在Eclipse实战"></a>PhoneGap在Eclipse实战</h2><p>参考官方说明<br><a href="http://docs.phonegap.com/en/3.5.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide" target="_blank" rel="external">http://docs.phonegap.com/en/3.5.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide</a>)</p>
+<p>1:使用Eclipse创建Android项目（参考：<a href="http://cotide.com/xcli/Blog/Article/75）" target="_blank" rel="external">http://cotide.com/xcli/Blog/Article/75）</a><br>2:安装 Cordova(<a href="http://cordova.apache.org/" target="_blank" rel="external">http://cordova.apache.org/</a>)</p>
+<p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f1vrosjij1j20hi07r75o.jpg" alt="PhoneGap"></p>
+<p>3.使用NodeJS 安装  npm install –g cordova<br>4.使用Cordova命令创建PhoneGap项目</p>
+<pre><code class="dos">$ cordova create hello com.example.hello "HelloWorld"
+$ <span class="built_in">cd</span> hello
+$ cordova platform add android
+$ cordova build
+</code></pre>
+<p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f1vrrm8mwqj20gd0aq407.jpg" alt="PhoneGap"></p>
+<p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f1vrru0e90j20g80aqjsj.jpg" alt="PhoneGap"></p>
+<p>最后提示</p>
+<p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f1vrshuai1j20i30bygns.jpg" alt="PhoneGap"></p>
+<p>5．打开Eclipse，选择File -&gt;New -&gt; Other -&gt;  Android projectsfrom existing code</p>
+<p>选择生成的项目文件夹位置，导入项目。</p>
+<ol>
+<li>运行项目</li>
+</ol>
+<p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7jw1f1vrt025v0j209w0fq3yv.jpg" alt="PhoneGap"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://phonegap.com" target="_blank" rel="external">Phonegap官方 (http://phonegap.com) </a> </li>
+<li><a href="https://github.com/phonegap/phonegap/wiki" target="_blank" rel="external">PhoneGap Wiki (https://github.com/phonegap/phonegap/wiki) </a> </li>
+<li><a href="http://www.phonegapcn.com/docs/zh/1.4.1/" target="_blank" rel="external">PhoneGep Api Doc (http://www.phonegapcn.com/docs/zh/1.4.1/) </a> </li>
+<li><a href="http://pan.baidu.com/s/1hqsZrpE" target="_blank" rel="external">PhoneGap实战(书) (http://pan.baidu.com/s/1hqsZrpE) </a> </li>
+<li><a href="http://nodejs.org" target="_blank" rel="external">Node.js官方 (http://nodejs.org) </a> </li>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">Git (http://git-scm.com/) </a> </li>
+<li><a href="http://cordova.apache.org/" target="_blank" rel="external">Cordova (http://cordova.apache.org/) </a>  </li>
+</ul>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/02/14/Csharp/Dapper-扩展/">Dapper使用</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Feb 14, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p> <strong>Dapper</strong>  -  是国外著名开发者社区Stackoverflow发布的一个轻量级,开源ORM组件。<br> 更多内容可以参考：   <a href="https://github.com/StackExchange/dapper-dot-net" target="_blank" rel="external">Dapper (https://github.com/StackExchange/dapper-dot-net) </a> </p>
+</blockquote>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><blockquote>
+<p> <strong>DapperExtensions</strong> - 是基于Dapper扩展的类库，让使用者更简单，快捷，统一的使用Dapper。<br>更多内容可以参考：   <a href="https://github.com/tmsmith/Dapper-Extensions" target="_blank" rel="external">DapperExtensions (https://github.com/tmsmith/Dapper-Extensions) </a> </p>
+</blockquote>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>表结构如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#用户信息</div><div class="line">DROP TABLE IF EXISTS `UserInfo`;</div><div class="line">CREATE TABLE `UserInfo` (</div><div class="line"> `ID` VARCHAR(32) NOT NULL COMMENT "Id,主键",  </div><div class="line"> `No` VARCHAR(128) COMMENT "编号",</div><div class="line"> `UserName` VARCHAR(128) COMMENT  "用户名",</div><div class="line"> `NiceName` VARCHAR(128) COMMENT "昵称",</div><div class="line"> `Paw` VARCHAR(128) COMMENT "密码",  </div><div class="line"> `Status` INT COMMENT "状态",</div><div class="line"> `CreateDateTime` DATETIME NOT NULL COMMENT "创建时间" ,</div><div class="line"> `LastUpdateDateTime`  DATETIME   NULL COMMENT "更新时间"  </div><div class="line">)ENGINE=InnoDB DEFAULT CHARSET = utf8 COMMENT = "用户信息";</div></pre></td></tr></table></figure>
+<p>查询 For SQL 参数 :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">[TestMethod]</div><div class="line">public void QueryListForSQLTest()</div><div class="line">&#123;</div><div class="line">    using (IUnitOfWork unitOfWork = GetUnitOfWork())</div><div class="line">    &#123;</div><div class="line">        var commonRepo = unitOfWork.GetRepositoryForEntity&lt;UserInfo&gt;();</div><div class="line">        var dto = commonRepo.GetList(&quot;select * from userinfo where NiceName like @NiceName &quot;,</div><div class="line">            new</div><div class="line">            &#123;</div><div class="line">                NiceName =&quot;%小潮%&quot;</div><div class="line">            &#125;);</div><div class="line"></div><div class="line">        foreach (var item in dto)</div><div class="line">        &#123;</div><div class="line">            Console.WriteLine(item.NiceName);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>查询 For 对象 属性 :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[TestMethod]</div><div class="line">public void QueryListTest()</div><div class="line">&#123;</div><div class="line">   using (IUnitOfWork unitOfWork = GetUnitOfWork())</div><div class="line">   &#123;</div><div class="line">       var commonRepo = unitOfWork.GetRepositoryForEntity&lt;UserInfo&gt;();</div><div class="line">       var predicate = Predicates.Field&lt;UserInfo&gt;(f =&gt; f.NiceName, Operator.Like, &quot;%小潮%&quot;);</div><div class="line">       var dto = commonRepo.GetList(predicate);</div><div class="line">       foreach (var item in dto)</div><div class="line">       &#123;</div><div class="line">           Console.WriteLine(item.NiceName);</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>数据持久化 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">[TestMethod]</div><div class="line">public void IUnitOfWorkTest()</div><div class="line">&#123;</div><div class="line">    using (IUnitOfWork unitOfWork = GetUnitOfWork())</div><div class="line">    &#123;</div><div class="line">        unitOfWork.BeginTransaction(); </div><div class="line">        var commonRepo = unitOfWork.GetRepositoryForEntity&lt;UserInfo&gt;();</div><div class="line">        commonRepo.Create(new UserInfo()</div><div class="line">        &#123; </div><div class="line">            NiceName = &quot;小潮1111111&quot;,</div><div class="line">            No = &quot;1231231321&quot;,</div><div class="line">            Paw = &quot;123456&quot;,</div><div class="line">            UserName = &quot;xiaochao&quot; </div><div class="line">        &#125;); </div><div class="line">        commonRepo.Create(new UserInfo()</div><div class="line">        &#123;</div><div class="line">            NiceName = &quot;小潮222222222&quot;, </div><div class="line">            Paw = &quot;123456&quot;,</div><div class="line">            UserName = &quot;xiaochao&quot;</div><div class="line">        &#125;); </div><div class="line">        unitOfWork.Commit();</div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于DapperExtensions 可以自定义Mapper来映射数据库和实体的关系。</p>
+<p>Mapper配置 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class UserInfo_Mapper : ClassMapper&lt;UserInfo&gt;</div><div class="line">&#123;</div><div class="line">   public UserInfo_Mapper()</div><div class="line">   &#123;</div><div class="line">        base.Table(&quot;UserInfo&quot;);</div><div class="line">        Map(f =&gt; f.Id);        </div><div class="line">        AutoMap();</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用DapperExtension组件的 <strong><em>SetMappingAssemblies</em></strong> 方法，将一个或多个程序集包含Mapper配置规则适配到DapperExtension中： </p>
+<pre><code>DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(CustomMapping&lt;&gt;).Assembly });
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>最早接触轻量级ＯＲＭ是 <a href="https://github.com/CollaboratingPlatypus/PetaPoco" target="_blank" rel="external">petapoco (https://github.com/CollaboratingPlatypus/PetaPoco) </a> 两者很像，都是很棒的轻量级ＯＲＭ框架。</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://github.com/StackExchange/dapper-dot-net" target="_blank" rel="external">Dapper (https://github.com/StackExchange/dapper-dot-net) </a> </li>
+<li><a href="https://github.com/tmsmith/Dapper-Extensions" target="_blank" rel="external">DapperExtensions (https://github.com/tmsmith/Dapper-Extensions) </a> </li>
+<li><a href="https://github.com/CollaboratingPlatypus/PetaPoco" target="_blank" rel="external">petapoco (https://github.com/CollaboratingPlatypus/PetaPoco) </a> </li>
+</ul>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2012/12/10/Csharp/Elmah权限控制/">Elmah框架，添加日志文件访问权限</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Dec 10, 2012
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h2 id="Elmah-简述"><a href="#Elmah-简述" class="headerlink" title="Elmah 简述"></a>Elmah 简述</h2><p> <strong>ELMAH（The Error Logging Modules And Handlers）</strong>，直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP.NET应用程序的错误日志记录工作。它支持日志的多种存储方式（各种数据库、XML、内存存储），除了提供一个界面用于查询日志详细信息外，还可以通过E-MAIL、RSS订阅或Twitter发布方式通知错误信息给相关人员。</p>
+<p><img src="http://7nj0oy.com1.z0.glb.clouddn.com/hexo_blog_20121210233731_5479.jpg" alt="Elmah框架，添加日志文件访问权限"></p>
+<h2 id="Elmah-配置"><a href="#Elmah-配置" class="headerlink" title="Elmah 配置"></a>Elmah 配置</h2><h3 id="web-config-代码块"><a href="#web-config-代码块" class="headerlink" title="web.config 代码块"></a><strong>web.config</strong> 代码块</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">configSections</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Elmah日志记录插件 配置 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">sectionGroup</span> <span class="attr">name</span>=<span class="string">"elmah"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"security"</span> <span class="attr">type</span>=<span class="string">"Elmah.SecuritySectionHandler, Elmah"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"errorLog"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogSectionHandler, Elmah"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &lt;section name="errorMail" type="Elmah.ErrorMailSectionHandler, Elmah"/&gt; --&gt;</span></div><div class="line">	<span class="comment">&lt;!--  &lt;section name="errorFilter"  type="Elmah.ErrorFilterSectionHandler, Elmah"/&gt; --&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">sectionGroup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">configSections</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Elmah日志记录插件 配置 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">elmah</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 是否允许远程访问。0代表否、1代表是 &lt;security allowRemoteAccess="1" /&gt; --&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 错误邮件发送 配置  from: 用于发送的邮箱 to: 发送到的终端邮箱地址，多个用','分隔  subiect: 标题  async: 是否异步方式 smtpPort: SMTP端口 smtpServer:  SMTP服务地址 userName: 邮箱账号 password: 邮箱密码 noYsod: 邮件中是否包含附件 --&gt;</span> <span class="comment">&lt;!-- &lt;errorMail from="test@test.com"  to="huangyuan413026@163.com,364965519@qq.com"   subject="系统出错...."  async="true" smtpPort="25" smtpServer="mail.test.com" userName="test@test.com" password="*****" noYsod="true|false" /&gt; &lt;/elmah&gt; --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">errorLog</span> <span class="attr">type</span>=<span class="string">"Elmah.AccessErrorLog, Elmah"</span> <span class="attr">connectionString</span>=<span class="string">"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|Elmah.mdb"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">elmah</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="请求处理配置："><a href="#请求处理配置：" class="headerlink" title="请求处理配置："></a>请求处理配置：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">httpModules</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">"ErrorLog"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogModule, Elmah"</span>/&gt;</span> </div><div class="line"> <span class="tag">&lt;/<span class="name">httpModules</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">httpHandlers</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">add</span> <span class="attr">verb</span>=<span class="string">"POST,GET,HEAD"</span> <span class="attr">path</span>=<span class="string">"webLog.axd"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogPageFactory, Elmah"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">httpHandlers</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这个时候就能通过 <em>~/webLog.axd</em> 这个请求URL 来让Elmah框架处理，入口是<em>Elmah.ErrorLogPageFactory</em> !</p>
+<p>这个时候因为Elmah没有做权限验证，只要访问 ~/webLog.axd 都能看到日志信息，所以这样很不安全。</p>
+<p>解决方案1：在IIS配置URL访问权限，只有服务器本机的指定帐号才能访问该路径。</p>
+<p>解决方案2：<br>在web.config配置URL权限访问限制：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">location</span> <span class="attr">path</span>=<span class="string">"webLog.axd"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">authorization</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">deny</span> <span class="attr">users</span>=<span class="string">"?"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">authorization</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">location</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>拒绝所有匿名用户访问webLog.axd</p>
+<p>在Global.asax文件里面Application_AuthenticateRequest （处理权限验证促发）事件</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">Application_AuthenticateRequest</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 判断是否已经登录</span></div><div class="line">    <span class="keyword">if</span> (Request.IsAuthenticated &amp;&amp; !Request.IsStaticFile())</div><div class="line">    &#123;</div><div class="line">        <span class="comment">// IOC注入:登录用户服务实例</span></div><div class="line">        <span class="keyword">var</span> identityService = ServiceLocator.Current.GetInstance&lt;IIdentityService&gt;(); </div><div class="line">        <span class="comment">// 分配当前上下文用户</span></div><div class="line">        Context.User = identityService.GetCurrentUser(); </div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 处理日志权限问题</span></div><div class="line">    <span class="keyword">if</span> (Request.Url.ToString().Contains(<span class="string">"webLog.axd"</span>))</div><div class="line">    &#123;</div><div class="line">        <span class="comment">// 获取当前访问用户</span></div><div class="line">        <span class="keyword">var</span> user = Context.User <span class="keyword">as</span> UserPrincipal;</div><div class="line">        <span class="comment">// 业务逻辑，如果用户不为超级管理员则无法访问该请求数据 </span></div><div class="line">        <span class="keyword">if</span> (user == <span class="literal">null</span> || (user.UserRole &amp; UserRole.SuperAdmin) == <span class="number">0</span>)</div><div class="line">        &#123; </div><div class="line">           Response.Write(<span class="string">"无权限访问"</span>);</div><div class="line">           Response.End();</div><div class="line">        &#125;  </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>完毕！！！ 这样只要访问webLog.axd 时候都会促发权限验证事件，这个时候就能进行访问的权限控制…</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://code.google.com/p/elmah/" target="_blank" rel="external">Elmah (http://code.google.com/p/elmah/) </a> </li>
+</ul>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    
+      <a class="prev" href="/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+    
+  </nav>
+
+
+          </div>
+          
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:xcli.code@gmail.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://twitter.com/xiaochaoli" class="iconfont icon-twitter" title="twitter"></a>
+        
+      
+    
+      
+        
+          <a href="https://www.facebook.com/xcli.net" class="iconfont icon-facebook" title="facebook"></a>
+        
+      
+    
+      
+        
+          <a href="http://www.linkedin.com/in/xiaochaoli" class="iconfont icon-linkedin" title="linkedin"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/Cotide" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+        
+          <a href="http://weibo.com/silencenet" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2012 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">xcli’s Blog</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.3.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.3.x"></script>
+
+    
+  </body>
+</html>
