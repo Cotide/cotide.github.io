@@ -188,6 +188,65 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2016/08/18/Tools/Github ssh 公钥使用/">Github ssh 公钥生成</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Aug 18, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h2 id="Github-ssh-公钥生成"><a href="#Github-ssh-公钥生成" class="headerlink" title="Github ssh 公钥生成"></a>Github ssh 公钥生成</h2><blockquote>
+<p>SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层和传输层基础上的安全协议。</p>
+</blockquote>
+<h3 id="使用Git生成ssh-公钥"><a href="#使用Git生成ssh-公钥" class="headerlink" title="使用Git生成ssh 公钥"></a>使用Git生成ssh 公钥</h3><p>1.安装Git<br>访问<a href="https://git-scm.com/" target="_blank" rel="external">Git官方</a> 下载最新的Git工具</p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f68f6juyf6j20ti0mwdpy.jpg" alt="下载最新的Git工具"></p>
+<p>2.打开Git Bash</p>
+<p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f68f90q3mgj20gj094t98.jpg" alt="打开 Git Bash 工具"></p>
+<p>使用命令定位到.ssh文件夹 </p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f68fbk4jq1j20gj094wf6.jpg" alt="定位到 .ssh文件夹"></p>
+<p>使用命令<strong>ssh-keygen</strong>生成公钥和私钥<br>因为我本机已经存在其他SSH的Key 所以这里执行ssh-keygen 命令时候我追加了-f 输出文件名定义 和-C注释描述。更多可以查看<a href="http://killer-jok.iteye.com/blog/1853451" target="_blank" rel="external">ssh-keygen参数说明</a></p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -f github-cotide -C cotide</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f68fr1clayj20gj094wgt.jpg" alt="执行ssh-keygen命令"></p>
+<p>在该目录已经生成公钥和密码<br><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f68fsw17npj20ha06x0u3.jpg" alt="ssh-keygen 生成密钥目录"></p>
+<p>可以复制.pub文件内容到Github -&gt; Settings -&gt; SSH and GPG keys </p>
+<p>这样就完成Github的公钥配置</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://baike.baidu.com/subview/16184/5909252.htm" target="_blank" rel="external">SSH简介 - 百度百科</a> </li>
+<li><a href="https://git-scm.com/book/zh/ch4-3.html" target="_blank" rel="external">Git Document - 生成 SSH 公钥</a>\</li>
+<li><a href="https://wiki.archlinux.org/index.php/SSH_keys_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">Linux SSH</a>)</li>
+<li><a href="http://killer-jok.iteye.com/blog/1853451" target="_blank" rel="external">ssh-keygen - 参数说明</a></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2016/03/14/Mobile/PhoneGap 实战 – 初探/">PhoneGap 实战 – 初探</a>
         
       </h1>
