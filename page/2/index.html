@@ -188,6 +188,80 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2016/08/19/Mac/Mac 命令－ 环境变量设置/">Mac OS 环境变量设置</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Aug 19, 2016
+        </span>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <h2 id="Mac-OS-环境变量设置"><a href="#Mac-OS-环境变量设置" class="headerlink" title="Mac OS 环境变量设置"></a>Mac OS 环境变量设置</h2><blockquote>
+<p>环境变量（environment variables）</p>
+</blockquote>
+<p>一般是指在操作系统中用来指定操作系统运行环境的一些参数配置。</p>
+<p>环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息。<br>例如:Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到path中指定的路径去找。用户通过设置环境变量，来更好的运行进程。</p>
+<h2 id="Mac-OS-环境配置方法"><a href="#Mac-OS-环境配置方法" class="headerlink" title="Mac OS 环境配置方法"></a>Mac OS 环境配置方法</h2><ol>
+<li>打开Terminal（终端） </li>
+</ol>
+<p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5sfc40phvj20fu0a60sw.jpg" alt="图一：打开Terminal"></p>
+<p>2.本文章使用Mac OS的内置<strong>nano编辑器</strong>进行对.bash_profile进行配置</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nano .bash_profile</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f5sg7suz98j20fu0a6aal.jpg" alt="使用nano编辑器修改.bash_profile文件"></p>
+<blockquote>
+<p>使用当前命令将会使用Mac OS 系统自带的nano编辑器打开.bash_profile(如果当前文件不存在则创建)</p>
+</blockquote>
+<p>运行效果如下：</p>
+<p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f5sg94fy9bj20fu0a63zi.jpg" alt="使用nano编辑器修改.bash_profile文件运行效果"></p>
+<p>3.现在您可以很简单的加上一些配置到文件中，让后使您的终端(Terminal)使用起来更方便！^_^</p>
+<p>4.需要使用source命令去激活更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source .bash_profile</div></pre></td></tr></table></figure>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="配置-bash-profile实战效果："><a href="#配置-bash-profile实战效果：" class="headerlink" title="配置.bash_profile实战效果："></a>配置.bash_profile实战效果：</h3><p>1.在nano编辑器上写入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PS1=&quot;________________________________________________________________________________\n| \w @ \h (\u) \n| =&gt; &quot;</div><div class="line">export PS2=&quot;| =&gt; &quot;</div></pre></td></tr></table></figure>
+<p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5sh2472h1j20fu0a60tx.jpg" alt="配置.bash_profile内容"></p>
+<p>2.按ctr + x 保存文件</p>
+<p>3.使用source命令激活更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source .bash_profile</div></pre></td></tr></table></figure>
+<p>运行效果如下：</p>
+<p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5sh454b1nj20fu0a6q3f.jpg" alt="修改.bash_profile文件运行效果"></p>
+<p>更多关于.bash_profile的配置可以查看<strong>参考资料</strong> </p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://baike.baidu.com/view/95930.htm" target="_blank" rel="external">环境变量－百度百科</a> </li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" target="_blank" rel="external">环境变量－维基百科</a></li>
+<li><a href="https://natelandau.com/my-mac-osx-bash_profile/" target="_blank" rel="external">MY MAC OSX BASH PROFILE</a></li>
+<li><a href="https://www.douban.com/note/272498615/" target="_blank" rel="external">Mac nano 编辑器 配置</a></li>
+<li><a href="http://stefaanlippens.net/bashrc_and_others" target="_blank" rel="external">Bash: about .bashrc, .bash_profile…</a></li>
+<li><a href="https://www.phodal.com/blog/mac-os-bash-profile-configure-analytics/" target="_blank" rel="external">mac os .bash_profile 配置说明</a></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2016/08/18/Tools/Github ssh 公钥使用/">Github ssh 公钥生成</a>
         
       </h1>

@@ -12,12 +12,12 @@
 
 
 
-  <meta name="description" content="Mac OS －Alias 命令使用"/>
+  <meta name="description" content="Linux - IPTables 防火墙"/>
 
 
 
 
-  <meta name="keywords" content="Alias,Shell,Mac OS Command," />
+  <meta name="keywords" content="Shell,IPTables," />
 
 
 
@@ -31,34 +31,22 @@
 
 
 
-<link rel="canonical" href="https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/"/>
+<link rel="canonical" href="https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/"/>
 
 
-<meta name="description" content="简介
- 在计算机领域,  alias（英语，别名的意思）在命令行解释器、shell、4DOS/4NT和Windows PowerShell里是一个命令，采用一个单词来替代一串字符串。它主要被用来缩略系统命令，或者为常用的命令添加默认的参数
-
-MacOS 应用启动Terminal(终端)，使用vim 打开 .base_profile文件
-1$ vi ~/.base_profile
-alias 命令格">
+<meta name="description" content="概述
+iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS －Alias 命令使用">
-<meta property="og:url" content="https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/index.html">
+<meta property="og:title" content="Linux - IPTables 防火墙">
+<meta property="og:url" content="https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/index.html">
 <meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="简介
- 在计算机领域,  alias（英语，别名的意思）在命令行解释器、shell、4DOS/4NT和Windows PowerShell里是一个命令，采用一个单词来替代一串字符串。它主要被用来缩略系统命令，或者为常用的命令添加默认的参数
-
-MacOS 应用启动Terminal(终端)，使用vim 打开 .base_profile文件
-1$ vi ~/.base_profile
-alias 命令格">
-<meta property="og:updated_time" content="2017-03-01T03:04:31.000Z">
+<meta property="og:description" content="概述
+iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核">
+<meta property="og:updated_time" content="2017-04-21T06:05:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS －Alias 命令使用">
-<meta name="twitter:description" content="简介
- 在计算机领域,  alias（英语，别名的意思）在命令行解释器、shell、4DOS/4NT和Windows PowerShell里是一个命令，采用一个单词来替代一串字符串。它主要被用来缩略系统命令，或者为常用的命令添加默认的参数
-
-MacOS 应用启动Terminal(终端)，使用vim 打开 .base_profile文件
-1$ vi ~/.base_profile
-alias 命令格">
+<meta name="twitter:title" content="Linux - IPTables 防火墙">
+<meta name="twitter:description" content="概述
+iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
@@ -87,7 +75,7 @@ alias 命令格">
 
 
 
-    <title> Mac OS －Alias 命令使用 · xcli’s Blog </title>
+    <title> Linux - IPTables 防火墙 · xcli’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -204,13 +192,13 @@ alias 命令格">
     <header class="post-header">
       <h1 class="post-title">
         
-          Mac OS －Alias 命令使用
+          Linux - IPTables 防火墙
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          Mar 3, 2017
+          Apr 21, 2017
         </span>
       </div>
     </header>
@@ -220,25 +208,20 @@ alias 命令格">
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MacOS-应用"><span class="toc-text">MacOS 应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资源"><span class="toc-text">参考资源</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p> 在计算机领域,  alias（英语，别名的意思）在命令行解释器、shell、4DOS/4NT和Windows PowerShell里是一个命令，采用一个单词来替代一串字符串。它主要被用来缩略系统命令，或者为常用的命令添加默认的参数</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p>iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核层级里面iptables API运作功能的模块。</p>
 </blockquote>
-<h2 id="MacOS-应用"><a href="#MacOS-应用" class="headerlink" title="MacOS 应用"></a>MacOS 应用</h2><p>启动Terminal(终端)，使用vim 打开 .base_profile文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi ~/.base_profile</div></pre></td></tr></table></figure>
-<p>alias 命令格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 命令格式</div><div class="line">$ alias 命令名＝&quot;命令内容&quot;</div><div class="line"></div><div class="line"># 应用例子 </div><div class="line">$ alias now=&apos;date +&quot;%T&quot;&apos;</div></pre></td></tr></table></figure>
-<p>生效命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ~/.base_profile</div></pre></td></tr></table></figure></p>
-<p>输出效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ now</div><div class="line">10:25:13</div></pre></td></tr></table></figure></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://en.wikipedia.org/wiki/Alias_(Mac_OS" target="_blank" rel="external">Alias (Mac OS) EN Wiki</a>) </li>
-<li><a href="https://zh.wikipedia.org/wiki/Alias_(%E5%91%BD%E4%BB%A4" target="_blank" rel="external">Alias (Mac OS) ZH Wiki</a>)</li>
+<figure class="highlight plain"><figcaption><span>操作</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 防火墙启动</div><div class="line">service iptables start</div><div class="line"># 防火墙停止</div><div class="line">service iptables stop</div><div class="line"># 防火墙重启</div><div class="line">service iptables reload</div><div class="line"># 将临时命令 写入配置文件中</div><div class="line">service iptables save</div><div class="line"># 显示所有运行级系统服务 (iptables) 的运行状态信息(on或off).</div><div class="line">chkconfig --list iptables</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 查看防火墙状态</div><div class="line">$ /etc/init.d/iptables status</div><div class="line"></div><div class="line"># 修改防火墙配置规则</div><div class="line">$ vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><ul>
+<li><a href="https://wiki.archlinux.org/index.php/Iptables_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">Iptables (简体中文)</a>)</li>
 </ul>
 
       
@@ -259,7 +242,7 @@ alias 命令格">
     </p>
     <p class="copyright-item">
       <span>Link: </span>
-      <a href="https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/">https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/</a>
+      <a href="https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/">https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/</a>
     </p>
 
     <p class="copyright-item lincese">
@@ -297,11 +280,9 @@ alias 命令格">
         
           <div class="post-tags">
             
-              <a href="/tags/Alias/">Alias</a>
-            
               <a href="/tags/Shell/">Shell</a>
             
-              <a href="/tags/Mac-OS-Command/">Mac OS Command</a>
+              <a href="/tags/IPTables/">IPTables</a>
             
           </div>
         
@@ -309,15 +290,9 @@ alias 命令格">
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2017/03/04/JMeter/性能测试工具 - Apache JMeter (安装)/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">性能测试工具 - Apache JMeter (安装)</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
     
-    
-      <a class="next" href="/2016/10/01/Plan/理财学习/">
-        <span class="next-text nav-default">理财学习</span>
+      <a class="next" href="/2017/04/11/Linux/Linux - Terminal (终端) 内容显示不全问题/">
+        <span class="next-text nav-default">Linux - Terminal (终端) 内容显示不全问题</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
