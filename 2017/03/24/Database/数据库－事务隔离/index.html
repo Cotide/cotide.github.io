@@ -12,7 +12,7 @@
 
 
 
-  <meta name="description" content="数据库－事务隔离"/>
+  <meta name="description" content="数据库的事物隔离级别相关知识"/>
 
 
 
@@ -34,38 +34,17 @@
 <link rel="canonical" href="https://cotide.github.io/2017/03/24/Database/数据库－事务隔离/"/>
 
 
-<meta name="description" content="概述
-事务隔离（英语：Transaction Isolation）定义了数据库系统中一个操作的结果在何时以何种方式对其他并发操作可见。隔离是事务ACID（原子性、一致性性、隔离性、持久性）四大属性之一。
-
-隔离级别概述
-很多数据库管理系统定义了不同的“事务隔离等级”来控制锁的程度。在很多数据库系统中，多数的数据库事务都避免高等级的隔离等级（如可序列化）从而减少对系统的锁定开销。
-
-隔离级别
-可序列">
+<meta name="description" content="数据库的事物隔离级别相关知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库－事务隔离">
 <meta property="og:url" content="https://cotide.github.io/2017/03/24/Database/数据库－事务隔离/index.html">
 <meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="概述
-事务隔离（英语：Transaction Isolation）定义了数据库系统中一个操作的结果在何时以何种方式对其他并发操作可见。隔离是事务ACID（原子性、一致性性、隔离性、持久性）四大属性之一。
-
-隔离级别概述
-很多数据库管理系统定义了不同的“事务隔离等级”来控制锁的程度。在很多数据库系统中，多数的数据库事务都避免高等级的隔离等级（如可序列化）从而减少对系统的锁定开销。
-
-隔离级别
-可序列">
+<meta property="og:description" content="数据库的事物隔离级别相关知识">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdy05oznb3j20cn07vt8l.jpg">
-<meta property="og:updated_time" content="2017-04-03T04:36:29.000Z">
+<meta property="og:updated_time" content="2017-04-25T09:41:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库－事务隔离">
-<meta name="twitter:description" content="概述
-事务隔离（英语：Transaction Isolation）定义了数据库系统中一个操作的结果在何时以何种方式对其他并发操作可见。隔离是事务ACID（原子性、一致性性、隔离性、持久性）四大属性之一。
-
-隔离级别概述
-很多数据库管理系统定义了不同的“事务隔离等级”来控制锁的程度。在很多数据库系统中，多数的数据库事务都避免高等级的隔离等级（如可序列化）从而减少对系统的锁定开销。
-
-隔离级别
-可序列">
+<meta name="twitter:description" content="数据库的事物隔离级别相关知识">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdy05oznb3j20cn07vt8l.jpg">
 
 

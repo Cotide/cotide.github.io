@@ -12,7 +12,7 @@
 
 
 
-  <meta name="description" content="ConcurrentDictionary与Dictionary的区别"/>
+  <meta name="description" content="C#的ConcurrentDictionary与Dictionary的介绍和使用"/>
 
 
 
@@ -34,25 +34,16 @@
 <link rel="canonical" href="https://cotide.github.io/2017/03/13/Csharp/ConcurrentDictionary与Dictionary的区别/"/>
 
 
-<meta name="description" content="概述Dictionary
-泛型类提供了从一组键到一组值的映射。通过键来检索值的速度是非常快的，这是因为 Dictionary 类是作为一个哈希表来实现的。检索速度取决于为 TKey 指定的类型的哈希算法的质量。
-TValue可以是值类型，数组，类或其他。
-一个类的实例里，有个属性是个字典，我们不加考虑的会用Dictionary，而当这个属性被提升为static静态的（类级别的）时候，我们就要考虑它">
+<meta name="description" content="C#的ConcurrentDictionary与Dictionary的介绍和使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ConcurrentDictionary与Dictionary的区别">
 <meta property="og:url" content="https://cotide.github.io/2017/03/13/Csharp/ConcurrentDictionary与Dictionary的区别/index.html">
 <meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="概述Dictionary
-泛型类提供了从一组键到一组值的映射。通过键来检索值的速度是非常快的，这是因为 Dictionary 类是作为一个哈希表来实现的。检索速度取决于为 TKey 指定的类型的哈希算法的质量。
-TValue可以是值类型，数组，类或其他。
-一个类的实例里，有个属性是个字典，我们不加考虑的会用Dictionary，而当这个属性被提升为static静态的（类级别的）时候，我们就要考虑它">
-<meta property="og:updated_time" content="2017-04-03T04:34:09.000Z">
+<meta property="og:description" content="C#的ConcurrentDictionary与Dictionary的介绍和使用">
+<meta property="og:updated_time" content="2017-04-25T09:37:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ConcurrentDictionary与Dictionary的区别">
-<meta name="twitter:description" content="概述Dictionary
-泛型类提供了从一组键到一组值的映射。通过键来检索值的速度是非常快的，这是因为 Dictionary 类是作为一个哈希表来实现的。检索速度取决于为 TKey 指定的类型的哈希算法的质量。
-TValue可以是值类型，数组，类或其他。
-一个类的实例里，有个属性是个字典，我们不加考虑的会用Dictionary，而当这个属性被提升为static静态的（类级别的）时候，我们就要考虑它">
+<meta name="twitter:description" content="C#的ConcurrentDictionary与Dictionary的介绍和使用">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
