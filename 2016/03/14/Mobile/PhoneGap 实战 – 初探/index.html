@@ -27,7 +27,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.3.x" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
 
 
 
@@ -87,11 +87,9 @@ PhoneGap简介PhoneGap 是基于HTML5的移动应用前端开发框架。使用H
 <meta name="twitter:image" content="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f1vqm7hvs6j20ee08tdg7.jpg">
 
 
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
 
 
-
-  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
 
 
 
@@ -99,9 +97,9 @@ PhoneGap简介PhoneGap 是基于HTML5的移动应用前端开发框架。使用H
 
 <script>
   var CONFIG = {
-    search: ,
+    search: false,
     searchPath: "/search.xml",
-    fancybox: true,
+    fancybox: false,
     toc: true,
   }
 </script>
@@ -366,15 +364,15 @@ $ cordova build
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>Author: </span>
+      <span>作者: </span>
       <span>xcli’s Blog</span>
     </p>
     <p class="copyright-item">
-      <span>Origin: </span>
+      <span>来源: </span>
       <a href="https://cotide.github.io">https://cotide.github.io</a>
     </p>
     <p class="copyright-item">
-      <span>Link: </span>
+      <span>链接: </span>
       <a href="https://cotide.github.io/2016/03/14/Mobile/PhoneGap 实战 – 初探/">https://cotide.github.io/2016/03/14/Mobile/PhoneGap 实战 – 初探/</a>
     </p>
 
@@ -390,7 +388,7 @@ $ cordova build
       
   <div class="post-reward">
     <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">Reward</label>
+    <label class="reward-button" for="reward">赞赏支持</label>
     <div class="qr-code">
       
       
@@ -448,6 +446,13 @@ $ cordova build
           
   <div class="comments" id="comments">
     
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
   </div>
 
 
@@ -459,43 +464,19 @@ $ cordova build
   <div class="social-links">
     
       
-        
-          <a href="mailto:xcli.code@gmail.com" class="iconfont icon-email" title="email"></a>
-        
+    
+      
+    
       
     
       
     
       
-        
-          <a href="https://twitter.com/xiaochaoli" class="iconfont icon-twitter" title="twitter"></a>
-        
-      
-    
-      
-        
-          <a href="https://www.facebook.com/xcli.net" class="iconfont icon-facebook" title="facebook"></a>
-        
-      
-    
-      
-        
-          <a href="http://www.linkedin.com/in/xiaochaoli" class="iconfont icon-linkedin" title="linkedin"></a>
-        
-      
     
       
     
       
-        
-          <a href="https://github.com/Cotide" class="iconfont icon-github" title="github"></a>
-        
-      
     
-      
-        
-          <a href="http://weibo.com/silencenet" class="iconfont icon-weibo" title="weibo"></a>
-        
       
     
       
@@ -542,14 +523,28 @@ $ cordova build
   
 
   
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2016/03/14/Mobile/PhoneGap 实战 – 初探/';
+        this.page.identifier = '2016/03/14/Mobile/PhoneGap 实战 – 初探/';
+        this.page.title = 'PhoneGap 实战 – 初探';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//cotide.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
   
 
 
 
 
     
-  
-
 
 
 
@@ -563,12 +558,10 @@ $ cordova build
   
 
   
-    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  
 
 
-    <script type="text/javascript" src="/js/src/even.js?v=2.3.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.3.x"></script>
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
     
   </body>

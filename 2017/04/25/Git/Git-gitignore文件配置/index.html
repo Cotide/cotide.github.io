@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="Git - .gitignore文件配置"/>
+
+
+
+
+  <meta name="keywords" content="git使用,gitignore," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="https://cotide.github.io/2017/04/25/Git/Git-gitignore文件配置/"/>
+
+
+<meta name="description" content="概述
+使用gitignore文件来忽略Git跟踪的文件
+
+使用
+在Git管理的文件夹中建立.gitignore 文件,在gitignore文件的每一行指定一种过滤规则。Git通常检查gitignore从最高到最低（在一级优先，最后匹配规则决定）
+
+快速建立项目的gitignore文件
+gitignore.io － 快速建立项目.gitignore文件
+
+
+在输入框输入项目相关的操作系统、IDE、编">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git - .gitignore文件配置">
+<meta property="og:url" content="https://cotide.github.io/2017/04/25/Git/Git-gitignore文件配置/index.html">
+<meta property="og:site_name" content="xcli’s Blog">
+<meta property="og:description" content="概述
+使用gitignore文件来忽略Git跟踪的文件
+
+使用
+在Git管理的文件夹中建立.gitignore 文件,在gitignore文件的每一行指定一种过滤规则。Git通常检查gitignore从最高到最低（在一级优先，最后匹配规则决定）
+
+快速建立项目的gitignore文件
+gitignore.io － 快速建立项目.gitignore文件
+
+
+在输入框输入项目相关的操作系统、IDE、编">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1feyz7o1frkj20kc09wmxs.jpg">
+<meta property="og:updated_time" content="2017-04-25T07:59:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git - .gitignore文件配置">
+<meta name="twitter:description" content="概述
+使用gitignore文件来忽略Git跟踪的文件
+
+使用
+在Git管理的文件夹中建立.gitignore 文件,在gitignore文件的每一行指定一种过滤规则。Git通常检查gitignore从最高到最低（在一级优先，最后匹配规则决定）
+
+快速建立项目的gitignore文件
+gitignore.io － 快速建立项目.gitignore文件
+
+
+在输入框输入项目相关的操作系统、IDE、编">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1feyz7o1frkj20kc09wmxs.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: false,
+    searchPath: "/search.xml",
+    fancybox: false,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> Git - .gitignore文件配置 · xcli’s Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">xcli’s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="https://about.me/xcli">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">xcli’s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://about.me/xcli">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Git - .gitignore文件配置
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Apr 25, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速建立项目的gitignore文件"><span class="toc-text">快速建立项目的gitignore文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资源"><span class="toc-text">参考资源</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p>使用gitignore文件来忽略Git跟踪的文件</p>
+</blockquote>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><blockquote>
+<p>在Git管理的文件夹中建立.gitignore 文件,在gitignore文件的每一行指定一种过滤规则。Git通常检查gitignore从最高到最低（在一级优先，最后匹配规则决定）</p>
+</blockquote>
+<h2 id="快速建立项目的gitignore文件"><a href="#快速建立项目的gitignore文件" class="headerlink" title="快速建立项目的gitignore文件"></a>快速建立项目的gitignore文件</h2><blockquote>
+<p><a href="https://www.gitignore.io/" target="_blank" rel="external">gitignore.io</a> － 快速建立项目.gitignore文件</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1feyz7o1frkj20kc09wmxs.jpg" alt="gitignore.io"></p>
+<p>在输入框输入项目相关的操作系统、IDE、编程语言关键字搜索对应的项目gitignore文件,点击Create按钮</p>
+<p>例子：VisualStudio 的.gitignore文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># Created by https://www.gitignore.io/api/visualstudio</div><div class="line"></div><div class="line">### VisualStudio ###</div><div class="line">## Ignore Visual Studio temporary files, build results, and</div><div class="line">## files generated by popular Visual Studio add-ons.</div><div class="line">##</div><div class="line">## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore</div><div class="line"></div><div class="line"># User-specific files</div><div class="line">*.suo</div><div class="line">*.user</div><div class="line">*.userosscache</div><div class="line">*.sln.docstates</div><div class="line"></div><div class="line"># User-specific files (MonoDevelop/Xamarin Studio)</div><div class="line">*.userprefs</div><div class="line"></div><div class="line"># Build results</div><div class="line">[Dd]ebug/</div><div class="line">[Dd]ebugPublic/</div><div class="line">[Rr]elease/</div><div class="line">[Rr]eleases/</div><div class="line">x64/</div><div class="line">x86/</div><div class="line">bld/</div><div class="line">[Bb]in/</div><div class="line">[Oo]bj/</div><div class="line">[Ll]og/</div><div class="line"></div><div class="line"># Visual Studio 2015 cache/options directory</div><div class="line">.vs/</div><div class="line"># Uncomment if you have tasks that create the project&apos;s static files in wwwroot</div><div class="line">#wwwroot/</div><div class="line"></div><div class="line"># MSTest test Results</div><div class="line">[Tt]est[Rr]esult*/</div><div class="line">[Bb]uild[Ll]og.*</div><div class="line"></div><div class="line"># NUNIT</div><div class="line">*.VisualState.xml</div><div class="line">TestResult.xml</div><div class="line"></div><div class="line"># Build Results of an ATL Project</div><div class="line">[Dd]ebugPS/</div><div class="line">[Rr]eleasePS/</div><div class="line">dlldata.c</div><div class="line"></div><div class="line"># .NET Core</div><div class="line">project.lock.json</div><div class="line">project.fragment.lock.json</div><div class="line">artifacts/</div><div class="line">**/Properties/launchSettings.json</div><div class="line"></div><div class="line">*_i.c</div><div class="line">*_p.c</div><div class="line">*_i.h</div><div class="line">*.ilk</div><div class="line">*.meta</div><div class="line">*.obj</div><div class="line">*.pch</div><div class="line">*.pdb</div><div class="line">*.pgc</div><div class="line">*.pgd</div><div class="line">*.rsp</div><div class="line">*.sbr</div><div class="line">*.tlb</div><div class="line">*.tli</div><div class="line">*.tlh</div><div class="line">*.tmp</div><div class="line">*.tmp_proj</div><div class="line">*.log</div><div class="line">*.vspscc</div><div class="line">*.vssscc</div><div class="line">.builds</div><div class="line">*.pidb</div><div class="line">*.svclog</div><div class="line">*.scc</div><div class="line"></div><div class="line"># Chutzpah Test files</div><div class="line">_Chutzpah*</div><div class="line"></div><div class="line"># Visual C++ cache files</div><div class="line">ipch/</div><div class="line">*.aps</div><div class="line">*.ncb</div><div class="line">*.opendb</div><div class="line">*.opensdf</div><div class="line">*.sdf</div><div class="line">*.cachefile</div><div class="line">*.VC.db</div><div class="line">*.VC.VC.opendb</div><div class="line"></div><div class="line"># Visual Studio profiler</div><div class="line">*.psess</div><div class="line">*.vsp</div><div class="line">*.vspx</div><div class="line">*.sap</div><div class="line"></div><div class="line"># TFS 2012 Local Workspace</div><div class="line">$tf/</div><div class="line"></div><div class="line"># Guidance Automation Toolkit</div><div class="line">*.gpState</div><div class="line"></div><div class="line"># ReSharper is a .NET coding add-in</div><div class="line">_ReSharper*/</div><div class="line">*.[Rr]e[Ss]harper</div><div class="line">*.DotSettings.user</div><div class="line"></div><div class="line"># JustCode is a .NET coding add-in</div><div class="line">.JustCode</div><div class="line"></div><div class="line"># TeamCity is a build add-in</div><div class="line">_TeamCity*</div><div class="line"></div><div class="line"># DotCover is a Code Coverage Tool</div><div class="line">*.dotCover</div><div class="line"></div><div class="line"># Visual Studio code coverage results</div><div class="line">*.coverage</div><div class="line">*.coveragexml</div><div class="line"></div><div class="line"># NCrunch</div><div class="line">_NCrunch_*</div><div class="line">.*crunch*.local.xml</div><div class="line">nCrunchTemp_*</div><div class="line"></div><div class="line"># MightyMoose</div><div class="line">*.mm.*</div><div class="line">AutoTest.Net/</div><div class="line"></div><div class="line"># Web workbench (sass)</div><div class="line">.sass-cache/</div><div class="line"></div><div class="line"># Installshield output folder</div><div class="line">[Ee]xpress/</div><div class="line"></div><div class="line"># DocProject is a documentation generator add-in</div><div class="line">DocProject/buildhelp/</div><div class="line">DocProject/Help/*.HxT</div><div class="line">DocProject/Help/*.HxC</div><div class="line">DocProject/Help/*.hhc</div><div class="line">DocProject/Help/*.hhk</div><div class="line">DocProject/Help/*.hhp</div><div class="line">DocProject/Help/Html2</div><div class="line">DocProject/Help/html</div><div class="line"></div><div class="line"># Click-Once directory</div><div class="line">publish/</div><div class="line"></div><div class="line"># Publish Web Output</div><div class="line">*.[Pp]ublish.xml</div><div class="line">*.azurePubxml</div><div class="line"># TODO: Comment the next line if you want to checkin your web deploy settings</div><div class="line"># but database connection strings (with potential passwords) will be unencrypted</div><div class="line">*.pubxml</div><div class="line">*.publishproj</div><div class="line"></div><div class="line"># Microsoft Azure Web App publish settings. Comment the next line if you want to</div><div class="line"># checkin your Azure Web App publish settings, but sensitive information contained</div><div class="line"># in these scripts will be unencrypted</div><div class="line">PublishScripts/</div><div class="line"></div><div class="line"># NuGet Packages</div><div class="line">*.nupkg</div><div class="line"># The packages folder can be ignored because of Package Restore</div><div class="line">**/packages/*</div><div class="line"># except build/, which is used as an MSBuild target.</div><div class="line">!**/packages/build/</div><div class="line"># Uncomment if necessary however generally it will be regenerated when needed</div><div class="line">#!**/packages/repositories.config</div><div class="line"># NuGet v3&apos;s project.json files produces more ignorable files</div><div class="line">*.nuget.props</div><div class="line">*.nuget.targets</div><div class="line"></div><div class="line"># Microsoft Azure Build Output</div><div class="line">csx/</div><div class="line">*.build.csdef</div><div class="line"></div><div class="line"># Microsoft Azure Emulator</div><div class="line">ecf/</div><div class="line">rcf/</div><div class="line"></div><div class="line"># Windows Store app package directories and files</div><div class="line">AppPackages/</div><div class="line">BundleArtifacts/</div><div class="line">Package.StoreAssociation.xml</div><div class="line">_pkginfo.txt</div><div class="line"></div><div class="line"># Visual Studio cache files</div><div class="line"># files ending in .cache can be ignored</div><div class="line">*.[Cc]ache</div><div class="line"># but keep track of directories ending in .cache</div><div class="line">!*.[Cc]ache/</div><div class="line"></div><div class="line"># Others</div><div class="line">ClientBin/</div><div class="line">~$*</div><div class="line">*~</div><div class="line">*.dbmdl</div><div class="line">*.dbproj.schemaview</div><div class="line">*.jfm</div><div class="line">*.pfx</div><div class="line">*.publishsettings</div><div class="line">orleans.codegen.cs</div><div class="line"></div><div class="line"># Since there are multiple workflows, uncomment next line to ignore bower_components</div><div class="line"># (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)</div><div class="line">#bower_components/</div><div class="line"></div><div class="line"># RIA/Silverlight projects</div><div class="line">Generated_Code/</div><div class="line"></div><div class="line"># Backup &amp; report files from converting an old project file</div><div class="line"># to a newer Visual Studio version. Backup files are not needed,</div><div class="line"># because we have git ;-)</div><div class="line">_UpgradeReport_Files/</div><div class="line">Backup*/</div><div class="line">UpgradeLog*.XML</div><div class="line">UpgradeLog*.htm</div><div class="line"></div><div class="line"># SQL Server files</div><div class="line">*.mdf</div><div class="line">*.ldf</div><div class="line">*.ndf</div><div class="line"></div><div class="line"># Business Intelligence projects</div><div class="line">*.rdl.data</div><div class="line">*.bim.layout</div><div class="line">*.bim_*.settings</div><div class="line"></div><div class="line"># Microsoft Fakes</div><div class="line">FakesAssemblies/</div><div class="line"></div><div class="line"># GhostDoc plugin setting file</div><div class="line">*.GhostDoc.xml</div><div class="line"></div><div class="line"># Node.js Tools for Visual Studio</div><div class="line">.ntvs_analysis.dat</div><div class="line">node_modules/</div><div class="line"></div><div class="line"># Typescript v1 declaration files</div><div class="line">typings/</div><div class="line"></div><div class="line"># Visual Studio 6 build log</div><div class="line">*.plg</div><div class="line"></div><div class="line"># Visual Studio 6 workspace options file</div><div class="line">*.opt</div><div class="line"></div><div class="line"># Visual Studio 6 auto-generated workspace file (contains which files were open etc.)</div><div class="line">*.vbw</div><div class="line"></div><div class="line"># Visual Studio LightSwitch build output</div><div class="line">**/*.HTMLClient/GeneratedArtifacts</div><div class="line">**/*.DesktopClient/GeneratedArtifacts</div><div class="line">**/*.DesktopClient/ModelManifest.xml</div><div class="line">**/*.Server/GeneratedArtifacts</div><div class="line">**/*.Server/ModelManifest.xml</div><div class="line">_Pvt_Extensions</div><div class="line"></div><div class="line"># Paket dependency manager</div><div class="line">.paket/paket.exe</div><div class="line">paket-files/</div><div class="line"></div><div class="line"># FAKE - F# Make</div><div class="line">.fake/</div><div class="line"></div><div class="line"># JetBrains Rider</div><div class="line">.idea/</div><div class="line">*.sln.iml</div><div class="line"></div><div class="line"># CodeRush</div><div class="line">.cr/</div><div class="line"></div><div class="line"># Python Tools for Visual Studio (PTVS)</div><div class="line">__pycache__/</div><div class="line">*.pyc</div><div class="line"></div><div class="line"># Cake - Uncomment if you are using it</div><div class="line"># tools/**</div><div class="line"># !tools/packages.config</div><div class="line"></div><div class="line"># Telerik&apos;s JustMock configuration file</div><div class="line">*.jmconfig</div><div class="line"></div><div class="line"># BizTalk build output</div><div class="line">*.btp.cs</div><div class="line">*.btm.cs</div><div class="line">*.odx.cs</div><div class="line">*.xsd.cs</div><div class="line"></div><div class="line"># End of https://www.gitignore.io/api/visualstudio</div></pre></td></tr></table></figure>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><ul>
+<li><a href="https://git-scm.com/docs/gitignore" target="_blank" rel="external">Git Dos</a></li>
+<li><a href="https://www.gitignore.io/" target="_blank" rel="external">gitignore.io</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>作者: </span>
+      <span>xcli’s Blog</span>
+    </p>
+    <p class="copyright-item">
+      <span>来源: </span>
+      <a href="https://cotide.github.io">https://cotide.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>链接: </span>
+      <a href="https://cotide.github.io/2017/04/25/Git/Git-gitignore文件配置/">https://cotide.github.io/2017/04/25/Git/Git-gitignore文件配置/</a>
+    </p>
+
+    <p class="copyright-item lincese">
+      
+      本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/git使用/">git使用</a>
+            
+              <a href="/tags/gitignore/">gitignore</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/04/21/Linux/Linux-IPTables防火墙/">
+        <span class="next-text nav-default">Linux - IPTables 防火墙</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2012 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">xcli’s Blog</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2017/04/25/Git/Git-gitignore文件配置/';
+        this.page.identifier = '2017/04/25/Git/Git-gitignore文件配置/';
+        this.page.title = 'Git - .gitignore文件配置';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//cotide.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+  
+
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  </body>
+</html>

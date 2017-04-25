@@ -27,7 +27,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.3.x" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
 
 
 
@@ -35,25 +35,29 @@
 
 
 <meta name="description" content="概述
-iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核">
+iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。
+
+操作12345678910# 防火墙启动service iptables start# 防火墙停止service iptables stop# 防火墙重启service iptables reload# 将临时命令 写入配置文件中service iptables s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux - IPTables 防火墙">
 <meta property="og:url" content="https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/index.html">
 <meta property="og:site_name" content="xcli’s Blog">
 <meta property="og:description" content="概述
-iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核">
-<meta property="og:updated_time" content="2017-04-21T06:05:54.000Z">
+iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。
+
+操作12345678910# 防火墙启动service iptables start# 防火墙停止service iptables stop# 防火墙重启service iptables reload# 将临时命令 写入配置文件中service iptables s">
+<meta property="og:updated_time" content="2017-04-21T06:07:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux - IPTables 防火墙">
 <meta name="twitter:description" content="概述
-iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核">
+iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。
+
+操作12345678910# 防火墙启动service iptables start# 防火墙停止service iptables stop# 防火墙重启service iptables reload# 将临时命令 写入配置文件中service iptables s">
 
 
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
 
 
-
-  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
 
 
 
@@ -61,9 +65,9 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
 
 <script>
   var CONFIG = {
-    search: ,
+    search: false,
     searchPath: "/search.xml",
-    fancybox: true,
+    fancybox: false,
     toc: true,
   }
 </script>
@@ -216,7 +220,7 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
     <div class="post-content">
       
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
-<p>iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分的Linux系统上面，iptables是使用/usr/sbin/iptables来操作，文件则放置在手册页（Man page[2]）底下，可以通过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核层级里面iptables API运作功能的模块。</p>
+<p>iptables，一个运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。</p>
 </blockquote>
 <figure class="highlight plain"><figcaption><span>操作</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 防火墙启动</div><div class="line">service iptables start</div><div class="line"># 防火墙停止</div><div class="line">service iptables stop</div><div class="line"># 防火墙重启</div><div class="line">service iptables reload</div><div class="line"># 将临时命令 写入配置文件中</div><div class="line">service iptables save</div><div class="line"># 显示所有运行级系统服务 (iptables) 的运行状态信息(on或off).</div><div class="line">chkconfig --list iptables</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 查看防火墙状态</div><div class="line">$ /etc/init.d/iptables status</div><div class="line"></div><div class="line"># 修改防火墙配置规则</div><div class="line">$ vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
@@ -233,15 +237,15 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>Author: </span>
+      <span>作者: </span>
       <span>xcli’s Blog</span>
     </p>
     <p class="copyright-item">
-      <span>Origin: </span>
+      <span>来源: </span>
       <a href="https://cotide.github.io">https://cotide.github.io</a>
     </p>
     <p class="copyright-item">
-      <span>Link: </span>
+      <span>链接: </span>
       <a href="https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/">https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/</a>
     </p>
 
@@ -257,7 +261,7 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
       
   <div class="post-reward">
     <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">Reward</label>
+    <label class="reward-button" for="reward">赞赏支持</label>
     <div class="qr-code">
       
       
@@ -290,6 +294,12 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
         
   <nav class="post-nav">
     
+      <a class="prev" href="/2017/04/25/Git/Git-gitignore文件配置/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Git - .gitignore文件配置</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
     
       <a class="next" href="/2017/04/11/Linux/Linux - Terminal (终端) 内容显示不全问题/">
         <span class="next-text nav-default">Linux - Terminal (终端) 内容显示不全问题</span>
@@ -309,6 +319,13 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
           
   <div class="comments" id="comments">
     
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
   </div>
 
 
@@ -320,43 +337,19 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
   <div class="social-links">
     
       
-        
-          <a href="mailto:xcli.code@gmail.com" class="iconfont icon-email" title="email"></a>
-        
+    
+      
+    
       
     
       
     
       
-        
-          <a href="https://twitter.com/xiaochaoli" class="iconfont icon-twitter" title="twitter"></a>
-        
-      
-    
-      
-        
-          <a href="https://www.facebook.com/xcli.net" class="iconfont icon-facebook" title="facebook"></a>
-        
-      
-    
-      
-        
-          <a href="http://www.linkedin.com/in/xiaochaoli" class="iconfont icon-linkedin" title="linkedin"></a>
-        
-      
     
       
     
       
-        
-          <a href="https://github.com/Cotide" class="iconfont icon-github" title="github"></a>
-        
-      
     
-      
-        
-          <a href="http://weibo.com/silencenet" class="iconfont icon-weibo" title="weibo"></a>
-        
       
     
       
@@ -403,14 +396,28 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
   
 
   
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2017/04/21/Linux/Linux-IPTables防火墙/';
+        this.page.identifier = '2017/04/21/Linux/Linux-IPTables防火墙/';
+        this.page.title = 'Linux - IPTables 防火墙';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//cotide.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
   
 
 
 
 
     
-  
-
 
 
 
@@ -424,12 +431,10 @@ iptables，一个运行在用户空间的应用软件，通过控制Linux内核n
   
 
   
-    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  
 
 
-    <script type="text/javascript" src="/js/src/even.js?v=2.3.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.3.x"></script>
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
     
   </body>

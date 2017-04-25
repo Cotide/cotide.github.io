@@ -27,7 +27,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.3.x" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
 
 
 
@@ -95,11 +95,9 @@ MySQL数据库压测
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7ly1fdgrvkrtahj20jx0fjq5i">
 
 
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.x" />
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
 
 
-
-  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
 
 
 
@@ -107,9 +105,9 @@ MySQL数据库压测
 
 <script>
   var CONFIG = {
-    search: ,
+    search: false,
     searchPath: "/search.xml",
-    fancybox: true,
+    fancybox: false,
     toc: true,
   }
 </script>
@@ -385,15 +383,15 @@ MySQL数据库压测
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>Author: </span>
+      <span>作者: </span>
       <span>xcli’s Blog</span>
     </p>
     <p class="copyright-item">
-      <span>Origin: </span>
+      <span>来源: </span>
       <a href="https://cotide.github.io">https://cotide.github.io</a>
     </p>
     <p class="copyright-item">
-      <span>Link: </span>
+      <span>链接: </span>
       <a href="https://cotide.github.io/2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/">https://cotide.github.io/2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/</a>
     </p>
 
@@ -409,7 +407,7 @@ MySQL数据库压测
       
   <div class="post-reward">
     <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">Reward</label>
+    <label class="reward-button" for="reward">赞赏支持</label>
     <div class="qr-code">
       
       
@@ -469,6 +467,13 @@ MySQL数据库压测
           
   <div class="comments" id="comments">
     
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
   </div>
 
 
@@ -480,43 +485,19 @@ MySQL数据库压测
   <div class="social-links">
     
       
-        
-          <a href="mailto:xcli.code@gmail.com" class="iconfont icon-email" title="email"></a>
-        
+    
+      
+    
       
     
       
     
       
-        
-          <a href="https://twitter.com/xiaochaoli" class="iconfont icon-twitter" title="twitter"></a>
-        
-      
-    
-      
-        
-          <a href="https://www.facebook.com/xcli.net" class="iconfont icon-facebook" title="facebook"></a>
-        
-      
-    
-      
-        
-          <a href="http://www.linkedin.com/in/xiaochaoli" class="iconfont icon-linkedin" title="linkedin"></a>
-        
-      
     
       
     
       
-        
-          <a href="https://github.com/Cotide" class="iconfont icon-github" title="github"></a>
-        
-      
     
-      
-        
-          <a href="http://weibo.com/silencenet" class="iconfont icon-weibo" title="weibo"></a>
-        
       
     
       
@@ -563,14 +544,28 @@ MySQL数据库压测
   
 
   
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/';
+        this.page.identifier = '2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/';
+        this.page.title = '性能测试工具-Apache JMeter (数据库测试配置)';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//cotide.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
   
 
 
 
 
     
-  
-
 
 
 
@@ -584,12 +579,10 @@ MySQL数据库压测
   
 
   
-    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  
 
 
-    <script type="text/javascript" src="/js/src/even.js?v=2.3.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.3.x"></script>
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
     
   </body>
