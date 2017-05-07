@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="java学习笔记，关于Maven使用收集的资料"/>
+
+
+
+
+  <meta name="keywords" content="Hello World,Maven," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="https://cotide.github.io/2017/05/07/Java/JAVA - Apache Maven/"/>
+
+
+<meta name="description" content="java学习笔记，关于Maven使用收集的资料">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA - Apache Maven">
+<meta property="og:url" content="https://cotide.github.io/2017/05/07/Java/JAVA - Apache Maven/index.html">
+<meta property="og:site_name" content="xcli’s Blog">
+<meta property="og:description" content="java学习笔记，关于Maven使用收集的资料">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff8bp99l07j20hd08daav.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9491n49hj20bl0cugmv.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff8c4dtl1lj20it0aymy0.jpg">
+<meta property="og:updated_time" content="2017-05-07T05:59:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JAVA - Apache Maven">
+<meta name="twitter:description" content="java学习笔记，关于Maven使用收集的资料">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff8bp99l07j20hd08daav.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: false,
+    searchPath: "/search.xml",
+    fancybox: false,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> JAVA - Apache Maven · xcli’s Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">xcli’s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="https://about.me/xcli">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">xcli’s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://about.me/xcli">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          JAVA - Apache Maven
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          May 7, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统要求"><span class="toc-text">系统要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下载"><span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Window"><span class="toc-text">安装 (Window)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-（Mac-OS）"><span class="toc-text">安装 （Mac OS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven-仓库"><span class="toc-text">Maven 仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#POM-介绍"><span class="toc-text">POM 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POM-配置介绍"><span class="toc-text">POM 配置介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven国内镜像"><span class="toc-text">Maven国内镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Intellij-IDEA-转换成-Maven项目"><span class="toc-text">Intellij IDEA 转换成 Maven项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomcat-Maven-插件"><span class="toc-text">Tomcat Maven 插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p>Apache Maven 是项目管理及自动构建工具，由Apache软件基金会所提供。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。</p>
+</blockquote>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h3><ul>
+<li><p>Maven 3.3+ 的版本需要 JDK1.7以上版本支持</p>
+</li>
+<li><p>最少为10MB，另外需要额外的磁盘空间建立Maven仓库，本地存储大少取决与你的Maven仓库，建议至少500MB空间</p>
+</li>
+</ul>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>访问 <a href="http://maven.apache.org/download.cgi#" target="_blank" rel="external">Apache Maven 官方 </a> 下载并解压，为了方便这边把文件重命名为”Maven3.5” </p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff8bp99l07j20hd08daav.jpg" alt="Maven 程序"></p>
+<h3 id="安装-Window"><a href="#安装-Window" class="headerlink" title="安装 (Window)"></a>安装 (Window)</h3><ul>
+<li>配置好JAVA环境变量JAVA_HOME,可以使用一下命令来检测java运行环境是否配置完成</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ java -version</div></pre></td></tr></table></figure>
+<p>Maven 环境变量配置,在系统变量Path中 追加Maven的/bin目录，然后使用检查命检测安装情况</p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9491n49hj20bl0cugmv.jpg" alt="Maven 环境变量配置"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mvn -v</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff8c4dtl1lj20it0aymy0.jpg" alt="mvn 运行版本"></p>
+<h3 id="安装-（Mac-OS）"><a href="#安装-（Mac-OS）" class="headerlink" title="安装 （Mac OS）"></a>安装 （Mac OS）</h3><p>1.安装 HomeBrew</p>
+<p>访问<a href="https://brew.sh/" target="_blank" rel="external">HomeBrew</a>，在terminal(终端)输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
+<p>2.使用brew 安装Maven<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 安装 maven</div><div class="line">$ brew install maven</div><div class="line"></div><div class="line"># 检查maven 版本</div><div class="line">$ mvn -v</div></pre></td></tr></table></figure></p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Maven 语法</div><div class="line">$ mvn [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;]</div><div class="line"></div><div class="line"># 查询Maven help 说明</div><div class="line">$ mvn -h</div></pre></td></tr></table></figure>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><p>可以通过访问 <a href="https://mvnrepository.com" target="_blank" rel="external">https://mvnrepository.com</a> 找到你想引用的第三方组件的POM信息追加到项目里的POM.XML</p>
+<h3 id="POM-介绍"><a href="#POM-介绍" class="headerlink" title="POM 介绍"></a>POM 介绍</h3><blockquote>
+<p>Maven 工作基于 pom.xml 文件来编译项目,关于<a href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html" target="_blank" rel="external">POM介绍</a></p>
+</blockquote>
+<h3 id="POM-配置介绍"><a href="#POM-配置介绍" class="headerlink" title="POM 配置介绍"></a>POM 配置介绍</h3><blockquote>
+<p><a href="https://maven.apache.org/settings.html" target="_blank" rel="external">https://maven.apache.org/settings.html</a></p>
+</blockquote>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="Maven国内镜像"><a href="#Maven国内镜像" class="headerlink" title="Maven国内镜像"></a>Maven国内镜像</h3><blockquote>
+<p><a href="http://maven.aliyun.com/nexus/" target="_blank" rel="external">阿里云Maven仓镜像</a></p>
+<p>修改Settings 加速Maven 的加载包的速度  <a href="http://www.cnblogs.com/geektown/p/5705405.html" target="_blank" rel="external">http://www.cnblogs.com/geektown/p/5705405.html</a></p>
+</blockquote>
+<h3 id="Intellij-IDEA-转换成-Maven项目"><a href="#Intellij-IDEA-转换成-Maven项目" class="headerlink" title="Intellij IDEA 转换成 Maven项目"></a>Intellij IDEA 转换成 Maven项目</h3><blockquote>
+<p>项目上右键 Add Framework Support，选择maven</p>
+</blockquote>
+<h3 id="Tomcat-Maven-插件"><a href="#Tomcat-Maven-插件" class="headerlink" title="Tomcat Maven 插件"></a>Tomcat Maven 插件</h3><blockquote>
+<p><a href="http://tomcat.apache.org/maven-plugin.html" target="_blank" rel="external">使用maven 运行Tomcat</a> </p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://maven.apache.org" target="_blank" rel="external">Apache Maven 官方</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/2017.1/maven.html" target="_blank" rel="external">Apache Maven Help</a></li>
+<li><a href="https://zh.wikipedia.org/zh-hans/Apache_Maven" target="_blank" rel="external">Apache Maven 维基百科</a></li>
+<li><a href="http://www.jianshu.com/p/1eff16f60297" target="_blank" rel="external">Maven 使用教程</a></li>
+<li><a href="https://mvnrepository.com" target="_blank" rel="external">MVN Repository</a></li>
+<li><a href="http://www.infoq.com/cn/maven-practice" target="_blank" rel="external">Maven 实战</a></li>
+<li><a href="http://www.infoq.com/cn/news/2011/06/xxb-maven-9-package?utm_source=news_about_maven-practice&amp;utm_medium=link&amp;utm_campaign=maven-practice" target="_blank" rel="external">Maven 打包</a></li>
+<li><a href="http://mark.leanote.com/post/%E4%BD%BF%E7%94%A8IntelliJ-IDEA-14%E5%92%8CMaven%E5%88%9B%E5%BB%BAjava-web%E9%A1%B9%E7%9B%AE" target="_blank" rel="external">IntelliJ IDEA 14 Maven项目创建</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>作者: </span>
+      <span>xcli’s Blog</span>
+    </p>
+    <p class="copyright-item">
+      <span>来源: </span>
+      <a href="https://cotide.github.io">https://cotide.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>链接: </span>
+      <a href="https://cotide.github.io/2017/05/07/Java/JAVA - Apache Maven/">https://cotide.github.io/2017/05/07/Java/JAVA - Apache Maven/</a>
+    </p>
+
+    <p class="copyright-item lincese">
+      
+      本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Hello-World/">Hello World</a>
+            
+              <a href="/tags/Maven/">Maven</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/05/03/Java/JAVA学习 - 笔记1/">
+        <span class="next-text nav-default">Java 学习 - 笔记1</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2012 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">xcli’s Blog</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2017/05/07/Java/JAVA - Apache Maven/';
+        this.page.identifier = '2017/05/07/Java/JAVA - Apache Maven/';
+        this.page.title = 'JAVA - Apache Maven';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//xclis-blog.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+  
+
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  </body>
+</html>
