@@ -12,12 +12,10 @@
 
 
 
-  <meta name="description" content="Elmah框架，添加日志文件访问权限"/>
+  <meta name="description" content="xcli’s Blog"/>
 
 
 
-
-  <meta name="keywords" content="C#,日志框架," />
 
 
 
@@ -31,21 +29,18 @@
 
 
 
-<link rel="canonical" href="https://cotide.github.io/2012/12/10/Csharp/Elmah权限控制/"/>
+<link rel="canonical" href="https://cotide.github.io/page/3/"/>
 
 
-<meta name="description" content="Elmah 简述 ELMAH（The Error Logging Modules And Handlers），直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Elmah框架，添加日志文件访问权限">
-<meta property="og:url" content="https://cotide.github.io/2012/12/10/Csharp/Elmah权限控制/index.html">
+<meta name="description" content="xcli’s Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xcli’s Blog">
+<meta property="og:url" content="https://cotide.github.io/page/3/index.html">
 <meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="Elmah 简述 ELMAH（The Error Logging Modules And Handlers），直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP">
-<meta property="og:image" content="http://7nj0oy.com1.z0.glb.clouddn.com/hexo_blog_20121210233731_5479.jpg">
-<meta property="og:updated_time" content="2017-04-07T16:05:56.000Z">
+<meta property="og:description" content="xcli’s Blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Elmah框架，添加日志文件访问权限">
-<meta name="twitter:description" content="Elmah 简述 ELMAH（The Error Logging Modules And Handlers），直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP">
-<meta name="twitter:image" content="http://7nj0oy.com1.z0.glb.clouddn.com/hexo_blog_20121210233731_5479.jpg">
+<meta name="twitter:title" content="xcli’s Blog">
+<meta name="twitter:description" content="xcli’s Blog">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
@@ -72,7 +67,7 @@
 
 
 
-    <title> Elmah框架，添加日志文件访问权限 · xcli’s Blog </title>
+    <title> xcli’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -184,12 +179,14 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  
+  <section id="posts" class="posts">
+    
+      
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
         
-          Elmah框架，添加日志文件访问权限
+          <a class="post-link" href="/2012/12/10/Csharp/Elmah权限控制/">Elmah框架，添加日志文件访问权限</a>
         
       </h1>
 
@@ -202,17 +199,14 @@
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Elmah-简述"><span class="toc-text">Elmah 简述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elmah-配置"><span class="toc-text">Elmah 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web-config-代码块"><span class="toc-text">web.config 代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#请求处理配置："><span class="toc-text">请求处理配置：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
-
 
     <div class="post-content">
       
-        <h2 id="Elmah-简述"><a href="#Elmah-简述" class="headerlink" title="Elmah 简述"></a>Elmah 简述</h2><p> <strong>ELMAH（The Error Logging Modules And Handlers）</strong>，直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP.NET应用程序的错误日志记录工作。它支持日志的多种存储方式（各种数据库、XML、内存存储），除了提供一个界面用于查询日志详细信息外，还可以通过E-MAIL、RSS订阅或Twitter发布方式通知错误信息给相关人员。</p>
+        
+        
+
+        
+          <h2 id="Elmah-简述"><a href="#Elmah-简述" class="headerlink" title="Elmah 简述"></a>Elmah 简述</h2><p> <strong>ELMAH（The Error Logging Modules And Handlers）</strong>，直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP.NET应用程序的错误日志记录工作。它支持日志的多种存储方式（各种数据库、XML、内存存储），除了提供一个界面用于查询日志详细信息外，还可以通过E-MAIL、RSS订阅或Twitter发布方式通知错误信息给相关人员。</p>
 <p><img src="http://7nj0oy.com1.z0.glb.clouddn.com/hexo_blog_20121210233731_5479.jpg" alt="Elmah框架，添加日志文件访问权限"></p>
 <h2 id="Elmah-配置"><a href="#Elmah-配置" class="headerlink" title="Elmah 配置"></a>Elmah 配置</h2><h3 id="web-config-代码块"><a href="#web-config-代码块" class="headerlink" title="web.config 代码块"></a><strong>web.config</strong> 代码块</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">configSections</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Elmah日志记录插件 配置 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">sectionGroup</span> <span class="attr">name</span>=<span class="string">"elmah"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"security"</span> <span class="attr">type</span>=<span class="string">"Elmah.SecuritySectionHandler, Elmah"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"errorLog"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogSectionHandler, Elmah"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!-- &lt;section name="errorMail" type="Elmah.ErrorMailSectionHandler, Elmah"/&gt; --&gt;</span></div><div class="line">	<span class="comment">&lt;!--  &lt;section name="errorFilter"  type="Elmah.ErrorFilterSectionHandler, Elmah"/&gt; --&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">sectionGroup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">configSections</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Elmah日志记录插件 配置 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">elmah</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 是否允许远程访问。0代表否、1代表是 &lt;security allowRemoteAccess="1" /&gt; --&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 错误邮件发送 配置  from: 用于发送的邮箱 to: 发送到的终端邮箱地址，多个用','分隔  subiect: 标题  async: 是否异步方式 smtpPort: SMTP端口 smtpServer:  SMTP服务地址 userName: 邮箱账号 password: 邮箱密码 noYsod: 邮件中是否包含附件 --&gt;</span> <span class="comment">&lt;!-- &lt;errorMail from="test@test.com"  to="huangyuan413026@163.com,364965519@qq.com"   subject="系统出错...."  async="true" smtpPort="25" smtpServer="mail.test.com" userName="test@test.com" password="*****" noYsod="true|false" /&gt; &lt;/elmah&gt; --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">errorLog</span> <span class="attr">type</span>=<span class="string">"Elmah.AccessErrorLog, Elmah"</span> <span class="attr">connectionString</span>=<span class="string">"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|Elmah.mdb"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">elmah</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="请求处理配置："><a href="#请求处理配置：" class="headerlink" title="请求处理配置："></a>请求处理配置：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">httpModules</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">"ErrorLog"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogModule, Elmah"</span>/&gt;</span> </div><div class="line"> <span class="tag">&lt;/<span class="name">httpModules</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">httpHandlers</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">add</span> <span class="attr">verb</span>=<span class="string">"POST,GET,HEAD"</span> <span class="attr">path</span>=<span class="string">"webLog.axd"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogPageFactory, Elmah"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">httpHandlers</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -229,100 +223,33 @@
 <li><a href="http://code.google.com/p/elmah/" target="_blank" rel="external">Elmah (http://code.google.com/p/elmah/) </a> </li>
 </ul>
 
+        
       
     </div>
 
     
-      
-      
-
-  <div class="post-copyright">
-    <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
-    </p>
-    <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
-      <a href="https://cotide.github.io/2012/12/10/Csharp/Elmah权限控制/">https://cotide.github.io/2012/12/10/Csharp/Elmah权限控制/</a>
-    </p>
-
-    <p class="copyright-item lincese">
-      
-      本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
-    </p>
-  </div>
-
-
-
-      
-      
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
 
     
 
+  </article>
+
     
-      <footer class="post-footer">
-        
-          <div class="post-tags">
-            
-              <a href="/tags/C/">C#</a>
-            
-              <a href="/tags/日志框架/">日志框架</a>
-            
-          </div>
-        
-        
-        
-  <nav class="post-nav">
+  </section>
+
+  
+  <nav class="pagination">
     
-      <a class="prev" href="/2016/02/14/Csharp/Dapper-扩展/">
+      <a class="prev" href="/page/2/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Dapper使用</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text">Prev</span>
       </a>
     
     
   </nav>
 
-      </footer>
-    
-
-  </article>
-
 
           </div>
           
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
 
         </div>  
       </main>
@@ -388,28 +315,6 @@
     </div>
 
     
-  
-
-  
-  <script type="text/javascript">
-    var disqus_config = function () {
-        this.page.url = 'https://cotide.github.io/2012/12/10/Csharp/Elmah权限控制/';
-        this.page.identifier = '2012/12/10/Csharp/Elmah权限控制/';
-        this.page.title = 'Elmah框架，添加日志文件访问权限';
-    };
-    (function() {
-    var d = document, s = d.createElement('script');
-
-    s.src = '//xclis-blog.disqus.com/embed.js';
-
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();  
-  </script>
-
-  
-
-
 
 
     
