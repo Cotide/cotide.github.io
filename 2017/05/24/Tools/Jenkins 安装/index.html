@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="在CentOS中Jenkins安装笔记"/>
+
+
+
+
+  <meta name="keywords" content="Jenkins," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="https://cotide.github.io/2017/05/24/Tools/Jenkins 安装/"/>
+
+
+<meta name="description" content="在CentOS中Jenkins安装笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins 安装">
+<meta property="og:url" content="https://cotide.github.io/2017/05/24/Tools/Jenkins 安装/index.html">
+<meta property="og:site_name" content="xcli’s Blog">
+<meta property="og:description" content="在CentOS中Jenkins安装笔记">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm71wv4u7j20qp0jvaby.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm79jpgewj20q80m6gni.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm7av7vtnj20q80m60ud.jpg">
+<meta property="og:updated_time" content="2017-05-24T15:49:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jenkins 安装">
+<meta name="twitter:description" content="在CentOS中Jenkins安装笔记">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm71wv4u7j20qp0jvaby.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: false,
+    searchPath: "/search.xml",
+    fancybox: false,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> Jenkins 安装 · xcli’s Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">xcli’s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="https://about.me/xcli">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">xcli’s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://about.me/xcli">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Jenkins 安装
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          May 24, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简述"><span class="toc-text">简述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux系统"><span class="toc-text">Linux系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#实战环境"><span class="toc-text">实战环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#操作"><span class="toc-text">操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Window系统"><span class="toc-text">Window系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#etc-sysconfig-jenkins-配置"><span class="toc-text">/etc/sysconfig/jenkins 配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><blockquote>
+<p>Jenkins是一个用Java编写的开源的持续集成工具</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Linux系统"><a href="#Linux系统" class="headerlink" title="Linux系统"></a>Linux系统</h3><h4 id="实战环境"><a href="#实战环境" class="headerlink" title="实战环境"></a>实战环境</h4><ul>
+<li>Centos 7</li>
+<li>Java 8</li>
+</ul>
+<h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><blockquote>
+<p>查看官方资料，找到一下命令,这里需要用到wget包没有则</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装wget</div><div class="line">$ yum -y install wget</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 创建目录，我创建在/usr/lib/jenkins 下</div><div class="line">$ mkdir /usr/lib/jenkins</div><div class="line"></div><div class="line"># 下载Jenkins</div><div class="line">$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo</div><div class="line">$ sudo rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key</div><div class="line"></div><div class="line"># 安装Jenkins</div><div class="line">$ sudo yum install jenkins</div><div class="line"></div><div class="line"># Jenkins 启动/禁止</div><div class="line">$ sudo service jenkins start</div><div class="line">$ sudo service jenkins stop</div></pre></td></tr></table></figure>
+<blockquote>
+<p>除了这种方式还可以手动下载.war文件进行部署,更多版本可以查看<br><a href="https://updates.jenkins-ci.org/download/war" target="_blank" rel="external">https://updates.jenkins-ci.org/download/war</a></p>
+</blockquote>
+<h3 id="Window系统"><a href="#Window系统" class="headerlink" title="Window系统"></a>Window系统</h3><p>访问<a href="https://jenkins.io" target="_blank" rel="external">Jenkins官方</a>,下载Window版本的安装包,直接运行msi文件安装</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><blockquote>
+<p>Jenkins安装目录: /var/lib/jenkins/</p>
+<p>Jenkins配置文件位置：/etc/sysconfig/jenkins</p>
+</blockquote>
+<h4 id="etc-sysconfig-jenkins-配置"><a href="#etc-sysconfig-jenkins-配置" class="headerlink" title="/etc/sysconfig/jenkins 配置"></a>/etc/sysconfig/jenkins 配置</h4><p>JENKINS_PORT 是Jenkins的端口，默认端口是8080。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">## Type:        integer(0:65535)  </div><div class="line">## Default:     8080</div><div class="line">## ServiceRestart: jenkins</div><div class="line">#</div><div class="line"># Port Jenkins is listening on.</div><div class="line"># Set to -1 to disable</div><div class="line">#</div><div class="line">JENKINS_PORT=&quot;8080&quot;</div></pre></td></tr></table></figure>
+<p>修改后记得重启服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo service jenkins restart</div></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm71wv4u7j20qp0jvaby.jpg" alt="jenkins使用"></p>
+<p>查看initialAdminPassword文件查询密钥，粘贴到输入框进行验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat /var/lib/jenkins/secrets/initialAdminPassword</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Window系统位置：F:\Program Files (x86)\Jenkins\secrets</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm79jpgewj20q80m6gni.jpg" alt="jenkins 插件安装"></p>
+<p>接着就是插件安装，可以选择自动安装和手动安装,默认就好了。</p>
+<p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffm7av7vtnj20q80m60ud.jpg" alt="Jenkins 安装"></p>
+<p>现在已经完成了Jenkins的安装了</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://jenkins.io/" target="_blank" rel="external">Jenkins -官方</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Jenkins_(%E8%BD%AF%E4%BB%B6" target="_blank" rel="external">Jenkins - 维基百科</a>)</li>
+<li><a href="https://www.vultr.com/docs/how-to-install-jenkins-on-centos-7" target="_blank" rel="external">How to Install Jenkins on CentOS 7</a></li>
+<li><a href="http://pkg.jenkins-ci.org/redhat-stable/" target="_blank" rel="external">RedHat Linux RPM packages for Jenkins</a></li>
+<li><a href="http://www.cnblogs.com/endoresu/p/5035384.html" target="_blank" rel="external">CentOs 7用ss命令来查看端口占用和对应进程</a></li>
+<li><a href="https://segmentfault.com/a/1190000004639325" target="_blank" rel="external">CentOs 安装Jenkins</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>作者: </span>
+      <span>xcli’s Blog</span>
+    </p>
+    <p class="copyright-item">
+      <span>来源: </span>
+      <a href="https://cotide.github.io">https://cotide.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>链接: </span>
+      <a href="https://cotide.github.io/2017/05/24/Tools/Jenkins 安装/">https://cotide.github.io/2017/05/24/Tools/Jenkins 安装/</a>
+    </p>
+
+    <p class="copyright-item lincese">
+      
+      本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Jenkins/">Jenkins</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/05/24/Mysql/CentOS 7 - Mysql安装/">
+        <span class="next-text nav-default">CentOS 7 - Mysql安装</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2012 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">xcli’s Blog</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2017/05/24/Tools/Jenkins 安装/';
+        this.page.identifier = '2017/05/24/Tools/Jenkins 安装/';
+        this.page.title = 'Jenkins 安装';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//xclis-blog.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+  
+
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  </body>
+</html>
