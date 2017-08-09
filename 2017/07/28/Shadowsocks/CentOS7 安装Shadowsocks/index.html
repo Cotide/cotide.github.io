@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="在Centos7 下用Python快速安装Shadowsocks"/>
+
+
+
+
+  <meta name="keywords" content="Shadowsocks," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x" />
+
+
+
+<link rel="canonical" href="https://cotide.github.io/2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/"/>
+
+
+<meta name="description" content="在Centos7 下用Python快速安装Shadowsocks">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7 安装Shadowsocks">
+<meta property="og:url" content="https://cotide.github.io/2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/index.html">
+<meta property="og:site_name" content="xcli’s Blog">
+<meta property="og:description" content="在Centos7 下用Python快速安装Shadowsocks">
+<meta property="og:updated_time" content="2017-08-09T11:37:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS7 安装Shadowsocks">
+<meta name="twitter:description" content="在Centos7 下用Python快速安装Shadowsocks">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: false,
+    searchPath: "/search.xml",
+    fancybox: false,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> CentOS7 安装Shadowsocks · xcli’s Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">xcli’s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="https://about.me/xcli">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">xcli’s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://about.me/xcli">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          CentOS7 安装Shadowsocks
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jul 28, 2017
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS7"><span class="toc-text">CentOS7</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Shell命令"><span class="toc-text">Shell命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到的问题"><span class="toc-text">遇到的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件代理"><span class="toc-text">软件代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>shadowsocks是一种基于Socks5代理方式的网络数据加密传输包，并采用Apache许可证、GPL、MIT许可证等多种自由软件许可协议开放源代码。shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。目前包使用Python、C、C++、C#、Go语言等编程语言开发</p>
+</blockquote>
+<h2 id="CentOS7"><a href="#CentOS7" class="headerlink" title="CentOS7"></a>CentOS7</h2><h3 id="Shell命令"><a href="#Shell命令" class="headerlink" title="Shell命令"></a>Shell命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 加载需要的包</div><div class="line">$ sudo yum -y update</div><div class="line">$ sudo yum -y install yum-utils</div><div class="line">$ sudo yum -y groupinstall development</div><div class="line"></div><div class="line"># 安装Python3.6</div><div class="line">$ sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm</div><div class="line">$ sudo yum -y install python36u</div><div class="line"></div><div class="line"># 检查版本 Output Python 3.6.1</div><div class="line">$ python3.6 -V </div><div class="line"></div><div class="line"># 安装包管理</div><div class="line">$ sudo yum -y install python36u-pip</div><div class="line"></div><div class="line"># 安装shadowsocks</div><div class="line">$ sudo pip3.6 --force-reinstall install shadowsocks </div><div class="line"></div><div class="line"># 启动shadowsocks服务</div><div class="line">$ sudo ssserver -p 8888 -k 888888 -m rc4-md5 --workers 10 --pid-file /tmp/ss.pid --log-file /tmp/ss.log   -v -d start</div><div class="line"></div><div class="line"># 停止shadowsocks服务</div><div class="line">$ sudo service  ssserver stop</div><div class="line"># 启动shadowsocks服务</div><div class="line">$ sudo service  ssserver start</div></pre></td></tr></table></figure>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>pip3.6: command not found</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo yum install python34</div></pre></td></tr></table></figure>
+<h2 id="软件代理"><a href="#软件代理" class="headerlink" title="软件代理"></a>软件代理</h2><blockquote>
+<p><a href="https://www.proxifier.com" target="_blank" rel="external">Proxifier</a>是一款功能非常强大的socks5客户端，可以让不支持通过代理服务器工作的网络程序能通过HTTPS或SOCKS代理或代理链。</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://blog.phpgao.com/shadowsocks_on_linux.html" target="_blank" rel="external">使用shadowsocks轻松搭建翻墙环境教程</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-centos-7" target="_blank" rel="external">How To Install Python 3 and Set Up a Local Programming Environment on CentOS 7</a></li>
+<li><a href="https://www.proxifier.com" target="_blank" rel="external">Proxifier</a> </li>
+<li><a href="https://github.com/shadowsocks/shadowsocks/wiki/%E7%94%A8-Supervisor-%E8%BF%90%E8%A1%8C-Shadowsocks" target="_blank" rel="external">用 Supervisor 运行 Shadowsocks</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>作者: </span>
+      <span>xcli’s Blog</span>
+    </p>
+    <p class="copyright-item">
+      <span>来源: </span>
+      <a href="https://cotide.github.io">https://cotide.github.io</a>
+    </p>
+    <p class="copyright-item">
+      <span>链接: </span>
+      <a href="https://cotide.github.io/2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/">https://cotide.github.io/2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/</a>
+    </p>
+
+    <p class="copyright-item lincese">
+      
+      本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Shadowsocks/">Shadowsocks</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/08/01/Cache/Redis  使用/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Redis 使用</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2017/05/28/Tools/Jenkins 使用/">
+        <span class="next-text nav-default">Jenkins 使用</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2012 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">xcli’s Blog</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://cotide.github.io/2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/';
+        this.page.identifier = '2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/';
+        this.page.title = 'CentOS7 安装Shadowsocks';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//xclis-blog.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+  
+
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  </body>
+</html>
