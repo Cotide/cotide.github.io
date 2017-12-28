@@ -895,6 +895,7 @@ h6 {
       .post .post-copyright .copyright-item a {
         text-decoration: underline; }
   .post .post-reward {
+	  display:none;
     margin-top: 20px;
     padding-top: 10px;
     text-align: center;
