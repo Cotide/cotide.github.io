@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="Mac OS 环境变量设置"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="Mac OS," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,37 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2016/08/19/Mac/Mac 命令－ 环境变量设置/"/>
 
 
-<meta name="description" content="Mac OS 环境变量设置
-环境变量（environment variables）
 
-一般是指在操作系统中用来指定操作系统运行环境的一些参数配置。
-环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息。例如:Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到pa">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS 环境变量设置">
-<meta property="og:url" content="https://cotide.github.io/2016/08/19/Mac/Mac 命令－ 环境变量设置/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="Mac OS 环境变量设置
-环境变量（environment variables）
 
-一般是指在操作系统中用来指定操作系统运行环境的一些参数配置。
-环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息。例如:Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到pa">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5sfc40phvj20fu0a60sw.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f5sg7suz98j20fu0a6aal.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f5sg94fy9bj20fu0a63zi.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5sh2472h1j20fu0a60tx.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5sh454b1nj20fu0a6q3f.jpg">
-<meta property="og:updated_time" content="2016-08-20T15:46:26.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS 环境变量设置">
-<meta name="twitter:description" content="Mac OS 环境变量设置
-环境变量（environment variables）
 
-一般是指在操作系统中用来指定操作系统运行环境的一些参数配置。
-环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息。例如:Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到pa">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5sfc40phvj20fu0a60sw.jpg">
+
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -73,27 +82,15 @@
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> Mac OS 环境变量设置 · xcli’s Blog </title>
+    <title> Mac OS 环境变量设置 - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -109,7 +106,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -118,7 +115,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -127,7 +124,7 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -136,7 +133,7 @@
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -146,7 +143,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -157,7 +154,7 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -166,7 +163,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -175,7 +172,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -184,11 +181,10 @@
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -211,19 +207,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Aug 19, 2016
+          2016-08-19
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Mac-应用/">Mac 应用</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac-OS-环境变量设置"><span class="toc-text">Mac OS 环境变量设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac-OS-环境配置方法"><span class="toc-text">Mac OS 环境配置方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战"><span class="toc-text">实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置-bash-profile实战效果："><span class="toc-text">配置.bash_profile实战效果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -238,7 +236,7 @@
 </ol>
 <p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5sfc40phvj20fu0a60sw.jpg" alt="图一：打开Terminal"></p>
 <p>2.本文章使用Mac OS的内置<strong>nano编辑器</strong>进行对.bash_profile进行配置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nano .bash_profile</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nano .bash_profile</span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f5sg7suz98j20fu0a6aal.jpg" alt="使用nano编辑器修改.bash_profile文件"></p>
 <blockquote>
 <p>使用当前命令将会使用Mac OS 系统自带的nano编辑器打开.bash_profile(如果当前文件不存在则创建)</p>
@@ -247,23 +245,23 @@
 <p><img src="http://ww3.sinaimg.cn/large/7c2c6ab7gw1f5sg94fy9bj20fu0a63zi.jpg" alt="使用nano编辑器修改.bash_profile文件运行效果"></p>
 <p>3.现在您可以很简单的加上一些配置到文件中，让后使您的终端(Terminal)使用起来更方便！^_^</p>
 <p>4.需要使用source命令去激活更新</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source .bash_profile</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
 <h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="配置-bash-profile实战效果："><a href="#配置-bash-profile实战效果：" class="headerlink" title="配置.bash_profile实战效果："></a>配置.bash_profile实战效果：</h3><p>1.在nano编辑器上写入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PS1=&quot;________________________________________________________________________________\n| \w @ \h (\u) \n| =&gt; &quot;</div><div class="line">export PS2=&quot;| =&gt; &quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PS1=&quot;________________________________________________________________________________\n| \w @ \h (\u) \n| =&gt; &quot;</span><br><span class="line">export PS2=&quot;| =&gt; &quot;</span><br></pre></td></tr></table></figure>
 <p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5sh2472h1j20fu0a60tx.jpg" alt="配置.bash_profile内容"></p>
 <p>2.按ctr + x 保存文件</p>
 <p>3.使用source命令激活更新</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source .bash_profile</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
 <p>运行效果如下：</p>
 <p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5sh454b1nj20fu0a6q3f.jpg" alt="修改.bash_profile文件运行效果"></p>
 <p>更多关于.bash_profile的配置可以查看<strong>参考资料</strong> </p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://baike.baidu.com/view/95930.htm" target="_blank" rel="external">环境变量－百度百科</a> </li>
-<li><a href="https://zh.wikipedia.org/wiki/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" target="_blank" rel="external">环境变量－维基百科</a></li>
-<li><a href="https://natelandau.com/my-mac-osx-bash_profile/" target="_blank" rel="external">MY MAC OSX BASH PROFILE</a></li>
-<li><a href="https://www.douban.com/note/272498615/" target="_blank" rel="external">Mac nano 编辑器 配置</a></li>
-<li><a href="http://stefaanlippens.net/bashrc_and_others" target="_blank" rel="external">Bash: about .bashrc, .bash_profile…</a></li>
-<li><a href="https://www.phodal.com/blog/mac-os-bash-profile-configure-analytics/" target="_blank" rel="external">mac os .bash_profile 配置说明</a></li>
+<li><a href="http://baike.baidu.com/view/95930.htm" target="_blank" rel="noopener">环境变量－百度百科</a> </li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" target="_blank" rel="noopener">环境变量－维基百科</a></li>
+<li><a href="https://natelandau.com/my-mac-osx-bash_profile/" target="_blank" rel="noopener">MY MAC OSX BASH PROFILE</a></li>
+<li><a href="https://www.douban.com/note/272498615/" target="_blank" rel="noopener">Mac nano 编辑器 配置</a></li>
+<li><a href="http://stefaanlippens.net/bashrc_and_others" target="_blank" rel="noopener">Bash: about .bashrc, .bash_profile…</a></li>
+<li><a href="https://www.phodal.com/blog/mac-os-bash-profile-configure-analytics/" target="_blank" rel="noopener">mac os .bash_profile 配置说明</a></li>
 </ul>
 
       
@@ -275,19 +273,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2016/08/19/Mac/Mac 命令－ 环境变量设置/">https://cotide.github.io/2016/08/19/Mac/Mac 命令－ 环境变量设置/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -297,24 +291,6 @@
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -333,13 +309,13 @@
       <a class="prev" href="/2016/08/20/Framework/使用Mac搭建Hexo环境/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">使用Mac搭建Hexo环境</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2016/08/18/Tools/Github ssh 公钥使用/">
         <span class="next-text nav-default">Github ssh 公钥生成</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -365,7 +341,7 @@
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -399,11 +375,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -413,14 +389,15 @@
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -429,8 +406,6 @@
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -450,6 +425,7 @@
 
   
 
+  
 
 
 
@@ -458,8 +434,10 @@
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -468,10 +446,12 @@
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>

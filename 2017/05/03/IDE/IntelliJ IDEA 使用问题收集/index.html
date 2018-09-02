@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="使用IntelliJ IDEA 的时候遇到的问题和处理的笔记"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="IDE,问题收集," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,22 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2017/05/03/IDE/IntelliJ IDEA 使用问题收集/"/>
 
 
-<meta name="description" content="使用IntelliJ IDEA 的时候遇到的问题和处理的笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="IntelliJ IDEA 使用问题收集">
-<meta property="og:url" content="https://cotide.github.io/2017/05/03/IDE/IntelliJ IDEA 使用问题收集/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="使用IntelliJ IDEA 的时候遇到的问题和处理的笔记">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9chaw2ldj20uc0l276a.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9c1uq1pwj20tj08maaz.jpg">
-<meta property="og:updated_time" content="2017-05-11T12:21:36.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IntelliJ IDEA 使用问题收集">
-<meta name="twitter:description" content="使用IntelliJ IDEA 的时候遇到的问题和处理的笔记">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9chaw2ldj20uc0l276a.jpg">
+
+
+
+
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -58,27 +82,15 @@
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> IntelliJ IDEA 使用问题收集 · xcli’s Blog </title>
+    <title> IntelliJ IDEA 使用问题收集 - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -94,7 +106,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -103,7 +115,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -112,7 +124,7 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -121,7 +133,7 @@
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -131,7 +143,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -142,7 +154,7 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -151,7 +163,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -160,7 +172,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -169,11 +181,10 @@
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -196,19 +207,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          May 3, 2017
+          2017-05-03
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Intellij-IDEA/">Intellij IDEA</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#IntelliJ-IDEA-简介"><span class="toc-text">IntelliJ IDEA  简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IntelliJ-IDEA-文档"><span class="toc-text">IntelliJ IDEA 文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tomcat-使用"><span class="toc-text">Tomcat 使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomcat-配置"><span class="toc-text">Tomcat 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将-jsp文件修改及时更新到Tomcat中"><span class="toc-text">将*.jsp文件修改及时更新到Tomcat中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tomcat-运行问题处理"><span class="toc-text">Tomcat 运行问题处理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven使用"><span class="toc-text">Maven使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-输出乱码问题"><span class="toc-text">Maven 输出乱码问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-打包控制台项目"><span class="toc-text">Maven 打包控制台项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -217,10 +230,10 @@
 <p>IDEA 全称 IntelliJ IDEA，是java语言开发的集成环境，IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn、github等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的首都布拉格，开发人员以严谨著称的东欧程序员为主。它的旗舰版本还支持HTML，CSS，PHP，MySQL，Python等。免费版只支持Java等少数语言。</p>
 </blockquote>
 <h2 id="IntelliJ-IDEA-文档"><a href="#IntelliJ-IDEA-文档" class="headerlink" title="IntelliJ IDEA 文档"></a>IntelliJ IDEA 文档</h2><blockquote>
-<p><a href="https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html" target="_blank" rel="external">https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html</a> </p>
+<p><a href="https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html" target="_blank" rel="noopener">https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html</a> </p>
 </blockquote>
 <h2 id="Tomcat-使用"><a href="#Tomcat-使用" class="headerlink" title="Tomcat 使用"></a>Tomcat 使用</h2><blockquote>
-<p><a href="https://segmentfault.com/a/1190000003827831" target="_blank" rel="external">https://segmentfault.com/a/1190000003827831</a></p>
+<p><a href="https://segmentfault.com/a/1190000003827831" target="_blank" rel="noopener">https://segmentfault.com/a/1190000003827831</a></p>
 </blockquote>
 <h3 id="Tomcat-配置"><a href="#Tomcat-配置" class="headerlink" title="Tomcat 配置"></a>Tomcat 配置</h3><h4 id="将-jsp文件修改及时更新到Tomcat中"><a href="#将-jsp文件修改及时更新到Tomcat中" class="headerlink" title="将*.jsp文件修改及时更新到Tomcat中"></a>将*.jsp文件修改及时更新到Tomcat中</h4><p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9chaw2ldj20uc0l276a.jpg" alt="*.jsp文件修改及时更新到Tomcat中"></p>
 <p>Tomcat 的 server配置中on frame deactivation 选项中选择update classes and resources</p>
@@ -229,12 +242,12 @@
 </blockquote>
 <p>处理</p>
 <blockquote>
-<p><a href="http://stackoverflow.com/questions/19068977/intellij-cant-start-simple-web-application-unable-to-ping-server-at-localhost" target="_blank" rel="external">IntelliJ IDEA Tomcat 运行问题处理</a> - 修改Host文件 localhost 映射到 (127.0.0.1) 或更新更高的<a href="http://blog.csdn.net/wsm0712syb/article/details/52495034" target="_blank" rel="external">Java 版本</a></p>
+<p><a href="http://stackoverflow.com/questions/19068977/intellij-cant-start-simple-web-application-unable-to-ping-server-at-localhost" target="_blank" rel="noopener">IntelliJ IDEA Tomcat 运行问题处理</a> - 修改Host文件 localhost 映射到 (127.0.0.1) 或更新更高的<a href="http://blog.csdn.net/wsm0712syb/article/details/52495034" target="_blank" rel="noopener">Java 版本</a></p>
 </blockquote>
-<p>对于Tomcat各版本的<a href="http://tomcat.apache.org/whichversion.html" target="_blank" rel="external">JDK要求</a></p>
+<p>对于Tomcat各版本的<a href="http://tomcat.apache.org/whichversion.html" target="_blank" rel="noopener">JDK要求</a></p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ff9c1uq1pwj20tj08maaz.jpg" alt="Tomcat对JDK各版本要求"></p>
 <h2 id="Maven使用"><a href="#Maven使用" class="headerlink" title="Maven使用"></a>Maven使用</h2><h3 id="Maven-输出乱码问题"><a href="#Maven-输出乱码问题" class="headerlink" title="Maven 输出乱码问题"></a>Maven 输出乱码问题</h3><p>pom.xml 配置如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 解决maven test命令时console出现中文乱码乱码 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.20<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">forkMode</span>&gt;</span>once<span class="tag">&lt;/<span class="name">forkMode</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">argLine</span>&gt;</span>-Dfile.encoding=UTF-8<span class="tag">&lt;/<span class="name">argLine</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 解决maven test命令时console出现中文乱码乱码 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.20<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">forkMode</span>&gt;</span>once<span class="tag">&lt;/<span class="name">forkMode</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">argLine</span>&gt;</span>-Dfile.encoding=UTF-8<span class="tag">&lt;/<span class="name">argLine</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="Maven-打包控制台项目"><a href="#Maven-打包控制台项目" class="headerlink" title="Maven 打包控制台项目"></a>Maven 打包控制台项目</h3><p>pom.xml 配置如下：</p>
 <pre><code class="xml">
 <span class="tag">&lt;<span class="name">plugin</span>&gt;</span>
@@ -250,13 +263,14 @@
         <span class="tag">&lt;/<span class="name">archive</span>&gt;</span>
     <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span>
 <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span>
+
 </code></pre>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">极客学院教程</a></li>
-<li><a href="https://www.jetbrains.com/help/idea/2017.1/run-debug-configuration-tomcat-server.html" target="_blank" rel="external">Intellij IDEA 运行Tomcat</a></li>
-<li><a href="http://blog.csdn.net/wsscy2004/article/details/38776965" target="_blank" rel="external">IDEA跑Tomcat异常</a></li>
-<li><a href="http://blog.csdn.net/wsm0712syb/article/details/52495034" target="_blank" rel="external">Intellij IDEA Tomcat 启动报错, Unable to ping server at localhost:1099</a></li>
-<li><a href="http://blog.csdn.net/yums467/article/details/51660683" target="_blank" rel="external">Intellij IDEA Maven 项目打包 -&gt; war 文件</a></li>
+<li><a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" target="_blank" rel="noopener">极客学院教程</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/2017.1/run-debug-configuration-tomcat-server.html" target="_blank" rel="noopener">Intellij IDEA 运行Tomcat</a></li>
+<li><a href="http://blog.csdn.net/wsscy2004/article/details/38776965" target="_blank" rel="noopener">IDEA跑Tomcat异常</a></li>
+<li><a href="http://blog.csdn.net/wsm0712syb/article/details/52495034" target="_blank" rel="noopener">Intellij IDEA Tomcat 启动报错, Unable to ping server at localhost:1099</a></li>
+<li><a href="http://blog.csdn.net/yums467/article/details/51660683" target="_blank" rel="noopener">Intellij IDEA Maven 项目打包 -&gt; war 文件</a></li>
 </ul>
 
       
@@ -268,19 +282,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2017/05/03/IDE/IntelliJ IDEA 使用问题收集/">https://cotide.github.io/2017/05/03/IDE/IntelliJ IDEA 使用问题收集/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -290,24 +300,6 @@
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -328,13 +320,13 @@
       <a class="prev" href="/2017/05/03/Java/JAVA学习 - 笔记1/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">Java 学习 - 笔记1</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2017/04/25/Git/Git-gitignore文件配置/">
         <span class="next-text nav-default">Git - gitignore文件配置</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -360,7 +352,7 @@
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -394,11 +386,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -408,14 +400,15 @@
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -424,8 +417,6 @@
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -445,6 +436,7 @@
 
   
 
+  
 
 
 
@@ -453,8 +445,10 @@
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -463,10 +457,12 @@
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>

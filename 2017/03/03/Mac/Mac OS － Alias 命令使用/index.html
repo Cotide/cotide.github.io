@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="在使用Mac OS, 为了更便捷的去使用，使用Alias 命令的操作笔记"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="Alias,Shell,Mac OS Command," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,19 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/"/>
 
 
-<meta name="description" content="在使用Mac OS, 为了更便捷的去使用，使用Alias 命令的操作笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS －Alias 命令使用">
-<meta property="og:url" content="https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="在使用Mac OS, 为了更便捷的去使用，使用Alias 命令的操作笔记">
-<meta property="og:updated_time" content="2017-04-25T09:39:39.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS －Alias 命令使用">
-<meta name="twitter:description" content="在使用Mac OS, 为了更便捷的去使用，使用Alias 命令的操作笔记">
+
+
+
+
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -55,27 +82,15 @@
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> Mac OS －Alias 命令使用 · xcli’s Blog </title>
+    <title> Mac OS －Alias 命令使用 - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -91,7 +106,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -100,7 +115,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -109,7 +124,7 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -118,7 +133,7 @@
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -128,7 +143,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -139,7 +154,7 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -148,7 +163,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -157,7 +172,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -166,11 +181,10 @@
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -193,19 +207,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Mar 3, 2017
+          2017-03-03
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Mac/">Mac</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MacOS-应用"><span class="toc-text">MacOS 应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -214,14 +230,14 @@
 <p> 在计算机领域,  alias（英语，别名的意思）在命令行解释器、shell、4DOS/4NT和Windows PowerShell里是一个命令，采用一个单词来替代一串字符串。它主要被用来缩略系统命令，或者为常用的命令添加默认的参数</p>
 </blockquote>
 <h2 id="MacOS-应用"><a href="#MacOS-应用" class="headerlink" title="MacOS 应用"></a>MacOS 应用</h2><p>启动Terminal(终端)，使用vim 打开 .base_profile文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi ~/.base_profile</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.base_profile</span><br></pre></td></tr></table></figure>
 <p>alias 命令格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 命令格式</div><div class="line">$ alias 命令名＝&quot;命令内容&quot;</div><div class="line"></div><div class="line"># 应用例子 </div><div class="line">$ alias now=&apos;date +&quot;%T&quot;&apos;</div></pre></td></tr></table></figure>
-<p>生效命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ~/.base_profile</div></pre></td></tr></table></figure></p>
-<p>输出效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ now</div><div class="line">10:25:13</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 命令格式</span><br><span class="line">$ alias 命令名＝&quot;命令内容&quot;</span><br><span class="line"></span><br><span class="line"># 应用例子 </span><br><span class="line">$ alias now=&apos;date +&quot;%T&quot;&apos;</span><br></pre></td></tr></table></figure>
+<p>生效命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.base_profile</span><br></pre></td></tr></table></figure></p>
+<p>输出效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ now</span><br><span class="line">10:25:13</span><br></pre></td></tr></table></figure></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://en.wikipedia.org/wiki/Alias_(Mac_OS" target="_blank" rel="external">Alias (Mac OS) EN Wiki</a>) </li>
-<li><a href="https://zh.wikipedia.org/wiki/Alias_(%E5%91%BD%E4%BB%A4" target="_blank" rel="external">Alias (Mac OS) ZH Wiki</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Alias_(Mac_OS" target="_blank" rel="noopener">Alias (Mac OS) EN Wiki</a>) </li>
+<li><a href="https://zh.wikipedia.org/wiki/Alias_(%E5%91%BD%E4%BB%A4" target="_blank" rel="noopener">Alias (Mac OS) ZH Wiki</a>)</li>
 </ul>
 
       
@@ -233,19 +249,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/">https://cotide.github.io/2017/03/03/Mac/Mac OS － Alias 命令使用/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -255,24 +267,6 @@
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -295,13 +289,13 @@
       <a class="prev" href="/2017/03/04/JMeter/性能测试工具 - Apache JMeter (安装)/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">性能测试工具 - Apache JMeter (安装)</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2016/10/01/Plan/理财学习/">
         <span class="next-text nav-default">理财学习</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -327,7 +321,7 @@
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -361,11 +355,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -375,14 +369,15 @@
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -391,8 +386,6 @@
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -412,6 +405,7 @@
 
   
 
+  
 
 
 
@@ -420,8 +414,10 @@
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -430,10 +426,12 @@
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>

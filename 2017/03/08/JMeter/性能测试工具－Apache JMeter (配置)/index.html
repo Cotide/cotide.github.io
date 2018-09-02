@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="测试工具JMeter的配置使用和说明"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="性能测试,负载测试,JMeter," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,31 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2017/03/08/JMeter/性能测试工具－Apache JMeter (配置)/"/>
 
 
-<meta name="description" content="测试工具JMeter的配置使用和说明">
-<meta property="og:type" content="article">
-<meta property="og:title" content="性能测试工具－Apache JMeter (配置)">
-<meta property="og:url" content="https://cotide.github.io/2017/03/08/JMeter/性能测试工具－Apache JMeter (配置)/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="测试工具JMeter的配置使用和说明">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fd8hhyd4d4j20q40i2q56">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdcxu6pakxj20u70hbdhu">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdcx9smvn6j204o01k0sp">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdcxsdys0rj20j3046dfo">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdcy1ckwcfj20u50jt77s">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdd45jy4iwj20h707s3zx">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdd6gyf2x7j20ik0bjq2q">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fde467poeoj20tj0o2jv8">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdfgn29clyj208j03rweo">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdfgsahbkmj20m70b7jta">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdfgvq6ze3j20li0aitay">
-<meta property="og:updated_time" content="2017-04-25T09:40:15.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="性能测试工具－Apache JMeter (配置)">
-<meta name="twitter:description" content="测试工具JMeter的配置使用和说明">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fd8hhyd4d4j20q40i2q56">
+
+
+
+
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -67,27 +82,15 @@
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> 性能测试工具－Apache JMeter (配置) · xcli’s Blog </title>
+    <title> 性能测试工具－Apache JMeter (配置) - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -103,7 +106,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -112,7 +115,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -121,7 +124,7 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -130,7 +133,7 @@
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -140,7 +143,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -151,7 +154,7 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -160,7 +163,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -169,7 +172,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -178,11 +181,10 @@
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -205,19 +207,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Mar 8, 2017
+          2017-03-08
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/测试工具/">测试工具</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立测试计划（Test-Plan）"><span class="toc-text">建立测试计划（Test Plan）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战"><span class="toc-text">实战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JMeter-Plugins-插件"><span class="toc-text">JMeter Plugins 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PerfMon-Server-Agent-插件说明"><span class="toc-text">PerfMon Server Agent 插件说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PerfMon-Server-Agent-插件使用"><span class="toc-text">PerfMon Server Agent 插件使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务端启动"><span class="toc-text">服务端启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#客户端启动"><span class="toc-text">客户端启动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -257,7 +261,7 @@
 <blockquote>
 <p>模拟用户登录行为，注意到Parameters -&gt; 名称(username) 的值为 ${__CSVRead(LoginID.txt,0)}<br>该部分为读取当前主程序目录下LoginID.txt文件 第一个字符串的值作为username的值进行请求</p>
 </blockquote>
-<p>对于CSVRead 函数使用可以查看官方文档<br><a href="http://jmeter.apache.org/usermanual/functions.html#__CSVRead" target="_blank" rel="external">http://jmeter.apache.org/usermanual/functions.html#__CSVRead</a></p>
+<p>对于CSVRead 函数使用可以查看官方文档<br><a href="http://jmeter.apache.org/usermanual/functions.html#__CSVRead" target="_blank" rel="noopener">http://jmeter.apache.org/usermanual/functions.html#__CSVRead</a></p>
 <ul>
 <li>选中HTTP请求 -&gt; 右键添加 -&gt; 后置处理 -&gt; 正则表达式提取器</li>
 </ul>
@@ -286,18 +290,18 @@
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdcy1ckwcfj20u50jt77s" alt="image"></p>
 <p>可以通过调整线程组配置进行模拟用户访问频率方式来访问接口</p>
 <h2 id="JMeter-Plugins-插件"><a href="#JMeter-Plugins-插件" class="headerlink" title="JMeter Plugins 插件"></a>JMeter Plugins 插件</h2><blockquote>
-<p>可以通过访问<a href="https://jmeter-plugins.org" target="_blank" rel="external">JMeterPlugin网站</a>，来扩展JMeter 工具的测试能力</p>
+<p>可以通过访问<a href="https://jmeter-plugins.org" target="_blank" rel="noopener">JMeterPlugin网站</a>，来扩展JMeter 工具的测试能力</p>
 </blockquote>
-<p>下载<a href="https://jmeter-plugins.org/install/Install/" target="_blank" rel="external">Plugins Manager</a> ，下载 <strong>plugins-manager.jar</strong> 放置在 <strong>lib/ext</strong> 目录下然后重启 JMeter</p>
+<p>下载<a href="https://jmeter-plugins.org/install/Install/" target="_blank" rel="noopener">Plugins Manager</a> ，下载 <strong>plugins-manager.jar</strong> 放置在 <strong>lib/ext</strong> 目录下然后重启 JMeter</p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdd45jy4iwj20h707s3zx" alt="Plugins Manager"></p>
 <p>在选项下出现 Plugins Manager 功能项 </p>
 <h3 id="PerfMon-Server-Agent-插件说明"><a href="#PerfMon-Server-Agent-插件说明" class="headerlink" title="PerfMon Server Agent 插件说明"></a>PerfMon Server Agent 插件说明</h3><blockquote>
 <p>配合<br>Servers Performance Monitoring 插件使用，运行服务端的代理。用于传输服务端的（CPU、内存、IO、网络等信息）</p>
 </blockquote>
 <h3 id="PerfMon-Server-Agent-插件使用"><a href="#PerfMon-Server-Agent-插件使用" class="headerlink" title="PerfMon Server Agent 插件使用"></a>PerfMon Server Agent 插件使用</h3><h4 id="服务端启动"><a href="#服务端启动" class="headerlink" title="服务端启动"></a>服务端启动</h4><blockquote>
-<p>访问<a href="https://jmeter-plugins.org" target="_blank" rel="external">JMeterPlugin网站</a> 搜索<a href="https://jmeter-plugins.org/wiki/PerfMonAgent" target="_blank" rel="external">PerfMon Server Agent</a> 插件，下载ServerAgent-2.2.1.zip 安装包</p>
+<p>访问<a href="https://jmeter-plugins.org" target="_blank" rel="noopener">JMeterPlugin网站</a> 搜索<a href="https://jmeter-plugins.org/wiki/PerfMonAgent" target="_blank" rel="noopener">PerfMon Server Agent</a> 插件，下载ServerAgent-2.2.1.zip 安装包</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Unix 系统启动</div><div class="line">$ startAgent.sh</div><div class="line"></div><div class="line"># Windows 系统启动</div><div class="line">$ startAgent.bat</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Unix 系统启动</span><br><span class="line">$ startAgent.sh</span><br><span class="line"></span><br><span class="line"># Windows 系统启动</span><br><span class="line">$ startAgent.bat</span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdd6gyf2x7j20ik0bjq2q" alt="启动ServerAgent"></p>
 <p>Windows 系统启动效果</p>
 <h4 id="客户端启动"><a href="#客户端启动" class="headerlink" title="客户端启动"></a>客户端启动</h4><blockquote>
@@ -323,9 +327,9 @@
 </ul>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1fdfgvq6ze3j20li0aitay" alt="image"><br>监控服务器端CPU、内存、网络I/O、磁盘I/O信息</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://jmeter.apache.org/" target="_blank" rel="external">JMeter 官方</a></li>
-<li><a href="https://jmeter-plugins.org" target="_blank" rel="external">JMeter Plugin 插件</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/websphere/techjournal/1208_hare/1208_hare.html" target="_blank" rel="external">使用 WebSphere Application Server 执行性能测试和分析</a> </li>
+<li><a href="http://jmeter.apache.org/" target="_blank" rel="noopener">JMeter 官方</a></li>
+<li><a href="https://jmeter-plugins.org" target="_blank" rel="noopener">JMeter Plugin 插件</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/websphere/techjournal/1208_hare/1208_hare.html" target="_blank" rel="noopener">使用 WebSphere Application Server 执行性能测试和分析</a> </li>
 </ul>
 
       
@@ -337,19 +341,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2017/03/08/JMeter/性能测试工具－Apache JMeter (配置)/">https://cotide.github.io/2017/03/08/JMeter/性能测试工具－Apache JMeter (配置)/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -359,24 +359,6 @@
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -399,13 +381,13 @@
       <a class="prev" href="/2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">性能测试工具-Apache JMeter (数据库测试配置)</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2017/03/04/JMeter/性能测试工具 - Apache JMeter (安装)/">
         <span class="next-text nav-default">性能测试工具 - Apache JMeter (安装)</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -431,7 +413,7 @@
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -465,11 +447,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -479,14 +461,15 @@
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -495,8 +478,6 @@
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -516,6 +497,7 @@
 
   
 
+  
 
 
 
@@ -524,8 +506,10 @@
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -534,10 +518,12 @@
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>

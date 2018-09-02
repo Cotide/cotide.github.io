@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="使用Mac搭建Hexo环境"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="博客框架,Github 博客," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,78 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2016/08/20/Framework/使用Mac搭建Hexo环境/"/>
 
 
-<meta name="description" content="Hexo 框架
-Hexo 简介
 
-Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-使用条件
-Node.js
-Git
 
-操作流程
-安装 Node.js
-安装 Git 工具
 
-安装 Node.js
-前往Node.js 官方 下载安装包
 
-安装node.js方法很多，也可以使用 homebrew
-
-关于LT">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用Mac搭建Hexo环境">
-<meta property="og:url" content="https://cotide.github.io/2016/08/20/Framework/使用Mac搭建Hexo环境/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="Hexo 框架
-Hexo 简介
-
-Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-使用条件
-Node.js
-Git
-
-操作流程
-安装 Node.js
-安装 Git 工具
-
-安装 Node.js
-前往Node.js 官方 下载安装包
-
-安装node.js方法很多，也可以使用 homebrew
-
-关于LT">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5yzojlmw2j20m30hgdic.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5z1q7q2psj20jk0ei3za.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f61o57tbg0j20i60ci0tb.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f70au858brj20i90ccgnt.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f70b216jdjj20i60cijsv.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f70dfasdi5j20i60ci75c.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f70e7q3jyfj20je0jeq54.jpg">
-<meta property="og:updated_time" content="2016-08-23T03:28:03.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Mac搭建Hexo环境">
-<meta name="twitter:description" content="Hexo 框架
-Hexo 简介
-
-Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-使用条件
-Node.js
-Git
-
-操作流程
-安装 Node.js
-安装 Git 工具
-
-安装 Node.js
-前往Node.js 官方 下载安装包
-
-安装node.js方法很多，也可以使用 homebrew
-
-关于LT">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5yzojlmw2j20m30hgdic.jpg">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -114,27 +82,15 @@ Git
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> 使用Mac搭建Hexo环境 · xcli’s Blog </title>
+    <title> 使用Mac搭建Hexo环境 - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -150,7 +106,7 @@ Git
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -159,7 +115,7 @@ Git
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -168,7 +124,7 @@ Git
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -177,7 +133,7 @@ Git
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -187,7 +143,7 @@ Git
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -198,7 +154,7 @@ Git
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -207,7 +163,7 @@ Git
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -216,7 +172,7 @@ Git
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -225,11 +181,10 @@ Git
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -252,19 +207,21 @@ Git
 
       <div class="post-meta">
         <span class="post-time">
-          Aug 20, 2016
+          2016-08-20
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/框架/">框架</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-框架"><span class="toc-text">Hexo 框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用条件"><span class="toc-text">使用条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作流程"><span class="toc-text">操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Node-js"><span class="toc-text">安装 Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Git工具"><span class="toc-text">安装 Git工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-node-js-nvm-安装hexo"><span class="toc-text">使用 node.js nvm 安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建站"><span class="toc-text">建站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -274,50 +231,50 @@ Git
 </blockquote>
 <p>Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h2 id="使用条件"><a href="#使用条件" class="headerlink" title="使用条件"></a>使用条件</h2><ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
 </ul>
 <h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ul>
 <li>安装 Node.js</li>
 <li>安装 Git 工具</li>
 </ul>
 <h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><ol>
-<li>前往<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 官方</a> 下载安装包</li>
+<li>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js 官方</a> 下载安装包</li>
 </ol>
-<p>安装node.js方法很多，也可以使用 <a href="http://brew.sh/" target="_blank" rel="external">homebrew</a></p>
+<p>安装node.js方法很多，也可以使用 <a href="http://brew.sh/" target="_blank" rel="noopener">homebrew</a></p>
 <p><img src="http://ww4.sinaimg.cn/large/7c2c6ab7gw1f5yzojlmw2j20m30hgdic.jpg" alt="下载Node.js 001"></p>
-<p>关于LTS 和 Current版本区别 可以查阅官方 <a href="https://nodejs.org/en/blog/community/node-v5/" target="_blank" rel="external">Hexo 版本分支说明</a></p>
+<p>关于LTS 和 Current版本区别 可以查阅官方 <a href="https://nodejs.org/en/blog/community/node-v5/" target="_blank" rel="noopener">Hexo 版本分支说明</a></p>
 <p>安装node.js程序,点击继续一步步操作就ok了<br><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f5z1q7q2psj20jk0ei3za.jpg" alt="下载node.js"></p>
-<ol>
+<ol start="2">
 <li>检查node.js是否安装成功<br>打开终端输入:</li>
 </ol>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f61o57tbg0j20i60ci0tb.jpg" alt="检查node.js是否安装成功"></p>
-<h3 id="安装-Git工具"><a href="#安装-Git工具" class="headerlink" title="安装 Git工具"></a>安装 Git工具</h3><p>可以安装 <a href="https://git-scm.com/" target="_blank" rel="external">Git GUI</a> 或者使用 <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a> 进行安装</p>
-<h3 id="使用-node-js-nvm-安装hexo"><a href="#使用-node-js-nvm-安装hexo" class="headerlink" title="使用 node.js nvm 安装hexo"></a>使用 node.js nvm 安装hexo</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h3 id="安装-Git工具"><a href="#安装-Git工具" class="headerlink" title="安装 Git工具"></a>安装 Git工具</h3><p>可以安装 <a href="https://git-scm.com/" target="_blank" rel="noopener">Git GUI</a> 或者使用 <a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 进行安装</p>
+<h3 id="使用-node-js-nvm-安装hexo"><a href="#使用-node-js-nvm-安装hexo" class="headerlink" title="使用 node.js nvm 安装hexo"></a>使用 node.js nvm 安装hexo</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f70au858brj20i90ccgnt.jpg" alt="nvm 安装hexo"></p>
 <p>使用命令检查，hexo安装情况</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo -v</div></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
 <p>遇到问题：</p>
 <p><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f70b216jdjj20i60cijsv.jpg" alt="hexo安装"></p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; [Error: Cannot <span class="built_in">find</span> module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' &#125;    </div><div class="line">&#123; [Error: Cannot <span class="built_in">find</span> module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' &#125;</div><div class="line">&#123; [Error: Cannot <span class="built_in">find</span> module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' &#125;</div></pre></td></tr></table></figure>
-<p>该问题官方说明（<a href="https://hexo.io/docs/troubleshooting.html#Error-with-DTrace-Mac-OS-X" target="_blank" rel="external">https://hexo.io/docs/troubleshooting.html#Error-with-DTrace-Mac-OS-X</a>）</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' &#125;    </span><br><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' &#125;</span><br><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' &#125;</span><br></pre></td></tr></table></figure>
+<p>该问题官方说明（<a href="https://hexo.io/docs/troubleshooting.html#Error-with-DTrace-Mac-OS-X" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html#Error-with-DTrace-Mac-OS-X</a>）</p>
 <p>然后查了以下hexo官方文档，最后用下面语句成功安装好hexo!</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gw1f70dfasdi5j20i60ci75c.jpg" alt="hexo 安装"></p>
-<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>效果如下：<br><img src="http://ww2.sinaimg.cn/large/7c2c6ab7gw1f70e7q3jyfj20je0jeq54.jpg" alt="hexo 网站运行效果"></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://www.jianshu.com/p/70974a67ec8f" target="_blank" rel="external">Mac os X 配置hexo教程</a> </li>
-<li><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">Hexo 博客搭建教程</a></li>
-<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo 官方安装说明</a></li>
-<li><a href="https://nodejs.org/en/blog/community/node-v5/" target="_blank" rel="external">Hexo 版本分支说明</a></li>
-<li><a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">Node.js安装配置</a></li>
-<li><a href="https://git-scm.com/" target="_blank" rel="external">Git 工具使用</a></li>
-<li><a href="https://git-scm.com/downloads/guis" target="_blank" rel="external">Git Client 工具使用</a></li>
-<li><a href="http://brew.sh/" target="_blank" rel="external">Homebrew 官方</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/Homebrew" target="_blank" rel="external">Homebrew 维基百科</a></li>
+<li><a href="http://www.jianshu.com/p/70974a67ec8f" target="_blank" rel="noopener">Mac os X 配置hexo教程</a> </li>
+<li><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="noopener">Hexo 博客搭建教程</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方安装说明</a></li>
+<li><a href="https://nodejs.org/en/blog/community/node-v5/" target="_blank" rel="noopener">Hexo 版本分支说明</a></li>
+<li><a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">Node.js安装配置</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git 工具使用</a></li>
+<li><a href="https://git-scm.com/downloads/guis" target="_blank" rel="noopener">Git Client 工具使用</a></li>
+<li><a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew 官方</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Homebrew" target="_blank" rel="noopener">Homebrew 维基百科</a></li>
 </ul>
 
       
@@ -329,19 +286,15 @@ Git
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2016/08/20/Framework/使用Mac搭建Hexo环境/">https://cotide.github.io/2016/08/20/Framework/使用Mac搭建Hexo环境/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -351,24 +304,6 @@ Git
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -389,13 +324,13 @@ Git
       <a class="prev" href="/2016/10/01/Plan/理财学习/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">理财学习</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2016/08/19/Mac/Mac 命令－ 环境变量设置/">
         <span class="next-text nav-default">Mac OS 环境变量设置</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -421,7 +356,7 @@ Git
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -455,11 +390,11 @@ Git
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -469,14 +404,15 @@ Git
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -485,8 +421,6 @@ Git
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -506,6 +440,7 @@ Git
 
   
 
+  
 
 
 
@@ -514,8 +449,10 @@ Git
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -524,10 +461,12 @@ Git
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>

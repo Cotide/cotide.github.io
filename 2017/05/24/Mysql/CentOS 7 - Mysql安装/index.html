@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="在CentOS中MySQL5.7版本安装和遇到的问题处理笔记"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="MySQL,Linux 环境," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,19 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2017/05/24/Mysql/CentOS 7 - Mysql安装/"/>
 
 
-<meta name="description" content="在CentOS中MySQL5.7版本安装和遇到的问题处理笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CentOS 7 - Mysql安装">
-<meta property="og:url" content="https://cotide.github.io/2017/05/24/Mysql/CentOS 7 - Mysql安装/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="在CentOS中MySQL5.7版本安装和遇到的问题处理笔记">
-<meta property="og:updated_time" content="2017-05-24T15:46:18.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS 7 - Mysql安装">
-<meta name="twitter:description" content="在CentOS中MySQL5.7版本安装和遇到的问题处理笔记">
+
+
+
+
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -55,27 +82,15 @@
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> CentOS 7 - Mysql安装 · xcli’s Blog </title>
+    <title> CentOS 7 - Mysql安装 - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -91,7 +106,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -100,7 +115,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -109,7 +124,7 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -118,7 +133,7 @@
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -128,7 +143,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -139,7 +154,7 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -148,7 +163,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -157,7 +172,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -166,11 +181,10 @@
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -193,19 +207,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          May 24, 2017
+          2017-05-24
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/数据库/">数据库</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简述"><span class="toc-text">简述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境"><span class="toc-text">环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作"><span class="toc-text">操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外网连接"><span class="toc-text">外网连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -216,32 +232,32 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><ul>
 <li>CentOS 7.3.1611</li>
 </ul>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</div><div class="line">$ rpm -ivh mysql57-community-release-el7-11.noarch.rpm</div><div class="line">$ yum install mysql-community-server</div></pre></td></tr></table></figure></p>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>安装<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rpm -ivh mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> yum install mysql-community-server</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>更多版本可以查看 - <a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="external">Download MySQL Yum Repository</a></p>
+<p>更多版本可以查看 - <a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">Download MySQL Yum Repository</a></p>
 </blockquote>
 <p>操作命名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># mysql 重启动</div><div class="line">$ service mysqld restart</div><div class="line"></div><div class="line"></div><div class="line"># 查看mysql运行情况</div><div class="line">$ ps aux |grep mysqld </div><div class="line"></div><div class="line"></div><div class="line">$ systemctl status mysqld.service</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> mysql 重启动</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> service mysqld restart</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看mysql运行情况</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ps aux |grep mysqld </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> systemctl status mysqld.service</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><blockquote>
 <p>因为本人安装的是Mysql 5.7.x 版本，新版本的root账户默认密码会在log-error=/var/log/mysqld.log 生成，旧版本的Mysql则为空 </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 查看/var/log/mysqld.log 日志</div><div class="line">$ cat /var/log/mysqld.log</div></pre></td></tr></table></figure>
-<p>日志内容中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2017-05-19T03:09:51.005157Z 1 [Note] A temporary password is generated for root@localhost: o?meY=aEd2V-</div></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看/var/<span class="built_in">log</span>/mysqld.log 日志</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat /var/<span class="built_in">log</span>/mysqld.log</span></span><br></pre></td></tr></table></figure>
+<p>日志内容中：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2017-05-19T03:09:51.005157Z 1 [Note] A temporary password is generated for root@localhost: o?meY=aEd2V-</span><br></pre></td></tr></table></figure></p>
 <p>日志中 o?meY=aEd2V- 就是root账户的默认密码：</p>
-<p>首次进入Mysql需要修改密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.</div></pre></td></tr></table></figure></p>
+<p>首次进入Mysql需要修改密码<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.</span><br></pre></td></tr></table></figure></p>
 <p>对于</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 设置密码安全级别</div><div class="line">$ set global validate_password_length=4;  </div><div class="line"># 修改密码</div><div class="line">$ ALTER USER USER() IDENTIFIED BY &apos;12345678&apos;;</div></pre></td></tr></table></figure>
-<h3 id="外网连接"><a href="#外网连接" class="headerlink" title="外网连接"></a>外网连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># 登录mysql</div><div class="line">$ mysql -u root -p</div><div class="line"></div><div class="line">######## 进入MySql ######## </div><div class="line">mysql&gt; use mysql;</div><div class="line"># 查询host</div><div class="line">mysql&gt; select user,host from user;</div><div class="line">+-----------+-----------+</div><div class="line">| user      | host      |</div><div class="line">+-----------+-----------+</div><div class="line">| mysql.sys | localhost |</div><div class="line">| root      | localhost |</div><div class="line">+-----------+-----------+</div><div class="line"></div><div class="line"># 如果没有&quot;%&quot;这个host值,就执行下面这两句:</div><div class="line">mysql&gt; update user set host=&apos;%&apos; where user=&apos;root&apos;;</div><div class="line">mysql&gt; flush privileges;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置密码安全级别</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">set</span> global validate_password_length=4;  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改密码</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ALTER USER USER() IDENTIFIED BY <span class="string">'12345678'</span>;</span></span><br></pre></td></tr></table></figure>
+<h3 id="外网连接"><a href="#外网连接" class="headerlink" title="外网连接"></a>外网连接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 登录mysql</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mysql -u root -p</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####### 进入MySql ######## </span></span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> use mysql;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查询host</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> select user,host from user;</span></span><br><span class="line">+-----------+-----------+</span><br><span class="line">| user      | host      |</span><br><span class="line">+-----------+-----------+</span><br><span class="line">| mysql.sys | localhost |</span><br><span class="line">| root      | localhost |</span><br><span class="line">+-----------+-----------+</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果没有<span class="string">"%"</span>这个host值,就执行下面这两句:</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> update user <span class="built_in">set</span> host=<span class="string">'%'</span> <span class="built_in">where</span> user=<span class="string">'root'</span>;</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges;</span></span><br></pre></td></tr></table></figure>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.mysql.com/" target="_blank" rel="external">MySQL</a> </li>
-<li><a href="http://baike.baidu.com/item/RPM" target="_blank" rel="external">RPM - 百度百科</a></li>
-<li><a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="external">Download MySQL Yum Repository</a></li>
-<li><a href="http://www.cnblogs.com/xiaoluo501395377/archive/2013/04/07/3003278.html" target="_blank" rel="external">Linux学习之CentOS(十三)–CentOS6.4下Mysql数据库的安装与配置</a></li>
-<li><a href="http://www.cnblogs.com/mangu-uu/p/4162984.html" target="_blank" rel="external">MySQL指定路径启动 - 问题排查</a></li>
-<li><a href="http://lxsym.blog.51cto.com/1364623/477027" target="_blank" rel="external">Mysql找回root密码</a></li>
-<li><a href="https://www.percona.com/blog/2016/05/18/where-is-the-mysql-5-7-root-password/" target="_blank" rel="external">Mysql 5.7.x 版本的问题</a></li>
-<li><a href="http://www.jianshu.com/p/776e72742c6e" target="_blank" rel="external">OS X EI Capitan 安装mysql-5.7.9</a></li>
-<li><a href="http://blog.csdn.net/maxsky/article/details/51171474" target="_blank" rel="external">解决 MySQL 5.7 中 Your password does not satisfy the current policy requirements. 问题</a></li>
+<li><a href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a> </li>
+<li><a href="http://baike.baidu.com/item/RPM" target="_blank" rel="noopener">RPM - 百度百科</a></li>
+<li><a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">Download MySQL Yum Repository</a></li>
+<li><a href="http://www.cnblogs.com/xiaoluo501395377/archive/2013/04/07/3003278.html" target="_blank" rel="noopener">Linux学习之CentOS(十三)–CentOS6.4下Mysql数据库的安装与配置</a></li>
+<li><a href="http://www.cnblogs.com/mangu-uu/p/4162984.html" target="_blank" rel="noopener">MySQL指定路径启动 - 问题排查</a></li>
+<li><a href="http://lxsym.blog.51cto.com/1364623/477027" target="_blank" rel="noopener">Mysql找回root密码</a></li>
+<li><a href="https://www.percona.com/blog/2016/05/18/where-is-the-mysql-5-7-root-password/" target="_blank" rel="noopener">Mysql 5.7.x 版本的问题</a></li>
+<li><a href="http://www.jianshu.com/p/776e72742c6e" target="_blank" rel="noopener">OS X EI Capitan 安装mysql-5.7.9</a></li>
+<li><a href="http://blog.csdn.net/maxsky/article/details/51171474" target="_blank" rel="noopener">解决 MySQL 5.7 中 Your password does not satisfy the current policy requirements. 问题</a></li>
 </ul>
 
       
@@ -253,19 +269,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2017/05/24/Mysql/CentOS 7 - Mysql安装/">https://cotide.github.io/2017/05/24/Mysql/CentOS 7 - Mysql安装/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -275,24 +287,6 @@
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -313,13 +307,13 @@
       <a class="prev" href="/2017/05/24/Tools/Jenkins 安装/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">Jenkins 安装</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2017/05/16/Jexus/Jexus 使用/">
         <span class="next-text nav-default">Jexus 使用</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -345,7 +339,7 @@
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -379,11 +373,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -393,14 +387,15 @@
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -409,8 +404,6 @@
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -430,6 +423,7 @@
 
   
 
+  
 
 
 
@@ -438,8 +432,10 @@
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -448,10 +444,12 @@
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>

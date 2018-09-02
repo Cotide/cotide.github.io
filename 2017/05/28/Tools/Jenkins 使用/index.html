@@ -10,6 +10,11 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
 
 
   <meta name="description" content="关于Jenkins的使用，和在windows平台下编译c#项目并发布"/>
@@ -17,12 +22,18 @@
 
 
 
-  <meta name="keywords" content="Jenkins," />
+  <meta name="keywords" content="🍭 xcli’s Blog" />
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="xcli’s Blog">
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="cotide’s Blog">
 
 
 
@@ -34,38 +45,35 @@
 <link rel="canonical" href="https://cotide.github.io/2017/05/28/Tools/Jenkins 使用/"/>
 
 
-<meta name="description" content="关于Jenkins的使用，和在windows平台下编译c#项目并发布">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Jenkins 使用">
-<meta property="og:url" content="https://cotide.github.io/2017/05/28/Tools/Jenkins 使用/index.html">
-<meta property="og:site_name" content="xcli’s Blog">
-<meta property="og:description" content="关于Jenkins的使用，和在windows平台下编译c#项目并发布">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffmyny24h8j20p90ju0u4.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffmysefuq5j20p90ju3yv.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7ly1ffn8i0bhxzj20q80m6q55.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffo4jde3emj206o014jr5.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffo4n8r2ksj20sc0gf756.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffn6qjljrhj20q80m640n.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffoelpnbykj20sp0k0t9h.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffodlxup3gj20sv07zt8t.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffodmb7sb5j20sz0a3aan.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffocmaat16j20kx08zab1.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffocuy6r28j20qs0ecta9.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffocx63pwaj20qj0ff750.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffod2i9todj20qb0djgmg.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffodpgh30hj20pr0bnwez.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffpim3g5o3j20c909iglz.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffpo1cdg32j20bf0cu75k.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffpiql7n9sj20i00e4wfx.jpg">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffqh5ohvu4j20sx07u0sy.jpg">
-<meta property="og:updated_time" content="2017-08-09T11:27:53.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jenkins 使用">
-<meta name="twitter:description" content="关于Jenkins的使用，和在windows平台下编译c#项目并发布">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffmyny24h8j20p90ju0u4.jpg">
+
+
+
+
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
 
 
@@ -74,27 +82,15 @@
 
 
 <script>
-  var CONFIG = {
-    search: false,
-    searchPath: "/search.xml",
-    fancybox: false,
-    toc: true,
-  }
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":{"color":"Default","toc":true,"search":false,"fancybox":false},"deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2012,"favicon":"/favicon.ico","rss":false,"menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"copyright":{"enable":true,"license":"本文采用<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可"},"reward":{"enable":false,"qrCode":{"wechat":"/image/reward/wechat.png","alipay":"/image/reward/alipay.png"}},"social":{"email":null,"stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":null,"weibo":null,"zhihu":null,"pocket":null},"baidu_analytics":null,"google_analytics":null,"disqus_shortname":"xclis-blog","version":"2.4.x"};
 </script>
 
-
-
-
-  
-
-
-
-    <title> Jenkins 使用 · xcli’s Blog </title>
+    <title> Jenkins 使用 - cotide’s Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">xcli’s Blog</a>
+    <a href="/." class="logo">cotide’s Blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -110,7 +106,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -119,7 +115,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -128,7 +124,7 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
           
         </li>
       </a>
@@ -137,7 +133,7 @@
         <li class="mobile-menu-item">
           
           
-            About
+            关于
           
         </li>
       </a>
@@ -147,7 +143,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">xcli’s Blog</a>
+  <a href="/." class="logo">cotide’s Blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -158,7 +154,7 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -167,7 +163,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -176,7 +172,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
             
           </a>
         </li>
@@ -185,11 +181,10 @@
           <a class="menu-item-link" href="https://about.me/xcli">
             
             
-              About
+              关于
             
           </a>
         </li>
-      
       
     </ul>
   
@@ -212,19 +207,21 @@
 
       <div class="post-meta">
         <span class="post-time">
-          May 28, 2017
+          2017-05-28
         </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/自动化框架/">自动化框架</a>
+            
+          </div>
+        
+        
       </div>
     </header>
 
     
     
-  <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简述"><span class="toc-text">简述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用项目"><span class="toc-text">引用项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用场景1"><span class="toc-text">使用场景1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GitLab-配置"><span class="toc-text">GitLab 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成-SSH-公钥"><span class="toc-text">生成 SSH 公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-配置"><span class="toc-text">Jenkins 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#需要安装插件"><span class="toc-text">需要安装插件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#配置SSH"><span class="toc-text">配置SSH</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置Git-和-MSBuild"><span class="toc-text">配置Git 和 MSBuild</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#建立项目配置"><span class="toc-text">建立项目配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用场景2"><span class="toc-text">使用场景2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要插件"><span class="toc-text">需要插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-Home"><span class="toc-text">Maven Home</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
-    </div>
-  </div>
 
 
     <div class="post-content">
@@ -266,7 +263,7 @@
 <p>用于构建工作,然后分配项目权限<br>为了方便管理，我是建立一个群组给jenkins然后工程项目设置共享的群组,结果如下:</p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7ly1ffn8i0bhxzj20q80m6q55.jpg" alt="GitLab项目共享"></p>
 <h3 id="生成-SSH-公钥"><a href="#生成-SSH-公钥" class="headerlink" title="生成 SSH 公钥"></a>生成 SSH 公钥</h3><p>打开 Git Bash 工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 生成公钥</div><div class="line">$ ssh-keygen -t rsa -C &quot;GitLab用户的邮箱&quot; -b 4096</div><div class="line"># 查看公钥</div><div class="line">$ cd ~/.ssh </div><div class="line">$ ls</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 生成公钥</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -C <span class="string">"GitLab用户的邮箱"</span> -b 4096</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看公钥</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/.ssh </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffo4jde3emj206o014jr5.jpg" alt="Git - 生成SSH 公钥"></p>
 <p>文件说明：</p>
 <ul>
@@ -274,7 +271,7 @@
 <li>id_rsa.pub - 公钥</li>
 </ul>
 <p>查看id_rsa.pub (公钥),添加到Gitlab的SSH密钥中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 查看id_rsa.pub (公钥)</div><div class="line">$ cat id_rsa.pub</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看id_rsa.pub (公钥)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat id_rsa.pub</span></span><br></pre></td></tr></table></figure>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffo4n8r2ksj20sc0gf756.jpg" alt="GitLab SSH密钥"></p>
 <blockquote>
 <p>可以使用 git clone 命令来检查是否能正确使用</p>
@@ -291,7 +288,7 @@
 <h5 id="配置Git-和-MSBuild"><a href="#配置Git-和-MSBuild" class="headerlink" title="配置Git 和 MSBuild"></a>配置Git 和 MSBuild</h5><p>点击【系统管理】-&gt; 【Global Tool Configuration】配置 SSH remote hosts 配置<br> 配置 Git 和 MSBuild 信息</p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffodlxup3gj20sv07zt8t.jpg" alt="Jenkins 使用"></p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffodmb7sb5j20sz0a3aan.jpg" alt="Jenkins 使用"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 重启Jenkins (Window系统)</div><div class="line">$ net stop jenkins</div><div class="line">$ net start jenkins </div><div class="line"></div><div class="line"># 重启Jenkins (Linux系统)</div><div class="line">$ sudo service jenkins restart</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启Jenkins (Window系统)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> net stop jenkins</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> net start jenkins </span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启Jenkins (Linux系统)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo service jenkins restart</span></span><br></pre></td></tr></table></figure>
 <p>或者点击读取设置重置</p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffocmaat16j20kx08zab1.jpg" alt="Jenkins  使用"></p>
 <h4 id="建立项目配置"><a href="#建立项目配置" class="headerlink" title="建立项目配置"></a>建立项目配置</h4><blockquote>
@@ -301,7 +298,7 @@
 </blockquote>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffocuy6r28j20qs0ecta9.jpg" alt="Jenkins 使用"></p>
 <blockquote>
-<ol>
+<ol start="2">
 <li>源代码管理配置</li>
 </ol>
 </blockquote>
@@ -316,10 +313,10 @@
 <p>4.构建配置</p>
 </blockquote>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffodpgh30hj20pr0bnwez.jpg" alt="Jenkins  使用"></p>
-<p>使用配置好的MSBuild进行编译,更多命令参数可以查看 -&gt; <a href="https://msdn.microsoft.com/en-us/library/ms164311.aspx" target="_blank" rel="external">MSBuild官方参数说明</a></p>
+<p>使用配置好的MSBuild进行编译,更多命令参数可以查看 -&gt; <a href="https://msdn.microsoft.com/en-us/library/ms164311.aspx" target="_blank" rel="noopener">MSBuild官方参数说明</a></p>
 <p>编译完后可以接入脚本做后期发布操作，所以可以加上执行“Execute Windwos batch command”</p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffpim3g5o3j20c909iglz.jpg" alt="Jenkins  使用"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">echo &apos;**************************** 开始进行打包文件压缩 ****************************&apos;</div><div class="line">echo 当前目录:%cd%</div><div class="line">:当前项目目录</div><div class="line">set Root=%cd%</div><div class="line">:打包输出目录</div><div class="line">set OutputDIR=%Root%\build\</div><div class="line">:打包输出全路径</div><div class="line">set OutputFullPath=%OutputDIR%Web.zip</div><div class="line">:需要压缩目录</div><div class="line">set ProjectZipPath=%Root%\Project\Web\</div><div class="line"> </div><div class="line">echo 信息如下： </div><div class="line">echo 输出目录:%OutputDIR%</div><div class="line">echo 打包输出全路径: %OutputFullPath%</div><div class="line">echo 需要压缩目录: %ProjectZipPath%</div><div class="line"></div><div class="line"></div><div class="line">:判断文件是否存在，没有则删除</div><div class="line">if not exist &quot;%OutputDIR%&quot; (</div><div class="line">  mkdir &quot;%OutputDIR%&quot; </div><div class="line">)else  echo &quot;项目输出目录已存在&quot;</div><div class="line"></div><div class="line">:定位项目目录</div><div class="line">cd &quot;%ProjectZipPath%&quot;</div><div class="line"></div><div class="line">:压缩</div><div class="line">rar a -r &quot;%OutputFullPath%&quot;</div><div class="line"></div><div class="line">echo 压缩成功！输出文件位置: &quot;%OutputFullPath%&quot;</div><div class="line"></div><div class="line"></div><div class="line">echo &apos;**************************** 开始进行打包文件压缩 ****************************&apos;</div><div class="line"></div><div class="line">:移动压缩文件</div><div class="line">move &quot;%OutputFullPath%&quot;  F:\www\Test </div><div class="line">cd F:\www\Test\</div><div class="line">rar x Web.zip -y</div><div class="line">del F:\www\Test\Web.zip</div><div class="line"></div><div class="line">echo 部署成功！部署文件位置: F:\www\Test\Web.zip</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">echo '**************************** 开始进行打包文件压缩 ****************************'</span><br><span class="line">echo 当前目录:%cd%</span><br><span class="line">:当前项目目录</span><br><span class="line">set Root=%cd%</span><br><span class="line">:打包输出目录</span><br><span class="line">set OutputDIR=%Root%\build\</span><br><span class="line">:打包输出全路径</span><br><span class="line">set OutputFullPath=%OutputDIR%Web.zip</span><br><span class="line">:需要压缩目录</span><br><span class="line">set ProjectZipPath=%Root%\Project\Web\</span><br><span class="line"> </span><br><span class="line">echo 信息如下： </span><br><span class="line">echo 输出目录:%OutputDIR%</span><br><span class="line">echo 打包输出全路径: %OutputFullPath%</span><br><span class="line">echo 需要压缩目录: %ProjectZipPath%</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:判断文件是否存在，没有则删除</span><br><span class="line">if not exist "%OutputDIR%" (</span><br><span class="line">  mkdir "%OutputDIR%" </span><br><span class="line">)else  echo "项目输出目录已存在"</span><br><span class="line"></span><br><span class="line">:定位项目目录</span><br><span class="line">cd "%ProjectZipPath%"</span><br><span class="line"></span><br><span class="line">:压缩</span><br><span class="line">rar a -r "%OutputFullPath%"</span><br><span class="line"></span><br><span class="line">echo 压缩成功！输出文件位置: "%OutputFullPath%"</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo '**************************** 开始进行打包文件压缩 ****************************'</span><br><span class="line"></span><br><span class="line">:移动压缩文件</span><br><span class="line">move "%OutputFullPath%"  F:\www\Test </span><br><span class="line">cd F:\www\Test\</span><br><span class="line">rar x Web.zip -y</span><br><span class="line">del F:\www\Test\Web.zip</span><br><span class="line"></span><br><span class="line">echo 部署成功！部署文件位置: F:\www\Test\Web.zip</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意这里用到rar命令，该程序一般在C:\Program Files\WinRAR\目录下，为了方便调用我将它加到环境变量里面,这样才能直接调用rar命令</p>
 </blockquote>
@@ -327,7 +324,7 @@
 <blockquote>
 <p>5.执行效果</p>
 </blockquote>
-<p>输出结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div></pre></td><td class="code"><pre><div class="line">Started by user root</div><div class="line">Building in workspace F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10</div><div class="line">Fetching changes from the remote Git repository</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe config remote.origin.url git@192.168.124.128:HuiMei/NetDemo.git # timeout=10</div><div class="line">Fetching upstream changes from git@192.168.124.128:HuiMei/NetDemo.git</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe --version # timeout=10</div><div class="line">using GIT_SSH to set credentials </div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe fetch --tags --progress git@192.168.124.128:HuiMei/NetDemo.git +refs/heads/*:refs/remotes/origin/*</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe rev-parse &quot;refs/remotes/origin/master^&#123;commit&#125;&quot; # timeout=10</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe rev-parse &quot;refs/remotes/origin/origin/master^&#123;commit&#125;&quot; # timeout=10</div><div class="line">Checking out Revision 98a5f45299f8a1c189e88cbdcee0d1eca767017b (refs/remotes/origin/master)</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe checkout -f 98a5f45299f8a1c189e88cbdcee0d1eca767017b</div><div class="line"> &gt; F:\Program Files\Git\bin\git.exe rev-list 98a5f45299f8a1c189e88cbdcee0d1eca767017b # timeout=10</div><div class="line">Path To MSBuild.exe: C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe</div><div class="line">Executing the command cmd.exe /C &quot; &quot;C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe&quot; /t:Rebuild /p:Configuration=Release;Platform=AnyCPU Project/Web/Web.csproj &quot; &amp;&amp; exit %%ERRORLEVEL%% from F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build</div><div class="line">[NetDemo - Build] $ cmd.exe /C &quot; &quot;C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe&quot; /t:Rebuild /p:Configuration=Release;Platform=AnyCPU Project/Web/Web.csproj &quot; &amp;&amp; exit %%ERRORLEVEL%%</div><div class="line">Microsoft (R) 生成引擎版本 14.0.24720.0</div><div class="line">版权所有(C) Microsoft Corporation。保留所有权利。</div><div class="line"></div><div class="line">生成启动时间为 2017/5/18 14:51:15。</div><div class="line">项目中不存在 BeforeTargets 特性中的“C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)”位置列出的目标“BeforeGenerateProjectPriFile”，将忽略该目标。</div><div class="line">项目中不存在 BeforeTargets 特性中的“C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\Web\Microsoft.Web.Publishing.targets (843,131)”位置列出的目标“MvcBuildViews”，将忽略该目标。</div><div class="line">项目“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\Web.csproj”在节点 1 上(Rebuild 个目标)。</div><div class="line">CoreClean:</div><div class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.dll.config”。</div><div class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.dll”。</div><div class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.pdb”。</div><div class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\obj\Release\Web.csprojResolveAssemblyReference.cache”。</div><div class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\obj\Release\Web.dll”。</div><div class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\obj\Release\Web.pdb”。</div><div class="line">GenerateTargetFrameworkMonikerAttribute:</div><div class="line">正在跳过目标“GenerateTargetFrameworkMonikerAttribute”，因为所有输出文件相对于输入文件而言都是最新的。</div><div class="line">CoreCompile:</div><div class="line">  C:\Program Files (x86)\MSBuild\14.0\bin\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva- /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.DataAnnotations.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll&quot; /reference:&quot;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll&quot; /debug:pdbonly /optimize+ /out:obj\Release\Web.dll /ruleset:&quot;E:\Program Files\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset&quot; /target:library /utf8output Index.aspx.cs Index.aspx.designer.cs Properties\AssemblyInfo.cs &quot;C:\Windows\TEMP\.NETFramework,Version=v4.0.AssemblyAttributes.cs&quot;</div><div class="line">_CopyAppConfigFile:</div><div class="line">  正在将文件从“Web.config”复制到“bin\Web.dll.config”。</div><div class="line">CopyFilesToOutputDirectory:</div><div class="line">  正在将文件从“obj\Release\Web.dll”复制到“bin\Web.dll”。</div><div class="line">  Web -&gt; F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.dll</div><div class="line">  正在将文件从“obj\Release\Web.pdb”复制到“bin\Web.pdb”。</div><div class="line">已完成生成项目“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\Web.csproj”(Rebuild 个目标)的操作。</div><div class="line"></div><div class="line">已成功生成。</div><div class="line">    0 个警告</div><div class="line">    0 个错误</div><div class="line"></div><div class="line">已用时间 00:00:00.20</div><div class="line">[NetDemo - Build] $ cmd /c call C:\Windows\TEMP\hudson5880815456699306038.bat</div><div class="line">&apos;**************************** 开始进行打包文件压缩 ****************************&apos;</div><div class="line">当前目录:F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build</div><div class="line">信息如下： </div><div class="line">输出目录:F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\</div><div class="line">打包输出全路径: F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\Web.zip</div><div class="line">需要压缩目录: F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\</div><div class="line">&quot;项目输出目录已存在&quot;</div><div class="line"></div><div class="line">RAR 5.01   版权所有 (c) 1993-2013 Alexander Roshal   1 十二月 2013</div><div class="line">已注册给 State Grid Corporation Of China</div><div class="line"></div><div class="line">正在创建 压缩包 F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\Web.zip</div><div class="line"></div><div class="line">正在添加  AssemblyInfo.cs                                                  1%  OK </div><div class="line">正在添加  bin\Web.dll                                                      8%  OK </div><div class="line">正在添加  bin\Web.dll.config                                               8%  OK </div><div class="line">正在添加  bin\Web.pdb                                                     25%  OK </div><div class="line">正在添加  Index.aspx                                                      25%  OK </div><div class="line">正在添加  Index.aspx.cs                                                   26%  OK </div><div class="line">正在添加  Index.aspx.designer.cs                                          27%  OK </div><div class="line">正在添加  obj\Release\Web.csproj.FileListAbsolute.txt                     28%  OK </div><div class="line">正在添加  obj\Release\Web.csprojResolveAssemblyReference.cache            32%  OK </div><div class="line">正在添加  obj\Release\Web.dll                                             39%  OK </div><div class="line">正在添加  obj\Release\Web.pdb                                             56%  OK </div><div class="line">正在添加  Properties\AssemblyInfo.cs                                      57%  OK </div><div class="line">正在添加  Web.config                                                      58%  OK </div><div class="line">正在添加  Web.csproj                                                      65%  OK </div><div class="line">正在添加  Web.csproj.FileListAbsolute.txt                                 66%  OK </div><div class="line">正在添加  Web.csproj.user                                                 68%  OK </div><div class="line">正在添加  Web.csprojResolveAssemblyReference.cache                        72%  OK </div><div class="line">正在添加  Web.Debug.config                                                74%  OK </div><div class="line">正在添加  Web.dll                                                         81%  OK </div><div class="line">正在添加  Web.dll.config                                                  81%  OK </div><div class="line">正在添加  Web.pdb                                                         98%  OK </div><div class="line">正在添加  Web.Release.config                                             100%  OK </div><div class="line">正在添加  obj\Release                                                      OK </div><div class="line">正在添加  bin                                                              OK </div><div class="line">正在添加  obj                                                              OK </div><div class="line">正在添加  Properties                                                       OK </div><div class="line">完成</div><div class="line">压缩成功！输出文件位置: &quot;F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\Web.zip&quot;</div><div class="line">&apos;**************************** 开始进行打包文件压缩 ****************************&apos;</div><div class="line">移动了         1 个文件。</div><div class="line"></div><div class="line">RAR 5.01   版权所有 (c) 1993-2013 Alexander Roshal   1 十二月 2013</div><div class="line">已注册给 State Grid Corporation Of China</div><div class="line"></div><div class="line"></div><div class="line">正在从 Web.zip 解压缩</div><div class="line"></div><div class="line">正在解压缩  AssemblyInfo.cs                                                4%  OK </div><div class="line">正在解压缩  bin\Web.dll                                                   13%  OK </div><div class="line">正在解压缩  bin\Web.dll.config                                            15%  OK </div><div class="line">正在解压缩  bin\Web.pdb                                                   21%  OK </div><div class="line">正在解压缩  Index.aspx                                                    23%  OK </div><div class="line">正在解压缩  Index.aspx.cs                                                 24%  OK </div><div class="line">正在解压缩  Index.aspx.designer.cs                                        27%  OK </div><div class="line">正在解压缩  obj\Release\Web.csproj.FileListAbsolute.txt                   28%  OK </div><div class="line">正在解压缩  obj\Release\Web.csprojResolveAssemblyReference.cache          33%  OK </div><div class="line">正在解压缩  obj\Release\Web.dll                                           42%  OK </div><div class="line">正在解压缩  obj\Release\Web.pdb                                           48%  OK </div><div class="line">正在解压缩  Properties\AssemblyInfo.cs                                    52%  OK </div><div class="line">正在解压缩  Web.config                                                    54%  OK </div><div class="line">正在解压缩  Web.csproj                                                    63%  OK </div><div class="line">正在解压缩  Web.csproj.FileListAbsolute.txt                               65%  OK </div><div class="line">正在解压缩  Web.csproj.user                                               68%  OK </div><div class="line">正在解压缩  Web.csprojResolveAssemblyReference.cache                      72%  OK </div><div class="line">正在解压缩  Web.Debug.config                                              77%  OK </div><div class="line">正在解压缩  Web.dll                                                       86%  OK </div><div class="line">正在解压缩  Web.dll.config                                                88%  OK </div><div class="line">正在解压缩  Web.pdb                                                       94%  OK </div><div class="line">正在解压缩  Web.Release.config                                            98%  OK </div><div class="line">全部OK</div><div class="line">部署成功！部署文件位置: F:\www\Test\Web.zip </div><div class="line">Finished: SUCCESS</div></pre></td></tr></table></figure></p>
+<p>输出结果<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line">Started by user root</span><br><span class="line">Building in workspace F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build</span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree <span class="comment"># timeout=10</span></span></span><br><span class="line">Fetching changes from the remote Git repository</span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe config remote.origin.url git@192.168.124.128:HuiMei/NetDemo.git <span class="comment"># timeout=10</span></span></span><br><span class="line">Fetching upstream changes from git@192.168.124.128:HuiMei/NetDemo.git</span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe --version <span class="comment"># timeout=10</span></span></span><br><span class="line">using GIT_SSH to set credentials </span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe fetch --tags --progress git@192.168.124.128:HuiMei/NetDemo.git +refs/heads/*:refs/remotes/origin/*</span></span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe rev-parse <span class="string">"refs/remotes/origin/master^&#123;commit&#125;"</span> <span class="comment"># timeout=10</span></span></span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe rev-parse <span class="string">"refs/remotes/origin/origin/master^&#123;commit&#125;"</span> <span class="comment"># timeout=10</span></span></span><br><span class="line">Checking out Revision 98a5f45299f8a1c189e88cbdcee0d1eca767017b (refs/remotes/origin/master)</span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe config core.sparsecheckout <span class="comment"># timeout=10</span></span></span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe checkout -f 98a5f45299f8a1c189e88cbdcee0d1eca767017b</span></span><br><span class="line"><span class="meta"> &gt;</span><span class="bash"> F:\Program Files\Git\bin\git.exe rev-list 98a5f45299f8a1c189e88cbdcee0d1eca767017b <span class="comment"># timeout=10</span></span></span><br><span class="line">Path To MSBuild.exe: C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe</span><br><span class="line">Executing the command cmd.exe /C " "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /t:Rebuild /p:Configuration=Release;Platform=AnyCPU Project/Web/Web.csproj " &amp;&amp; exit %%ERRORLEVEL%% from F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build</span><br><span class="line">[NetDemo - Build] $ cmd.exe /C " "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /t:Rebuild /p:Configuration=Release;Platform=AnyCPU Project/Web/Web.csproj " &amp;&amp; exit %%ERRORLEVEL%%</span><br><span class="line">Microsoft (R) 生成引擎版本 14.0.24720.0</span><br><span class="line">版权所有(C) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">生成启动时间为 2017/5/18 14:51:15。</span><br><span class="line">项目中不存在 BeforeTargets 特性中的“C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)”位置列出的目标“BeforeGenerateProjectPriFile”，将忽略该目标。</span><br><span class="line">项目中不存在 BeforeTargets 特性中的“C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\Web\Microsoft.Web.Publishing.targets (843,131)”位置列出的目标“MvcBuildViews”，将忽略该目标。</span><br><span class="line">项目“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\Web.csproj”在节点 1 上(Rebuild 个目标)。</span><br><span class="line">CoreClean:</span><br><span class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.dll.config”。</span><br><span class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.dll”。</span><br><span class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.pdb”。</span><br><span class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\obj\Release\Web.csprojResolveAssemblyReference.cache”。</span><br><span class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\obj\Release\Web.dll”。</span><br><span class="line">  正在删除文件“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\obj\Release\Web.pdb”。</span><br><span class="line">GenerateTargetFrameworkMonikerAttribute:</span><br><span class="line">正在跳过目标“GenerateTargetFrameworkMonikerAttribute”，因为所有输出文件相对于输入文件而言都是最新的。</span><br><span class="line">CoreCompile:</span><br><span class="line">  C:\Program Files (x86)\MSBuild\14.0\bin\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva- /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /debug:pdbonly /optimize+ /out:obj\Release\Web.dll /ruleset:"E:\Program Files\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /target:library /utf8output Index.aspx.cs Index.aspx.designer.cs Properties\AssemblyInfo.cs "C:\Windows\TEMP\.NETFramework,Version=v4.0.AssemblyAttributes.cs"</span><br><span class="line">_CopyAppConfigFile:</span><br><span class="line">  正在将文件从“Web.config”复制到“bin\Web.dll.config”。</span><br><span class="line">CopyFilesToOutputDirectory:</span><br><span class="line">  正在将文件从“obj\Release\Web.dll”复制到“bin\Web.dll”。</span><br><span class="line">  Web -&gt; F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\bin\Web.dll</span><br><span class="line">  正在将文件从“obj\Release\Web.pdb”复制到“bin\Web.pdb”。</span><br><span class="line">已完成生成项目“F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\Web.csproj”(Rebuild 个目标)的操作。</span><br><span class="line"></span><br><span class="line">已成功生成。</span><br><span class="line">    0 个警告</span><br><span class="line">    0 个错误</span><br><span class="line"></span><br><span class="line">已用时间 00:00:00.20</span><br><span class="line">[NetDemo - Build] $ cmd /c call C:\Windows\TEMP\hudson5880815456699306038.bat</span><br><span class="line">'**************************** 开始进行打包文件压缩 ****************************'</span><br><span class="line">当前目录:F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build</span><br><span class="line">信息如下： </span><br><span class="line">输出目录:F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\</span><br><span class="line">打包输出全路径: F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\Web.zip</span><br><span class="line">需要压缩目录: F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\Project\Web\</span><br><span class="line">"项目输出目录已存在"</span><br><span class="line"></span><br><span class="line">RAR 5.01   版权所有 (c) 1993-2013 Alexander Roshal   1 十二月 2013</span><br><span class="line">已注册给 State Grid Corporation Of China</span><br><span class="line"></span><br><span class="line">正在创建 压缩包 F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\Web.zip</span><br><span class="line"></span><br><span class="line">正在添加  AssemblyInfo.cs                                                  1%  OK </span><br><span class="line">正在添加  bin\Web.dll                                                      8%  OK </span><br><span class="line">正在添加  bin\Web.dll.config                                               8%  OK </span><br><span class="line">正在添加  bin\Web.pdb                                                     25%  OK </span><br><span class="line">正在添加  Index.aspx                                                      25%  OK </span><br><span class="line">正在添加  Index.aspx.cs                                                   26%  OK </span><br><span class="line">正在添加  Index.aspx.designer.cs                                          27%  OK </span><br><span class="line">正在添加  obj\Release\Web.csproj.FileListAbsolute.txt                     28%  OK </span><br><span class="line">正在添加  obj\Release\Web.csprojResolveAssemblyReference.cache            32%  OK </span><br><span class="line">正在添加  obj\Release\Web.dll                                             39%  OK </span><br><span class="line">正在添加  obj\Release\Web.pdb                                             56%  OK </span><br><span class="line">正在添加  Properties\AssemblyInfo.cs                                      57%  OK </span><br><span class="line">正在添加  Web.config                                                      58%  OK </span><br><span class="line">正在添加  Web.csproj                                                      65%  OK </span><br><span class="line">正在添加  Web.csproj.FileListAbsolute.txt                                 66%  OK </span><br><span class="line">正在添加  Web.csproj.user                                                 68%  OK </span><br><span class="line">正在添加  Web.csprojResolveAssemblyReference.cache                        72%  OK </span><br><span class="line">正在添加  Web.Debug.config                                                74%  OK </span><br><span class="line">正在添加  Web.dll                                                         81%  OK </span><br><span class="line">正在添加  Web.dll.config                                                  81%  OK </span><br><span class="line">正在添加  Web.pdb                                                         98%  OK </span><br><span class="line">正在添加  Web.Release.config                                             100%  OK </span><br><span class="line">正在添加  obj\Release                                                      OK </span><br><span class="line">正在添加  bin                                                              OK </span><br><span class="line">正在添加  obj                                                              OK </span><br><span class="line">正在添加  Properties                                                       OK </span><br><span class="line">完成</span><br><span class="line">压缩成功！输出文件位置: "F:\Program Files (x86)\Jenkins\workspace\NetDemo - Build\build\Web.zip"</span><br><span class="line">'**************************** 开始进行打包文件压缩 ****************************'</span><br><span class="line">移动了         1 个文件。</span><br><span class="line"></span><br><span class="line">RAR 5.01   版权所有 (c) 1993-2013 Alexander Roshal   1 十二月 2013</span><br><span class="line">已注册给 State Grid Corporation Of China</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">正在从 Web.zip 解压缩</span><br><span class="line"></span><br><span class="line">正在解压缩  AssemblyInfo.cs                                                4%  OK </span><br><span class="line">正在解压缩  bin\Web.dll                                                   13%  OK </span><br><span class="line">正在解压缩  bin\Web.dll.config                                            15%  OK </span><br><span class="line">正在解压缩  bin\Web.pdb                                                   21%  OK </span><br><span class="line">正在解压缩  Index.aspx                                                    23%  OK </span><br><span class="line">正在解压缩  Index.aspx.cs                                                 24%  OK </span><br><span class="line">正在解压缩  Index.aspx.designer.cs                                        27%  OK </span><br><span class="line">正在解压缩  obj\Release\Web.csproj.FileListAbsolute.txt                   28%  OK </span><br><span class="line">正在解压缩  obj\Release\Web.csprojResolveAssemblyReference.cache          33%  OK </span><br><span class="line">正在解压缩  obj\Release\Web.dll                                           42%  OK </span><br><span class="line">正在解压缩  obj\Release\Web.pdb                                           48%  OK </span><br><span class="line">正在解压缩  Properties\AssemblyInfo.cs                                    52%  OK </span><br><span class="line">正在解压缩  Web.config                                                    54%  OK </span><br><span class="line">正在解压缩  Web.csproj                                                    63%  OK </span><br><span class="line">正在解压缩  Web.csproj.FileListAbsolute.txt                               65%  OK </span><br><span class="line">正在解压缩  Web.csproj.user                                               68%  OK </span><br><span class="line">正在解压缩  Web.csprojResolveAssemblyReference.cache                      72%  OK </span><br><span class="line">正在解压缩  Web.Debug.config                                              77%  OK </span><br><span class="line">正在解压缩  Web.dll                                                       86%  OK </span><br><span class="line">正在解压缩  Web.dll.config                                                88%  OK </span><br><span class="line">正在解压缩  Web.pdb                                                       94%  OK </span><br><span class="line">正在解压缩  Web.Release.config                                            98%  OK </span><br><span class="line">全部OK</span><br><span class="line">部署成功！部署文件位置: F:\www\Test\Web.zip </span><br><span class="line">Finished: SUCCESS</span><br></pre></td></tr></table></figure></p>
 <p>文件已经部署到F:\www\Test\中</p>
 <p><img src="http://ww1.sinaimg.cn/large/7c2c6ab7gy1ffpiql7n9sj20i00e4wfx.jpg" alt="Jenkins  使用"></p>
 <h2 id="使用场景2"><a href="#使用场景2" class="headerlink" title="使用场景2"></a>使用场景2</h2><blockquote>
@@ -341,31 +338,31 @@
 <p>点击【系统管理】-&gt; 【Global Tool Configuration】 配置Maven信息</p>
 </blockquote>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://lachlanbarclay.net/2016/08/automated-build-with-gitlab-and-jenkins" target="_blank" rel="external">Automated build with Gitlab and Jenkins</a></li>
-<li><a href="https://docs.gitlab.com/ee/integration/jenkins.html" target="_blank" rel="external">Jenkins CI integration</a></li>
-<li><a href="http://skyseraph.com/2016/07/18/Tools/Jenkins%20Gitlab%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%89%93%E5%8C%85%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/" target="_blank" rel="external">Jenkins Gitlab持续集成打包平台搭建</a></li>
-<li><a href="http://cron.qqe2.com/" target="_blank" rel="external">Cron在线生成</a></li>
-<li><a href="http://www.cnblogs.com/xishuai/p/gitlab-ci.html" target="_blank" rel="external">Gitlab 部署 CI 持续集成</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/ms164311.aspx" target="_blank" rel="external">MSBuild 参数说明</a></li>
-<li><a href="http://www.cnblogs.com/helloIT/p/5009553.html" target="_blank" rel="external">Jenkins Window的管理</a></li>
-<li><a href="http://www.cnblogs.com/yangxia-test/p/4372097.html" target="_blank" rel="external">Jenkins插件之构建MSBuild编译问题</a></li>
-<li><a href="http://blog.bekijkhet.com/2013/01/create-mono-c-buildserver-using-jenkins.html" target="_blank" rel="external">Create a Mono C# Buildserver using Jenkins and GitHub</a></li>
-<li><a href="http://www.mono-project.com" target="_blank" rel="external">Mono - 官方</a></li>
-<li><a href="https://git-scm.com/book/zh/v1/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5" target="_blank" rel="external">服务器上的 Git - 生成 SSH 公钥</a></li>
-<li><a href="http://blog.bekijkhet.com/2013/01/create-mono-c-buildserver-using-jenkins.html" target="_blank" rel="external">Create a Mono C# Buildserver using Jenkins and GitHub</a></li>
-<li><a href="http://stackoverflow.com/questions/10227967/build-net-application-in-jenkins-using-msbuild" target="_blank" rel="external">build .net application in Jenkins using MSBuild</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/SSH+plugin" target="_blank" rel="external">SSH plugin</a></li>
-<li><a href="https://blog.coderstory.cn/2016/12/28/jenkins%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E4%B9%8B%E7%BC%96%E8%AF%91%E5%90%8E%E4%BD%BF%E7%94%A8ssh%E5%8F%91%E5%B8%83/" target="_blank" rel="external">Jenkins系列教程之编译后使用SSH发布</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Publish+Over+SSH+Plugin" target="_blank" rel="external">Publish Over SSH Plugin</a></li>
-<li><a href="https://yq.aliyun.com/articles/33034" target="_blank" rel="external">Jenkins+Git 集成测试（build、zip、curl）</a> </li>
-<li><a href="http://www.cnblogs.com/fetty/p/4769279.html" target="_blank" rel="external">WinRAR的命令行模式用法介绍</a></li>
-<li><a href="http://www.cnblogs.com/kekec/p/3937530.html" target="_blank" rel="external">windows批处理语法</a></li>
-<li><a href="https://www.cygwin.com" target="_blank" rel="external">Cygwin</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/aix/library/1006_lisali_sshlogon/" target="_blank" rel="external">通过 SSH 密钥验证实现在不同系统之间的脚本自动化</a></li>
-<li><a href="https://docs.gitlab.com/ce/user/project/integrations/webhooks.html" target="_blank" rel="external">WebHook 官方说明</a></li>
-<li><a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="external">Git-钩子</a></li>
-<li><a href="https://sebastianblade.com/use-jenkins-to-auto-build-maven-project-in-git/" target="_blank" rel="external">用 Jenkins 自动化构建 Git 中 Maven 项目</a></li>
-<li><a href="https://github.com/qinjx/30min_guides/blob/master/shell.md" target="_blank" rel="external">Shell脚本编程30分钟入门</a></li>
+<li><a href="http://lachlanbarclay.net/2016/08/automated-build-with-gitlab-and-jenkins" target="_blank" rel="noopener">Automated build with Gitlab and Jenkins</a></li>
+<li><a href="https://docs.gitlab.com/ee/integration/jenkins.html" target="_blank" rel="noopener">Jenkins CI integration</a></li>
+<li><a href="http://skyseraph.com/2016/07/18/Tools/Jenkins%20Gitlab%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%89%93%E5%8C%85%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA/" target="_blank" rel="noopener">Jenkins Gitlab持续集成打包平台搭建</a></li>
+<li><a href="http://cron.qqe2.com/" target="_blank" rel="noopener">Cron在线生成</a></li>
+<li><a href="http://www.cnblogs.com/xishuai/p/gitlab-ci.html" target="_blank" rel="noopener">Gitlab 部署 CI 持续集成</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/ms164311.aspx" target="_blank" rel="noopener">MSBuild 参数说明</a></li>
+<li><a href="http://www.cnblogs.com/helloIT/p/5009553.html" target="_blank" rel="noopener">Jenkins Window的管理</a></li>
+<li><a href="http://www.cnblogs.com/yangxia-test/p/4372097.html" target="_blank" rel="noopener">Jenkins插件之构建MSBuild编译问题</a></li>
+<li><a href="http://blog.bekijkhet.com/2013/01/create-mono-c-buildserver-using-jenkins.html" target="_blank" rel="noopener">Create a Mono C# Buildserver using Jenkins and GitHub</a></li>
+<li><a href="http://www.mono-project.com" target="_blank" rel="noopener">Mono - 官方</a></li>
+<li><a href="https://git-scm.com/book/zh/v1/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5" target="_blank" rel="noopener">服务器上的 Git - 生成 SSH 公钥</a></li>
+<li><a href="http://blog.bekijkhet.com/2013/01/create-mono-c-buildserver-using-jenkins.html" target="_blank" rel="noopener">Create a Mono C# Buildserver using Jenkins and GitHub</a></li>
+<li><a href="http://stackoverflow.com/questions/10227967/build-net-application-in-jenkins-using-msbuild" target="_blank" rel="noopener">build .net application in Jenkins using MSBuild</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/SSH+plugin" target="_blank" rel="noopener">SSH plugin</a></li>
+<li><a href="https://blog.coderstory.cn/2016/12/28/jenkins%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E4%B9%8B%E7%BC%96%E8%AF%91%E5%90%8E%E4%BD%BF%E7%94%A8ssh%E5%8F%91%E5%B8%83/" target="_blank" rel="noopener">Jenkins系列教程之编译后使用SSH发布</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Publish+Over+SSH+Plugin" target="_blank" rel="noopener">Publish Over SSH Plugin</a></li>
+<li><a href="https://yq.aliyun.com/articles/33034" target="_blank" rel="noopener">Jenkins+Git 集成测试（build、zip、curl）</a> </li>
+<li><a href="http://www.cnblogs.com/fetty/p/4769279.html" target="_blank" rel="noopener">WinRAR的命令行模式用法介绍</a></li>
+<li><a href="http://www.cnblogs.com/kekec/p/3937530.html" target="_blank" rel="noopener">windows批处理语法</a></li>
+<li><a href="https://www.cygwin.com" target="_blank" rel="noopener">Cygwin</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/aix/library/1006_lisali_sshlogon/" target="_blank" rel="noopener">通过 SSH 密钥验证实现在不同系统之间的脚本自动化</a></li>
+<li><a href="https://docs.gitlab.com/ce/user/project/integrations/webhooks.html" target="_blank" rel="noopener">WebHook 官方说明</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener">Git-钩子</a></li>
+<li><a href="https://sebastianblade.com/use-jenkins-to-auto-build-maven-project-in-git/" target="_blank" rel="noopener">用 Jenkins 自动化构建 Git 中 Maven 项目</a></li>
+<li><a href="https://github.com/qinjx/30min_guides/blob/master/shell.md" target="_blank" rel="noopener">Shell脚本编程30分钟入门</a></li>
 </ul>
 
       
@@ -377,19 +374,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>作者: </span>
-      <span>xcli’s Blog</span>
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
     </p>
     <p class="copyright-item">
-      <span>来源: </span>
-      <a href="https://cotide.github.io">https://cotide.github.io</a>
-    </p>
-    <p class="copyright-item">
-      <span>链接: </span>
+      <span>原文链接: </span>
       <a href="https://cotide.github.io/2017/05/28/Tools/Jenkins 使用/">https://cotide.github.io/2017/05/28/Tools/Jenkins 使用/</a>
     </p>
-
-    <p class="copyright-item lincese">
+    <p class="copyright-item">
+      <span>许可协议: </span>
       
       本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
     </p>
@@ -399,24 +392,6 @@
 
       
       
-  <div class="post-reward">
-    <input type="checkbox" name="reward" id="reward" hidden />
-    <label class="reward-button" for="reward">赞赏支持</label>
-    <div class="qr-code">
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/wechat.png" title="wechat">
-        </label>
-      
-      
-        <label class="qr-code-image" for="reward">
-          <img class="image" src="/image/reward/alipay.png" title="alipay">
-        </label>
-      
-    </div>
-  </div>
-
     
 
     
@@ -435,13 +410,13 @@
       <a class="prev" href="/2017/07/28/Shadowsocks/CentOS7 安装Shadowsocks/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">CentOS7 安装Shadowsocks</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2017/05/24/Tools/Jenkins 安装/">
         <span class="next-text nav-default">Jenkins 安装</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -467,7 +442,7 @@
   </div>
 
 
-        </div>  
+        </div>
       </main>
 
       <footer id="footer" class="footer">
@@ -501,11 +476,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
-  
+  <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -515,14 +490,15 @@
      
       2012 - 
     
-    2017
+    2018
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">xcli’s Blog</span>
+    <span class="author">cotide</span>
   </span>
 </div>
+
       </footer>
 
       <div class="back-to-top" id="back-to-top">
@@ -531,8 +507,6 @@
     </div>
 
     
-  
-
   
   <script type="text/javascript">
     var disqus_config = function () {
@@ -552,6 +526,7 @@
 
   
 
+  
 
 
 
@@ -560,8 +535,10 @@
 
 
 
+
+
   
-    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   
 
   
@@ -570,10 +547,12 @@
 
   
 
+  
+
+  
+
 
     <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
 
-    
   </body>
 </html>
