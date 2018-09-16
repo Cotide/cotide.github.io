@@ -207,6 +207,57 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/">性能测试工具-Apache JMeter (数据库测试配置)</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-03-09
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/测试工具/">测试工具</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <p>测试工具JMeter的使用－（数据库测试压测）</p>
+          <div class="read-more">
+            <a href="/2017/03/09/JMeter/性能测试工具-Apache JMeter (数据库测试配置)/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2017/03/08/JMeter/性能测试工具－Apache JMeter (配置)/">性能测试工具－Apache JMeter (配置)</a>
         
       </h1>
@@ -876,68 +927,6 @@ $ cordova build
   </article>
 
     
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2012/12/10/Csharp/Elmah权限控制/">Elmah框架，添加日志文件访问权限</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2012-12-10
-        </span>
-        
-          <div class="post-category">
-            
-              <a href="/categories/Csharp/">Csharp</a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-
-    <div class="post-content">
-      
-        
-        
-
-        
-          <h2 id="Elmah-简述"><a href="#Elmah-简述" class="headerlink" title="Elmah 简述"></a>Elmah 简述</h2><p> <strong>ELMAH（The Error Logging Modules And Handlers）</strong>，直译过来就是“错误日志模块和处理”，它提供了一个用于集中记录和通知错误日志的机制。它是专用于ASP.NET的完全可热插拔的错误日志记录工具。其特点就是无需ASP.NET程序重新编译，即可通过配置web.config（或machine.config）来实现整个应用程序甚至是IIS中所有ASP.NET应用程序的错误日志记录工作。它支持日志的多种存储方式（各种数据库、XML、内存存储），除了提供一个界面用于查询日志详细信息外，还可以通过E-MAIL、RSS订阅或Twitter发布方式通知错误信息给相关人员。</p>
-<p><img src="http://7nj0oy.com1.z0.glb.clouddn.com/hexo_blog_20121210233731_5479.jpg" alt="Elmah框架，添加日志文件访问权限"></p>
-<h2 id="Elmah-配置"><a href="#Elmah-配置" class="headerlink" title="Elmah 配置"></a>Elmah 配置</h2><h3 id="web-config-代码块"><a href="#web-config-代码块" class="headerlink" title="web.config 代码块"></a><strong>web.config</strong> 代码块</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configSections</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Elmah日志记录插件 配置 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">sectionGroup</span> <span class="attr">name</span>=<span class="string">"elmah"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"security"</span> <span class="attr">type</span>=<span class="string">"Elmah.SecuritySectionHandler, Elmah"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"errorLog"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogSectionHandler, Elmah"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- &lt;section name="errorMail" type="Elmah.ErrorMailSectionHandler, Elmah"/&gt; --&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--  &lt;section name="errorFilter"  type="Elmah.ErrorFilterSectionHandler, Elmah"/&gt; --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">sectionGroup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configSections</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Elmah日志记录插件 配置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">elmah</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 是否允许远程访问。0代表否、1代表是 &lt;security allowRemoteAccess="1" /&gt; --&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 错误邮件发送 配置  from: 用于发送的邮箱 to: 发送到的终端邮箱地址，多个用','分隔  subiect: 标题  async: 是否异步方式 smtpPort: SMTP端口 smtpServer:  SMTP服务地址 userName: 邮箱账号 password: 邮箱密码 noYsod: 邮件中是否包含附件 --&gt;</span> <span class="comment">&lt;!-- &lt;errorMail from="test@test.com"  to="huangyuan413026@163.com,364965519@qq.com"   subject="系统出错...."  async="true" smtpPort="25" smtpServer="mail.test.com" userName="test@test.com" password="*****" noYsod="true|false" /&gt; &lt;/elmah&gt; --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">errorLog</span> <span class="attr">type</span>=<span class="string">"Elmah.AccessErrorLog, Elmah"</span> <span class="attr">connectionString</span>=<span class="string">"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|Elmah.mdb"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">elmah</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="请求处理配置："><a href="#请求处理配置：" class="headerlink" title="请求处理配置："></a>请求处理配置：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">httpModules</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">"ErrorLog"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogModule, Elmah"</span>/&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">httpModules</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">httpHandlers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">add</span> <span class="attr">verb</span>=<span class="string">"POST,GET,HEAD"</span> <span class="attr">path</span>=<span class="string">"webLog.axd"</span> <span class="attr">type</span>=<span class="string">"Elmah.ErrorLogPageFactory, Elmah"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">httpHandlers</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这个时候就能通过 <em>~/webLog.axd</em> 这个请求URL 来让Elmah框架处理，入口是<em>Elmah.ErrorLogPageFactory</em> !</p>
-<p>这个时候因为Elmah没有做权限验证，只要访问 ~/webLog.axd 都能看到日志信息，所以这样很不安全。</p>
-<p>解决方案1：在IIS配置URL访问权限，只有服务器本机的指定帐号才能访问该路径。</p>
-<p>解决方案2：<br>在web.config配置URL权限访问限制：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">location</span> <span class="attr">path</span>=<span class="string">"webLog.axd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">system.web</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">authorization</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">deny</span> <span class="attr">users</span>=<span class="string">"?"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">authorization</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">system.web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">location</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>拒绝所有匿名用户访问webLog.axd</p>
-<p>在Global.asax文件里面Application_AuthenticateRequest （处理权限验证促发）事件</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">Application_AuthenticateRequest</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 判断是否已经登录</span></span><br><span class="line">    <span class="keyword">if</span> (Request.IsAuthenticated &amp;&amp; !Request.IsStaticFile())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// IOC注入:登录用户服务实例</span></span><br><span class="line">        <span class="keyword">var</span> identityService = ServiceLocator.Current.GetInstance&lt;IIdentityService&gt;(); </span><br><span class="line">        <span class="comment">// 分配当前上下文用户</span></span><br><span class="line">        Context.User = identityService.GetCurrentUser(); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 处理日志权限问题</span></span><br><span class="line">    <span class="keyword">if</span> (Request.Url.ToString().Contains(<span class="string">"webLog.axd"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 获取当前访问用户</span></span><br><span class="line">        <span class="keyword">var</span> user = Context.User <span class="keyword">as</span> UserPrincipal;</span><br><span class="line">        <span class="comment">// 业务逻辑，如果用户不为超级管理员则无法访问该请求数据 </span></span><br><span class="line">        <span class="keyword">if</span> (user == <span class="literal">null</span> || (user.UserRole &amp; UserRole.SuperAdmin) == <span class="number">0</span>)</span><br><span class="line">        &#123; </span><br><span class="line">           Response.Write(<span class="string">"无权限访问"</span>);</span><br><span class="line">           Response.End();</span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>完毕！！！ 这样只要访问webLog.axd 时候都会促发权限验证事件，这个时候就能进行访问的权限控制…</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://code.google.com/p/elmah/" target="_blank" rel="noopener">Elmah (http://code.google.com/p/elmah/) </a> </li>
-</ul>
-
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
   </section>
 
   
@@ -948,6 +937,11 @@ $ cordova build
         <span class="prev-text">上一页</span>
       </a>
     
+    
+      <a class="next" href="/page/4/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 

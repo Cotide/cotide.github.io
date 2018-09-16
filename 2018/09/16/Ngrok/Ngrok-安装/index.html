@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道。ngrok 可捕获和分析所有通道上的流量，便于后期分析和重放。"/>
+
+
+
+
+  <meta name="keywords" content="🍭 xcli’s Blog" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="cotide’s Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.9.0" />
+
+
+
+<link rel="canonical" href="https://cotide.github.io/2018/09/16/Ngrok/Ngrok-安装/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.9.0" />
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"title":"cotide’s Blog","subtitle":null,"description":"☀️人生如画，岁月如歌🍻🍌🍍🍏🍊","author":"cotide","language":null,"timezone":null,"url":"https://cotide.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":null},"ignore":[],"keywords":"🍭 xcli’s Blog","index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2015,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"https://about.me/xcli"},"color":"Default","toc":true,"fancybox":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"xli.code@gmail.com","stack-overflow":null,"twitter":"https://twitter.com/xiaochaoli","facebook":null,"linkedin":null,"google":null,"github":"https://github.com/cotide","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":"app_id:iLauMtmkcbk2wqR6LwO1nCqC-gzGzoHsz app_key:JosstohXgGKf2m8484aH1Ebq","baidu_analytics":null,"baidu_verification":null,"google_analytics":null,"google_verification":null,"disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":null,"version":"2.9.0"};
+</script>
+
+    <title> Ngrok-安装 - cotide’s Blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">cotide’s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="https://about.me/xcli">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">cotide’s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="https://about.me/xcli">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Ngrok-安装
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-09-16
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Ngrok/">Ngrok</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ngrok版本"><span class="toc-text">Ngrok版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端"><span class="toc-text">服务端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置DNS"><span class="toc-text">配置DNS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置Ngrok全局变量"><span class="toc-text">设置Ngrok全局变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行Ngrok服务"><span class="toc-text">运行Ngrok服务</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#客户端-Window"><span class="toc-text">客户端(Window)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-text">遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题1-lib-lsb-init-functions-No-such-file-or-directory"><span class="toc-text">问题1: /lib/lsb/init-functions: No such file or directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题2-Ngrok-后台运行"><span class="toc-text">问题2: Ngrok 后台运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务端后台运行"><span class="toc-text">服务端后台运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#客户端后台运行"><span class="toc-text">客户端后台运行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题3-TCP-穿透"><span class="toc-text">问题3: TCP 穿透</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化管理"><span class="toc-text">优化管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+
+    <div class="post-content">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道,ngrok 可捕获和分析所有通道上的流量，便于后期分析和重放</p>
+</blockquote>
+<h2 id="Ngrok版本"><a href="#Ngrok版本" class="headerlink" title="Ngrok版本"></a>Ngrok版本</h2><blockquote>
+<p>v1.7</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 安装Go环境</span><br><span class="line">$ sudo yum install golang</span><br><span class="line">$ go version </span><br><span class="line"># 设置环境变量</span><br><span class="line">$ vi ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>.bash_profile 编辑内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># GO环境</span><br><span class="line">export GOPATH=$HOME/go</span><br><span class="line">PATH=$PATH:$HOME/.local/bin:$HOME/bin:$GOPATH/bin</span><br></pre></td></tr></table></figure>
+<p>编辑内容后执行source生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.bash_profile  </span><br><span class="line"># 检查go环境是否安装成功 </span><br><span class="line">$ go env</span><br><span class="line"># 检查go版本</span><br><span class="line">$ go version</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>编译ngrok源码安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装Git</span><br><span class="line">$ yum install -y git   </span><br><span class="line"># 下载ngrok源码 </span><br><span class="line">$ git clone https://github.com/mamboer/ngrok.git</span><br></pre></td></tr></table></figure></p>
+<p>生成签名证书，假设使用域名为：domain.com </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 进入ngrok源码目录</span><br><span class="line">$ cd ngrok</span><br><span class="line"># 生成签名证书</span><br><span class="line">$ openssl genrsa -out rootCA.key 2048</span><br><span class="line">$ openssl req -x509 -new -nodes -key rootCA.key -subj &quot;/CN=domain.com&quot; -days 5000 -out rootCA.pem</span><br><span class="line">$ openssl genrsa -out device.key 2048</span><br><span class="line">$ openssl req -new -key device.key -subj &quot;/CN=domain.com&quot; -out device.csr</span><br><span class="line">$ openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000</span><br></pre></td></tr></table></figure>
+<p>查看当前目录文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ll</span><br></pre></td></tr></table></figure></p>
+<p>包含6个证书相关文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r-- 1 root root  981 Dec 29 18:37 device.crt</span><br><span class="line">-rw-r--r-- 1 root root  895 Dec 29 18:37 device.csr</span><br><span class="line">-rw-r--r-- 1 root root 1679 Dec 29 18:37 device.key</span><br><span class="line">-rw-r--r-- 1 root root 1675 Dec 29 18:37 rootCA.key</span><br><span class="line">-rw-r--r-- 1 root root 1099 Dec 29 18:37 rootCA.pem</span><br><span class="line">-rw-r--r-- 1 root root   17 Dec 29 18:37 rootCA.srl</span><br></pre></td></tr></table></figure>
+<p>设置Ngrok默认证书</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 管理证书位置</span><br><span class="line">cp rootCA.pem /root/ngrok/assets/client/tls/ngrokroot.crt</span><br><span class="line">cp device.crt /root/ngrok/assets/server/tls/snakeoil.crt</span><br><span class="line">cp device.key /root/ngrok/assets/server/tls/snakeoil.key </span><br><span class="line"># 编译 </span><br><span class="line">## 编译服务端</span><br><span class="line">$ make release-server</span><br><span class="line">## 编译客户端</span><br><span class="line">$ make release-client  </span><br><span class="line">## 编译所有</span><br><span class="line">$ make release-all</span><br><span class="line">## Window客户端编译</span><br><span class="line">$ GOOS=windows GOARCH=386 make release-client</span><br></pre></td></tr></table></figure>
+<p>编译后可以在bin目录查看对应版本文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-rwxr-xr-x 1 root root  2644407 Dec 28 22:26 go-bindata</span><br><span class="line">-rwxr-xr-x 1 root root 11097051 Dec 29 19:03 ngrok</span><br><span class="line">-rwxr-xr-x 1 root root  8618267 Dec 29 19:03 ngrokd</span><br><span class="line">drwxr-xr-x 2 root root     4096 Dec 29 19:04 windows_386</span><br></pre></td></tr></table></figure>
+<p>alias 命令名＝”命令内容”</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><blockquote>
+<p>当前是不使用SSL连接方式场景</p>
+</blockquote>
+<h4 id="配置DNS"><a href="#配置DNS" class="headerlink" title="配置DNS"></a>配置DNS</h4><blockquote>
+<p>将*.domain.com 域名解析到运行Ngrok的服务器IP</p>
+</blockquote>
+<h4 id="设置Ngrok全局变量"><a href="#设置Ngrok全局变量" class="headerlink" title="设置Ngrok全局变量"></a>设置Ngrok全局变量</h4><p>注意：为了更方便调用ngrokd命令,可以为其定义别名,操作如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p><strong>.bash_profile</strong> 文件内容格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alias ngrokd=/root/ngrok/bin/ngrokd</span><br></pre></td></tr></table></figure>
+<p>执行source进行生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<h4 id="运行Ngrok服务"><a href="#运行Ngrok服务" class="headerlink" title="运行Ngrok服务"></a>运行Ngrok服务</h4><blockquote>
+<p>ngrokd -tlsKey=”/root/ngrok/assets/server/tls/snakeoil.key” -tlsCrt=”/root/ngrok/assets/server/tls/snakeoil.crt” -domain=”domain.com”</p>
+</blockquote>
+<p>正确运行显示内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[19:13:28 CST 2017/12/29] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [registry] [tun] No affinity cache specified</span><br><span class="line">[19:13:28 CST 2017/12/29] [INFO] (ngrok/log.Info:112) Listening for public http connections on 0.0.0.0:80</span><br><span class="line">[19:13:28 CST 2017/12/29] [INFO] (ngrok/log.Info:112) Listening for public https connections on 0.0.0.0:443</span><br><span class="line">[19:13:28 CST 2017/12/29] [INFO] (ngrok/log.Info:112) Listening for control and proxy connections on 0.0.0.0:4443</span><br><span class="line">[19:13:28 CST 2017/12/29] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [metrics] Reporting every 30 seconds</span><br></pre></td></tr></table></figure>
+<h3 id="客户端-Window"><a href="#客户端-Window" class="headerlink" title="客户端(Window)"></a>客户端(Window)</h3><p>将在服务器编译好的Window客户端(ngrok.exe)下载到本地,<br>创建ngrok.cfg配置文件</p>
+<p>配置内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server_addr: &quot;domain.com:4443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br></pre></td></tr></table></figure>
+<p>打开cmd.exe运行本地ngrok.exe</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd ngrok.exe存放目录</span><br><span class="line"></span><br><span class="line"># 运行window客户端,访问地址为:cotide.domain.com 对应本地的127.0.0.1:8080</span><br><span class="line">$ ngrok.exe   -proto=http -log=stdout  -subdomain cotide -config=ngrok.cfg 8080</span><br></pre></td></tr></table></figure>
+<p>查看 <a href="http://127.0.0.1:4040" target="_blank" rel="noopener">http://127.0.0.1:4040</a> 可以查看目前隧道情况</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="问题1-lib-lsb-init-functions-No-such-file-or-directory"><a href="#问题1-lib-lsb-init-functions-No-such-file-or-directory" class="headerlink" title="问题1: /lib/lsb/init-functions: No such file or directory"></a>问题1: /lib/lsb/init-functions: No such file or directory</h3><p>解决方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install &apos;/lib/lsb/init-functions&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="问题2-Ngrok-后台运行"><a href="#问题2-Ngrok-后台运行" class="headerlink" title="问题2: Ngrok 后台运行"></a>问题2: Ngrok 后台运行</h3><p>解决方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install screen</span><br></pre></td></tr></table></figure>
+<h4 id="服务端后台运行"><a href="#服务端后台运行" class="headerlink" title="服务端后台运行"></a>服务端后台运行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ screen -S ngrokd</span><br><span class="line">$ ./ngrokd -tlsKey=&quot;/root/ngrok/assets/server/tls/snakeoil.key&quot; -tlsCrt=&quot;/root/ngrok/assets/server/tls/snakeoil.crt&quot; -domain=&quot;domain.com&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="客户端后台运行"><a href="#客户端后台运行" class="headerlink" title="客户端后台运行"></a>客户端后台运行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ screen -S ngrok</span><br><span class="line">$ ./ngrok -subdomain code -config=/root/Ngrok/ngrok.cfg 80</span><br></pre></td></tr></table></figure>
+<h3 id="问题3-TCP-穿透"><a href="#问题3-TCP-穿透" class="headerlink" title="问题3: TCP 穿透"></a>问题3: TCP 穿透</h3><p>解决方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># window系统</span><br><span class="line">$ ngrok.exe  -log=stdout -subdomain db -config=ngrok.cfg  -proto=tcp 3306</span><br><span class="line"># linux系统</span><br><span class="line">$ ./ngrok -subdomain login -config=/root/ngrok/ngrok.cfg -proto=tcp 22</span><br></pre></td></tr></table></figure>
+<h2 id="优化管理"><a href="#优化管理" class="headerlink" title="优化管理"></a>优化管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 定义start.sh脚本</span><br><span class="line">$ vi start.sh</span><br></pre></td></tr></table></figure>
+<p>start.sh文件内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup /root/ngrok/bin/ngrokd -tlsKey=&quot;/root/ngrok/assets/server/tls/snakeoil.key&quot; -tlsCrt=&quot;/root/ngrok/assets/server/tls/snakeoil.crt&quot; -domain=&quot;domain.com&quot; &amp;</span><br></pre></td></tr></table></figure>
+<p>使用: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sh start.sh</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://ngrok.com" target="_blank" rel="noopener">Ngrok 官方</a></li>
+<li><a href="https://github.com/inconshreveable/ngrok" target="_blank" rel="noopener">Ngrok Github</a></li>
+<li><a href="https://github.com/inconshreveable/ngrok/blob/master/docs/SELFHOSTING.md" target="_blank" rel="noopener">How to run your own ngrokd server</a></li>
+<li><a href="http://ngrok.cn/docs.html" target="_blank" rel="noopener">Ngrok 中文Doc</a></li>
+<li><a href="http://tonybai.com/2015/05/14/ngrok-source-intro/" target="_blank" rel="noopener">Ngrok原理浅析</a>  </li>
+<li><a href="https://github.com/inconshreveable/ngrok/blob/a8e7fa486348f391f4bdf241344d798297f953bc/docs/DEVELOPMENT.md" target="_blank" rel="noopener">Developer’s guide to ngrok</a> </li>
+<li><a href="http://jhonge.net/Home/Single2/2482" target="_blank" rel="noopener">如何搭建自己的ngrok server服务</a></li>
+<li><a href="https://imququ.com/post/self-hosted-ngrokd.html" target="_blank" rel="noopener">搭建 ngrok 服务实现内网穿透</a></li>
+<li><a href="https://www.jianshu.com/p/b81bb6a3c0b9" target="_blank" rel="noopener">10分钟搭建属于自己的ngork服务器，实现内网穿透</a></li>
+<li><a href="https://aotu.io/notes/2016/02/19/ngrok/index.html" target="_blank" rel="noopener">手把手教你搭建ngrok服务－轻松外网调试本机站点</a></li>
+<li><a href="https://yii.im/posts/pretty-self-hosted-ngrokd/#" target="_blank" rel="noopener">搭建并配置优雅的 ngrok 服务实现内网穿透</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="https://cotide.github.io">cotide</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="https://cotide.github.io/2018/09/16/Ngrok/Ngrok-安装/">https://cotide.github.io/2018/09/16/Ngrok/Ngrok-安装/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/代理服务/">代理服务</a>
+            
+              <a href="/tags/Ngrok/">Ngrok</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/09/15/Git/Git多个账号多个ssh-key管理/">
+        <span class="next-text nav-default">Git多个账号多个ssh-key管理</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:xli.code@gmail.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+        
+          <a href="https://twitter.com/xiaochaoli" class="iconfont icon-twitter" title="twitter"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/cotide" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cotide</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.9.0"></script>
+
+  </body>
+</html>
